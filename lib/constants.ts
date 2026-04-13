@@ -7,6 +7,7 @@ export const SITE = {
   twitter: "https://twitter.com",
   instagram: "https://www.instagram.com",
   tiktok: "https://www.tiktok.com",
+  facebook: "https://www.facebook.com",
   youtube: "https://www.youtube.com",
   reddit: "https://www.reddit.com",
 } as const;

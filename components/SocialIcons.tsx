@@ -32,7 +32,7 @@ function IconShell({
   );
 }
 
-/** Colored circular brand marks — order: Instagram, TikTok, X, YouTube, LinkedIn, Reddit */
+/** Colored circular brand marks — Instagram, TikTok, Facebook, X, YouTube, LinkedIn, Reddit */
 export function SocialIcons() {
   const items: IconLink[] = [
     {
@@ -53,6 +53,16 @@ export function SocialIcons() {
       children: (
         <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
           <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z" />
+        </svg>
+      ),
+    },
+    {
+      name: "Facebook",
+      href: SITE.facebook,
+      className: "bg-[#1877F2]",
+      children: (
+        <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
         </svg>
       ),
     },
@@ -91,33 +101,9 @@ export function SocialIcons() {
       href: SITE.reddit,
       className: "bg-[#FF4500]",
       children: (
-        <svg
-          className="h-6 w-6"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden
-        >
-          <ellipse cx="12" cy="15" rx="6" ry="5" fill="white" />
-          <line
-            x1="12"
-            y1="6"
-            x2="12"
-            y2="10"
-            stroke="white"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-          <circle cx="12" cy="4.5" r="2.2" fill="white" />
-          <circle cx="9.2" cy="14" r="1.35" fill="#1a1a1a" />
-          <circle cx="14.8" cy="14" r="1.35" fill="#1a1a1a" />
-          <path
-            d="M9 17.2c0.9 1 2.1 1.2 3 1.2s2.1-.2 3-1.2"
-            stroke="#1a1a1a"
-            strokeWidth="1.25"
-            strokeLinecap="round"
-            fill="none"
-          />
+        <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+          {/* Simple Icons / Reddit official mark — white on brand orange */}
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 3.314 1.343 6.314 3.515 8.485l-2.286 2.286C.775 23.225 1.097 24 1.738 24H12c6.627 0 12-5.373 12-12S18.627 0 12 0Zm4.388 3.199c1.104 0 1.999.895 1.999 1.999 0 1.105-.895 2-1.999 2-.946 0-1.739-.657-1.947-1.539v.002c-1.147.162-2.032 1.15-2.032 2.341v.007c1.776.067 3.4.567 4.686 1.363.473-.363 1.064-.58 1.707-.58 1.547 0 2.802 1.254 2.802 2.802 0 1.117-.655 2.081-1.601 2.531-.088 3.256-3.637 5.876-7.997 5.876-4.361 0-7.905-2.617-7.998-5.87-.954-.447-1.614-1.415-1.614-2.538 0-1.548 1.255-2.802 2.803-2.802.645 0 1.239.218 1.712.585 1.275-.79 2.881-1.291 4.64-1.365v-.01c0-1.663 1.263-3.034 2.88-3.207.188-.911.993-1.595 1.959-1.595Zm-8.085 8.376c-.784 0-1.459.78-1.506 1.797-.047 1.016.64 1.429 1.426 1.429.786 0 1.371-.369 1.418-1.385.047-1.017-.553-1.841-1.338-1.841Zm7.406 0c-.786 0-1.385.824-1.338 1.841.047 1.017.634 1.385 1.418 1.385.785 0 1.473-.413 1.426-1.429-.046-1.017-.721-1.797-1.506-1.797Zm-3.703 4.013c-.974 0-1.907.048-2.77.135-.147.015-.241.168-.183.305.483 1.154 1.622 1.964 2.953 1.964 1.33 0 2.47-.81 2.953-1.964.057-.137-.037-.29-.184-.305-.863-.087-1.795-.135-2.769-.135Z" />
         </svg>
       ),
     },
