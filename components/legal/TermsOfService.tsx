@@ -180,10 +180,10 @@ export function TermsOfService() {
               For any questions regarding these Terms of Service, contact LDS
               Ventures LLC at{" "}
               <a
-                href="mailto:aziendaLDS@gmail.com"
+                href="mailto:envowlsupport@gmail.com"
                 className="font-medium text-black underline underline-offset-4"
               >
-                aziendaLDS@gmail.com
+                envowlsupport@gmail.com
               </a>
               .
             </p>

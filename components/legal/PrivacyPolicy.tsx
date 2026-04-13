@@ -157,10 +157,10 @@ export function PrivacyPolicy() {
             <p className="mt-6">
               To exercise any of these rights, contact us at{" "}
               <a
-                href="mailto:aziendaLDS@gmail.com"
+                href="mailto:envowlsupport@gmail.com"
                 className="font-medium text-black underline underline-offset-4"
               >
-                aziendaLDS@gmail.com
+                envowlsupport@gmail.com
               </a>
               . We will respond within 30 days.
             </p>
@@ -222,10 +222,10 @@ export function PrivacyPolicy() {
               For any privacy-related questions or requests, contact LDS Ventures
               LLC at{" "}
               <a
-                href="mailto:aziendaLDS@gmail.com"
+                href="mailto:envowlsupport@gmail.com"
                 className="font-medium text-black underline underline-offset-4"
               >
-                aziendaLDS@gmail.com
+                envowlsupport@gmail.com
               </a>
               .
             </p>

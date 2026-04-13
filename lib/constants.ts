@@ -2,7 +2,7 @@ export const PLATFORM_NAME =
   process.env.NEXT_PUBLIC_PLATFORM_NAME ?? "Envowl";
 
 export const SITE = {
-  contactEmail: "hello@example.com",
+  contactEmail: "envowlsupport@gmail.com",
   linkedin: "https://www.linkedin.com",
   twitter: "https://twitter.com",
   instagram: "https://www.instagram.com",
