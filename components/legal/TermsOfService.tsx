@@ -20,7 +20,7 @@ export function TermsOfService() {
               Agreement
             </h2>
             <p>
-              By accessing or using the Meridian website and services
+              By accessing or using the Envowl website and services
               (&quot;Service&quot;), operated by LDS Ventures LLC, you agree to
               be bound by these Terms of Service. If you do not agree to these
               terms, please do not use our Service. These terms apply to all
@@ -34,7 +34,7 @@ export function TermsOfService() {
               Description of Service
             </h2>
             <p>
-              Meridian is currently operating as a pre-launch waitlist and
+              Envowl is currently operating as a pre-launch waitlist and
               resource platform. We collect email addresses from individuals
               interested in our upcoming AI talent marketplace, and publish free
               educational content about artificial intelligence for businesses
@@ -48,11 +48,11 @@ export function TermsOfService() {
               Waitlist & Communications
             </h2>
             <p className="mb-4">
-              By joining the Meridian waitlist you agree that:
+              By joining the Envowl waitlist you agree that:
             </p>
             <ul className="list-none space-y-3">
               {[
-                "You are providing your email address voluntarily to receive updates about Meridian",
+                "You are providing your email address voluntarily to receive updates about Envowl",
                 "We may send you periodic emails about our launch, platform updates, and AI resources",
                 "You can unsubscribe at any time using the link provided in any email",
                 "Joining the waitlist does not guarantee access to the platform, any specific pricing, or any specific features",
@@ -71,7 +71,7 @@ export function TermsOfService() {
               Acceptable Use
             </h2>
             <p className="mb-4">
-              You agree not to use the Meridian website or services to:
+              You agree not to use the Envowl website or services to:
             </p>
             <ul className="list-none space-y-3">
               {[
@@ -80,7 +80,7 @@ export function TermsOfService() {
                 "Attempt to gain unauthorized access to any part of our systems",
                 "Transmit any harmful, offensive, or disruptive content",
                 "Scrape, harvest, or collect data from our website without permission",
-                "Impersonate Meridian, LDS Ventures LLC, or any of our team members",
+                "Impersonate Envowl, LDS Ventures LLC, or any of our team members",
               ].map((item) => (
                 <li key={item} className="flex gap-4">
                   <span className="mt-2.5 h-2 w-2 flex-shrink-0 rounded-full bg-black" />
@@ -95,7 +95,7 @@ export function TermsOfService() {
               Intellectual Property
             </h2>
             <p>
-              All content on the Meridian website — including text, design,
+              All content on the Envowl website — including text, design,
               logos, graphics, and resource articles — is the property of LDS
               Ventures LLC and is protected by applicable intellectual property
               laws. You may not reproduce, distribute, or create derivative
@@ -110,7 +110,7 @@ export function TermsOfService() {
             <p>
               Our resource library may link to or reference third party websites,
               articles, and videos. These are provided for informational
-              purposes only. Meridian does not endorse, control, or take
+              purposes only. Envowl does not endorse, control, or take
               responsibility for the content, privacy practices, or accuracy of
               any third party sites. Accessing third party links is at your own
               risk.
@@ -122,7 +122,7 @@ export function TermsOfService() {
               Disclaimer of Warranties
             </h2>
             <p>
-              The Meridian website and all content are provided &quot;as
+              The Envowl website and all content are provided &quot;as
               is&quot; without warranty of any kind, express or implied. We do
               not warrant that the Service will be uninterrupted, error-free, or
               free of harmful components. The educational content we publish is
@@ -139,7 +139,7 @@ export function TermsOfService() {
               To the fullest extent permitted by law, LDS Ventures LLC shall not
               be liable for any indirect, incidental, special, consequential, or
               punitive damages arising from your use of or inability to use the
-              Meridian website or services. Our total liability to you for any
+              Envowl website or services. Our total liability to you for any
               claims arising from these terms shall not exceed the amount you
               paid us in the twelve months preceding the claim, which at the
               current pre-launch stage is zero.

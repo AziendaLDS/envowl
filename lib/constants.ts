@@ -1,5 +1,5 @@
 export const PLATFORM_NAME =
-  process.env.NEXT_PUBLIC_PLATFORM_NAME ?? "Meridian";
+  process.env.NEXT_PUBLIC_PLATFORM_NAME ?? "Envowl";
 
 export const SITE = {
   contactEmail: "hello@example.com",

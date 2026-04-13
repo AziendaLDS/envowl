@@ -20,11 +20,11 @@ export function PrivacyPolicy() {
               Overview
             </h2>
             <p>
-              Meridian (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is
+              Envowl (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is
               operated by LDS Ventures LLC. We are committed to protecting your
               personal information and being transparent about what we collect and
               how we use it. This Privacy Policy explains our practices for the
-              Meridian website and waitlist service located at our website.
+              Envowl website and waitlist service located at our website.
             </p>
           </section>
 
@@ -71,7 +71,7 @@ export function PrivacyPolicy() {
               {[
                 "Send you waitlist updates, early access notifications, and launch announcements",
                 "Deliver our weekly newsletter and AI resource content",
-                "Improve the Meridian platform based on usage patterns",
+                "Improve the Envowl platform based on usage patterns",
                 "Communicate important service updates",
               ].map((item) => (
                 <li key={item} className="flex gap-4">
@@ -90,7 +90,7 @@ export function PrivacyPolicy() {
               {[
                 "We never sell your personal information to third parties",
                 "We never share your email address with advertisers",
-                "We never send unsolicited commercial messages unrelated to Meridian",
+                "We never send unsolicited commercial messages unrelated to Envowl",
               ].map((item) => (
                 <li key={item} className="flex gap-4">
                   <span className="mt-2.5 h-2 w-2 flex-shrink-0 rounded-full bg-black" />
@@ -105,7 +105,7 @@ export function PrivacyPolicy() {
               Third Party Services
             </h2>
             <p className="mb-4">
-              We use the following third party services to operate Meridian. Each
+              We use the following third party services to operate Envowl. Each
               has their own privacy policy governing how they handle data:
             </p>
             <div className="space-y-4">
@@ -195,7 +195,7 @@ export function PrivacyPolicy() {
               Children&apos;s Privacy
             </h2>
             <p>
-              Meridian is not directed at children under the age of 13. We do
+              Envowl is not directed at children under the age of 13. We do
               not knowingly collect personal information from children. If you
               believe a child has provided us with personal information, please
               contact us and we will delete it promptly.
@@ -207,7 +207,7 @@ export function PrivacyPolicy() {
               Changes to This Policy
             </h2>
             <p>
-              We may update this Privacy Policy as Meridian grows and evolves. We
+              We may update this Privacy Policy as Envowl grows and evolves. We
               will notify waitlist subscribers of any material changes via email.
               Continued use of our website after changes constitutes acceptance of
               the updated policy.
