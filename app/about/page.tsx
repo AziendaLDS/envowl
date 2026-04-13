@@ -10,7 +10,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white text-black">
       {/* Hero */}
-      <section className="mx-auto max-w-3xl px-4 pt-16 pb-12 sm:px-6 sm:pt-24 md:px-8 md:pt-32 md:pb-16">
+      <section className="mx-auto max-w-4xl px-4 pb-12 pt-24 sm:px-6 sm:pb-16 sm:pt-32 md:px-8 md:pb-16 md:pt-40 lg:pt-44">
         <p className="mb-4 text-sm uppercase tracking-widest text-neutral-500 sm:mb-6">
           What we believe
         </p>
@@ -24,21 +24,21 @@ export default function AboutPage() {
       </section>
 
       {/* Manifesto body */}
-      <section className="mx-auto max-w-3xl space-y-8 px-4 pb-16 text-neutral-600 sm:space-y-10 sm:px-6 sm:pb-24 md:px-8">
-        <p className="text-lg leading-loose md:text-xl">
+      <section className="mx-auto max-w-4xl space-y-8 px-4 pb-16 text-neutral-600 sm:space-y-10 sm:px-6 sm:pb-24 md:px-8">
+        <p className="text-lg leading-loose lg:text-xl">
           Something strange is happening. The most transformative technology in
           a generation is available to everyone — and most people still
           can&apos;t figure out how to use it to their advantage.
         </p>
 
-        <p className="text-lg leading-loose md:text-xl">
+        <p className="text-lg leading-loose lg:text-xl">
           It&apos;s not a capability problem. The tools work. The use cases are
           real. Businesses are saving hours every week. Careers are being
           rebuilt around new skills. The gap between those who understand AI and
           those who don&apos;t is widening faster than most people realize.
         </p>
 
-        <p className="text-lg leading-loose md:text-xl">The problem is trust.</p>
+        <p className="text-lg leading-loose lg:text-xl">The problem is trust.</p>
 
         <div className="my-10 border-l-2 border-accent py-2 pl-6 sm:my-12 sm:pl-8">
           <p className="text-xl font-medium leading-loose text-neutral-900 lg:text-2xl">
@@ -48,7 +48,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <p className="text-lg leading-loose md:text-xl">
+        <p className="text-lg leading-loose lg:text-xl">
           The internet is full of people selling AI solutions. Promises of
           automation, efficiency, transformation. Most of it is noise. And the
           people who get burned — the small business owner who paid someone to
@@ -57,12 +57,12 @@ export default function AboutPage() {
           the whole category.
         </p>
 
-        <p className="text-lg leading-loose md:text-xl">
+        <p className="text-lg leading-loose lg:text-xl">
           That&apos;s not an AI problem. That&apos;s a vetting problem. A trust
           problem. A marketplace problem.
         </p>
 
-        <p className="text-lg leading-loose md:text-xl">
+        <p className="text-lg leading-loose lg:text-xl">
           {PLATFORM_NAME} exists because we believe the single biggest unlock
           for AI adoption isn&apos;t a better tool. It&apos;s a better
           introduction. A trusted handshake between the people who need help
@@ -70,7 +70,7 @@ export default function AboutPage() {
         </p>
 
         <div className="my-10 space-y-5 rounded-2xl border border-neutral-800 bg-neutral-900 p-6 sm:my-12 sm:space-y-6 sm:p-10">
-          <p className="text-lg font-medium leading-loose text-white md:text-xl">
+          <p className="text-lg font-medium leading-loose text-white lg:text-xl">
             We believe:
           </p>
           {[
@@ -82,20 +82,20 @@ export default function AboutPage() {
           ].map((belief) => (
             <div key={belief} className="flex gap-4">
               <span className="mt-1 flex-shrink-0 text-accent">—</span>
-              <p className="text-lg leading-loose text-neutral-300 md:text-xl">
+              <p className="text-lg leading-loose text-neutral-300 lg:text-xl">
                 {belief}
               </p>
             </div>
           ))}
         </div>
 
-        <p className="text-lg leading-loose md:text-xl">
+        <p className="text-lg leading-loose lg:text-xl">
           We&apos;re not neutral on this. We think the stakes are real. We think
           the window for getting ahead of the curve is open right now — and it
           won&apos;t stay open forever.
         </p>
 
-        <p className="text-lg leading-loose md:text-xl">
+        <p className="text-lg leading-loose lg:text-xl">
           {PLATFORM_NAME} is built for the people who feel that urgency. The
           business owner who knows they need to adapt but doesn&apos;t know who
           to trust. The professional who wants to make themselves indispensable
@@ -104,14 +104,14 @@ export default function AboutPage() {
           understand the value of what they do.
         </p>
 
-        <p className="text-lg leading-loose md:text-xl">
+        <p className="text-lg leading-loose lg:text-xl">
           We built the resource library because education shouldn&apos;t be
           paywalled. We built the vetting process because quality shouldn&apos;t
           be a gamble. We built the marketplace because the right introduction
           changes everything.
         </p>
 
-        <p className="text-lg font-medium leading-loose text-neutral-900 md:text-xl">
+        <p className="text-lg font-medium leading-loose text-neutral-900 lg:text-xl">
           This is what {PLATFORM_NAME} is for. This is what we&apos;re building
           toward.
         </p>
@@ -119,7 +119,7 @@ export default function AboutPage() {
 
       {/* Divider + CTA */}
       <section className="border-t border-neutral-200 bg-neutral-50">
-        <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24 md:px-8">
+        <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 md:px-8">
           <div className="mb-12 grid grid-cols-1 gap-8 sm:mb-16 md:grid-cols-3 md:gap-8">
             {[
               {
