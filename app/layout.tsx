@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
@@ -73,6 +74,16 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XC358QBGN7"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XC358QBGN7');`}
+        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen min-w-0 overflow-x-clip bg-[#F2F2F2] font-sans text-[0.9375rem] leading-relaxed antialiased text-neutral-900 sm:text-[1.0625rem]`}
