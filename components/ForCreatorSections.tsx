@@ -102,27 +102,3 @@ export function CreatorTypes() {
     </section>
   );
 }
-
-export function CreatorQuote() {
-  return (
-    <section className="border-b border-neutral-200 bg-white py-16 sm:py-24 md:py-32">
-      <div className="mx-auto max-w-3xl px-6 text-center sm:px-6 md:px-8">
-        <FadeIn>
-          <div className="mx-auto mb-10 h-px w-12 bg-accent" />
-          <blockquote className="mb-8 text-2xl font-medium leading-relaxed text-neutral-900">
-            &quot;I have been building AI tools for two years. The hardest part was always finding clients who understood what they were buying. Envowl solves that.&quot;
-          </blockquote>
-          <div className="flex items-center justify-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-100 text-sm font-semibold text-neutral-500">
-              AI
-            </div>
-            <div className="text-left">
-              <p className="text-sm font-semibold text-neutral-900">AI Creator Name</p>
-              <p className="text-xs text-neutral-500">AI Automation Specialist</p>
-            </div>
-          </div>
-        </FadeIn>
-      </div>
-    </section>
-  );
-}

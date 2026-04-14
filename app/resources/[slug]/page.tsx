@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ArticleBlocks } from "@/components/ArticleBody";
 import { articles, getArticleBySlug } from "@/lib/articles";
 import { PLATFORM_NAME } from "@/lib/constants";
 import { pageMetadata } from "@/lib/seo";
@@ -43,14 +44,7 @@ export default function ArticlePage({ params }: Props) {
           <span>{article.date}</span>
         </div>
         <div className="mt-12">
-          {article.body.map((p, i) => (
-            <p
-              key={i}
-              className="mb-5 text-base leading-relaxed text-neutral-600 last:mb-0 sm:mb-6 sm:text-lg"
-            >
-              {p}
-            </p>
-          ))}
+          <ArticleBlocks blocks={article.blocks} />
         </div>
         <div className="mt-16 border-t border-neutral-200 pt-12">
           <p className="text-base text-neutral-600">
