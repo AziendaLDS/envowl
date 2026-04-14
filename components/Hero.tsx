@@ -1,42 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { VolcanoBackground } from "@/components/VolcanoBackground";
+import { ShootingStarsHeroBackground } from "@/components/ShootingStarsHeroBackground";
 import { PLATFORM_NAME } from "@/lib/constants";
-
-/** Must match `ProblemSection` / page background below the hero (#F2F2F2). */
-const NEXT_SECTION_BG = "#F2F2F2";
 
 export function Hero({ children }: { children: React.ReactNode }) {
   return (
     <section className="relative min-h-[calc(100svh+min(5rem,8vh))] w-full min-w-0 overflow-x-clip overflow-hidden border-b-0 text-white">
-      <VolcanoBackground
-        skyTop="#0f0c29"
-        skyBottom="#302b63"
-        lavaColor="#f54927"
-        meteorCount={5}
-        eruptionIntensity={1}
-        starCount={50}
-        enableMeteors
-        enableEmbers
-      />
-      {/* Long soft fade so the canvas bleeds into the next section with no hard edge */}
-      <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-[min(52vh,28rem)] sm:h-[min(48vh,30rem)] md:h-[min(42vh,32rem)]"
-        style={{
-          background: `linear-gradient(to top,
-            ${NEXT_SECTION_BG} 0%,
-            ${NEXT_SECTION_BG} 14%,
-            rgba(242, 242, 242, 0.94) 26%,
-            rgba(242, 242, 242, 0.72) 42%,
-            rgba(242, 242, 242, 0.42) 58%,
-            rgba(242, 242, 242, 0.18) 74%,
-            rgba(242, 242, 242, 0.05) 88%,
-            transparent 100%
-          )`,
-        }}
-        aria-hidden
-      />
+      <ShootingStarsHeroBackground />
       <div className="relative z-10 mx-auto flex min-h-[100svh] w-full min-w-0 max-w-5xl flex-col items-center justify-center px-6 pb-28 pt-24 text-center sm:px-10 sm:pb-44 sm:pt-36 md:pb-48 md:pt-40">
         <motion.p
           initial={{ opacity: 0, y: 12 }}

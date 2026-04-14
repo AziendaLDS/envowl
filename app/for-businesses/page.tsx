@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FadeIn } from "@/components/FadeIn";
+import { ShootingStarsHeroBackground } from "@/components/ShootingStarsHeroBackground";
 import { WaitlistCTA } from "@/components/WaitlistCTA";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { PLATFORM_NAME } from "@/lib/constants";
@@ -21,8 +22,9 @@ const pills = [
 export default function ForBusinessesPage() {
   return (
     <>
-      <section className="border-b border-neutral-200 bg-[#0a0a0a] py-16 text-white sm:py-24 md:py-36">
-        <div className="mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
+      <section className="relative overflow-hidden border-b border-neutral-200 bg-[#0a0a0a] py-16 text-white sm:py-24 md:py-36">
+        <ShootingStarsHeroBackground />
+        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
           <FadeIn>
             <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
               AI for your business, without the guesswork.
