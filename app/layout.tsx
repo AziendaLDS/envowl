@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/react";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import {
@@ -79,6 +80,7 @@ export default function RootLayout({
         <Navbar />
         <main className="min-h-[50vh] min-w-0">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
