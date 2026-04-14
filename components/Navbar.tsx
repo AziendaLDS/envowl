@@ -73,7 +73,7 @@ export function Navbar() {
       <div className="mx-auto flex min-h-[3.5rem] max-w-7xl items-center justify-between gap-2 px-6 py-2.5 sm:min-h-[4.5rem] sm:gap-3 sm:px-6 md:px-8 md:py-0">
         <Link
           href="/"
-          className="flex shrink-0 items-center bg-[#F2F2F2]"
+          className="flex shrink-0 items-center self-center"
           onClick={() => setOpen(false)}
         >
           <Image
@@ -81,8 +81,8 @@ export function Navbar() {
             alt="Envowl"
             width={180}
             height={54}
-            className="h-9 w-auto max-h-9 max-w-[180px] object-contain sm:h-10 sm:max-h-10"
-            style={{ objectFit: "contain" }}
+            className="h-12 w-auto max-h-12 max-w-none self-center object-contain bg-transparent [mix-blend-mode:multiply]"
+            style={{ objectFit: "contain", background: "transparent" }}
             priority
             quality={100}
             sizes="(max-width: 768px) 150px, 180px"
