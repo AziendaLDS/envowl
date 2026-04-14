@@ -32,7 +32,6 @@ export function HowItWorks() {
         </FadeIn>
 
         <div className="relative mt-12 grid gap-8 md:mt-14 md:grid-cols-3 md:gap-6">
-          <div className="absolute left-[calc(33.33%+1rem)] right-[calc(33.33%+1rem)] top-8 hidden h-px bg-neutral-200 md:block" />
           {steps.map((step, i) => (
             <FadeIn key={step.number} delay={i * 0.06}>
               <div className="relative flex h-full flex-col gap-4 pr-2">
@@ -41,6 +40,7 @@ export function HowItWorks() {
                     {step.number}
                   </span>
                   <div className="z-10 h-6 w-6 shrink-0 rounded-full border-2 border-accent bg-white" />
+                  <div className="hidden h-px flex-1 bg-neutral-200 md:block" />
                 </div>
                 <h3 className="text-lg font-semibold text-neutral-900">{step.title}</h3>
                 <p className="text-sm leading-relaxed text-neutral-600">{step.body}</p>

@@ -89,7 +89,7 @@ export function CreatorTypes() {
         <div className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
           {types.map((type, i) => (
             <FadeIn key={type.label} delay={i * 0.05}>
-              <div className="group rounded-2xl border border-neutral-200 bg-white p-6 transition-all duration-200 hover:border-accent/30 hover:shadow-sm">
+              <div className="group h-full min-h-[8.75rem] rounded-2xl border border-neutral-200 bg-white p-6 transition-all duration-200 hover:border-accent/30 hover:shadow-sm">
                 <h3 className="mb-1 text-base font-semibold text-neutral-900 transition-colors group-hover:text-accent">
                   {type.label}
                 </h3>

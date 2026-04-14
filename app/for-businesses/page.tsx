@@ -67,7 +67,7 @@ export default function ForBusinessesPage() {
               {PLATFORM_NAME} connects you with someone who&apos;s done this
               before.
             </p>
-            <div className="mt-10 flex flex-wrap gap-3">
+            <div className="mt-10 flex flex-wrap justify-center gap-3">
               {pills.map((p) => (
                 <span
                   key={p}
