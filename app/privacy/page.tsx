@@ -1,10 +1,12 @@
 import { PrivacyPolicy } from "@/components/legal/PrivacyPolicy";
-import { PLATFORM_NAME } from "@/lib/constants";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Privacy Policy",
-  description: `Privacy policy for ${PLATFORM_NAME} (Envowl), operated by LDS Ventures LLC.`,
-};
+  description:
+    "How Envowl collects, uses, and protects your information. Privacy policy for Envowl, operated by LDS Ventures LLC.",
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return <PrivacyPolicy />;

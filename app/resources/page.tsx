@@ -2,12 +2,14 @@ import { Suspense } from "react";
 import { FadeIn } from "@/components/FadeIn";
 import { ResourcesGrid } from "@/components/ResourcesGrid";
 import { ResourcesNewsletter } from "@/components/ResourcesNewsletter";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Resources",
+export const metadata = pageMetadata({
+  title: "AI Resources & Guides",
   description:
-    "Practical guides for businesses, professionals, and anyone keeping up with AI.",
-};
+    "Free guides, videos, and breakdowns for businesses and professionals who want to stay ahead with AI — from Envowl.",
+  path: "/resources",
+});
 
 export default function ResourcesPage() {
   return (

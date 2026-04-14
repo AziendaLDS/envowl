@@ -1,7 +1,9 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articles, getArticleBySlug } from "@/lib/articles";
 import { PLATFORM_NAME } from "@/lib/constants";
+import { pageMetadata } from "@/lib/seo";
 
 type Props = { params: { slug: string } };
 
@@ -9,13 +11,17 @@ export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
 }
 
-export function generateMetadata({ params }: Props) {
+export function generateMetadata({ params }: Props): Metadata {
   const article = getArticleBySlug(params.slug);
-  if (!article) return { title: "Article" };
-  return {
+  if (!article) {
+    return { title: "Article not found" };
+  }
+  return pageMetadata({
     title: article.title,
     description: article.teaser,
-  };
+    path: `/resources/${params.slug}`,
+    ogType: "article",
+  });
 }
 
 export default function ArticlePage({ params }: Props) {

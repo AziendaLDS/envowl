@@ -3,11 +3,14 @@ import { FadeIn } from "@/components/FadeIn";
 import { WaitlistCTA } from "@/components/WaitlistCTA";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { PLATFORM_NAME } from "@/lib/constants";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "For Businesses",
-  description: `Hire vetted AI experts with ${PLATFORM_NAME}.`,
-};
+export const metadata = pageMetadata({
+  title: "Hire Vetted AI Experts for Your Business",
+  description:
+    "Connect with verified AI experts who understand your industry and budget. Envowl helps businesses avoid costly mismatches — join the waitlist.",
+  path: "/for-businesses",
+});
 
 const pills = [
   "Small business owners",

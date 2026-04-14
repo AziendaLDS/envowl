@@ -1,11 +1,14 @@
 import Link from "next/link";
 import { FadeIn } from "@/components/FadeIn";
 import { PLATFORM_NAME, SITE } from "@/lib/constants";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "You are on the list",
-  description: `Thank you for joining the ${PLATFORM_NAME} waitlist.`,
-};
+export const metadata = pageMetadata({
+  title: "You're on the Waitlist",
+  description:
+    "Thank you for joining Envowl. Check your inbox for confirmation and early access updates.",
+  path: "/waitlist-confirmed",
+});
 
 const shareText = encodeURIComponent(
   `I just joined the waitlist for ${PLATFORM_NAME} — vetted AI experts for real projects.`,

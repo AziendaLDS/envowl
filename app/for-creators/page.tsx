@@ -3,11 +3,14 @@ import { FadeIn } from "@/components/FadeIn";
 import { WaitlistCTA } from "@/components/WaitlistCTA";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { PLATFORM_NAME } from "@/lib/constants";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "For Creators",
-  description: `Apply to join the ${PLATFORM_NAME} creator network.`,
-};
+export const metadata = pageMetadata({
+  title: "For AI Creators & Agencies",
+  description:
+    "Join Envowl's vetted creator network. Get qualified leads, a trusted reputation, and tools to close more AI projects — apply to the waitlist.",
+  path: "/for-creators",
+});
 
 const benefits = [
   {

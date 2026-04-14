@@ -5,6 +5,17 @@ import { ProblemSection } from "@/components/ProblemSection";
 import { ResourcesPreview } from "@/components/ResourcesPreview";
 import { WaitlistCTA } from "@/components/WaitlistCTA";
 import { WaitlistForm } from "@/components/WaitlistForm";
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_TITLE,
+  pageMetadata,
+} from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: DEFAULT_TITLE,
+  description: DEFAULT_DESCRIPTION,
+  path: "/",
+});
 
 export default function Home() {
   return (

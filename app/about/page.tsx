@@ -1,10 +1,13 @@
 import Link from "next/link";
 import { PLATFORM_NAME, SITE } from "@/lib/constants";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "About",
-  description: `What we believe — ${PLATFORM_NAME}.`,
-};
+export const metadata = pageMetadata({
+  title: "About Envowl — Trust in AI Talent",
+  description:
+    "Why Envowl exists: trusted introductions between people who need AI help and creators who deliver. Our beliefs, mission, and how we're building the marketplace.",
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (

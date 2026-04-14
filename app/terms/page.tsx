@@ -1,10 +1,12 @@
 import { TermsOfService } from "@/components/legal/TermsOfService";
-import { PLATFORM_NAME } from "@/lib/constants";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Terms of Service",
-  description: `Terms of service for ${PLATFORM_NAME} (Envowl), operated by LDS Ventures LLC.`,
-};
+  description:
+    "Terms governing your use of Envowl's website and services. Operated by LDS Ventures LLC.",
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return <TermsOfService />;

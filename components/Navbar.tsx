@@ -1,8 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { PLATFORM_NAME } from "@/lib/constants";
 
 const links = [
   { href: "/for-creators", label: "For Creators" },
@@ -72,10 +72,17 @@ export function Navbar() {
       <div className="mx-auto flex min-h-[3.5rem] max-w-7xl items-center justify-between gap-2 px-4 py-2.5 sm:min-h-[4.5rem] sm:gap-3 sm:px-6 md:px-8 md:py-0">
         <Link
           href="/"
-          className="shrink-0 text-base font-semibold tracking-tight text-neutral-900 sm:text-lg"
+          className="relative shrink-0 flex h-8 w-[7.5rem] items-center sm:h-9 sm:w-[8.5rem]"
           onClick={() => setOpen(false)}
         >
-          {PLATFORM_NAME}
+          <Image
+            src="/logo.png"
+            alt="Envowl"
+            fill
+            className="object-contain object-left"
+            sizes="(max-width: 768px) 120px, 136px"
+            priority
+          />
         </Link>
 
         <nav
