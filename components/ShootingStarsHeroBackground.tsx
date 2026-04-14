@@ -4,7 +4,18 @@ import { VolcanoBackground } from "@/components/VolcanoBackground";
 
 const NEXT_SECTION_BG = "#F2F2F2";
 
-export function ShootingStarsHeroBackground() {
+type ShootingStarsHeroBackgroundProps = {
+  fadeVariant?: "default" | "lower";
+};
+
+export function ShootingStarsHeroBackground({
+  fadeVariant = "default",
+}: ShootingStarsHeroBackgroundProps) {
+  const fadeHeightClass =
+    fadeVariant === "lower"
+      ? "h-[min(36vh,20rem)] sm:h-[min(34vh,22rem)] md:h-[min(32vh,24rem)]"
+      : "h-[min(52vh,28rem)] sm:h-[min(48vh,30rem)] md:h-[min(42vh,32rem)]";
+
   return (
     <>
       <VolcanoBackground
@@ -18,7 +29,7 @@ export function ShootingStarsHeroBackground() {
         enableEmbers
       />
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-[min(52vh,28rem)] sm:h-[min(48vh,30rem)] md:h-[min(42vh,32rem)]"
+        className={`pointer-events-none absolute inset-x-0 bottom-0 z-[5] ${fadeHeightClass}`}
         style={{
           background: `linear-gradient(to top,
             ${NEXT_SECTION_BG} 0%,
