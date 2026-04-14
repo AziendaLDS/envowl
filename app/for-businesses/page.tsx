@@ -1,4 +1,9 @@
 import Link from "next/link";
+import {
+  HowItWorks,
+  SocialProofStats,
+  UseCaseCategories,
+} from "@/components/ForBusinessSections";
 import { FadeIn } from "@/components/FadeIn";
 import { ShootingStarsHeroBackground } from "@/components/ShootingStarsHeroBackground";
 import { WaitlistCTA } from "@/components/WaitlistCTA";
@@ -74,6 +79,9 @@ export default function ForBusinessesPage() {
         </div>
       </section>
 
+      <HowItWorks />
+      <UseCaseCategories />
+
       <section className="border-b border-neutral-200 bg-[#ebebeb] py-16 sm:py-24 md:py-32">
         <div className="mx-auto max-w-4xl px-6 sm:px-6 md:px-8">
           <FadeIn>
@@ -93,6 +101,7 @@ export default function ForBusinessesPage() {
                 results.
               </p>
             </div>
+            <SocialProofStats />
           </FadeIn>
         </div>
       </section>

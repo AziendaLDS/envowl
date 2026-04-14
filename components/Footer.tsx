@@ -27,6 +27,9 @@ export function Footer() {
               <Link href="/for-businesses" className={linkClass}>
                 For Businesses
               </Link>
+              <Link href="/for-professionals" className={linkClass}>
+                For Professionals
+              </Link>
               <Link href="/for-creators" className={linkClass}>
                 For Creators
               </Link>

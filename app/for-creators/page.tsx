@@ -1,4 +1,9 @@
 import Link from "next/link";
+import {
+  CreatorExperience,
+  CreatorQuote,
+  CreatorTypes,
+} from "@/components/ForCreatorSections";
 import { FadeIn } from "@/components/FadeIn";
 import { ShootingStarsHeroBackground } from "@/components/ShootingStarsHeroBackground";
 import { WaitlistCTA } from "@/components/WaitlistCTA";
@@ -84,6 +89,8 @@ export default function ForCreatorsPage() {
         </div>
       </section>
 
+      <CreatorExperience />
+
       <section className="border-b border-neutral-200 bg-[#ebebeb] py-16 sm:py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6 sm:px-6 md:px-8">
           <FadeIn>
@@ -107,6 +114,9 @@ export default function ForCreatorsPage() {
           </div>
         </div>
       </section>
+
+      <CreatorTypes />
+      <CreatorQuote />
 
       <section className="border-b border-neutral-200 bg-[#F2F2F2] py-16 sm:py-24 md:py-32">
         <div className="mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
