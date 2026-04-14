@@ -14,7 +14,7 @@ export const metadata = pageMetadata({
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#0a0a0a] py-16 text-white sm:py-24 md:py-36">
-      <ShootingStarsHeroBackground fadeVariant="lower" />
+      <ShootingStarsHeroBackground fadeVariant="lower" nextSectionBg="#FFFFFF" />
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
         <FadeIn>
           <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-accent">
