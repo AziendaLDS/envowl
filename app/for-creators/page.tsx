@@ -32,9 +32,9 @@ export default function ForCreatorsPage() {
   return (
     <>
       <section className="border-b border-neutral-200 bg-[#0a0a0a] py-16 text-white sm:py-24 md:py-36">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 md:px-8">
+        <div className="mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
           <FadeIn>
-            <h1 className="text-3xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
+            <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
               Your next client is already looking for you.
             </h1>
             <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/80 sm:mt-8 sm:text-lg md:text-xl">
@@ -57,18 +57,21 @@ export default function ForCreatorsPage() {
       </section>
 
       <section className="border-b border-neutral-200 bg-[#F2F2F2] py-16 sm:py-24 md:py-32">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 md:px-8">
+        <div className="mx-auto max-w-4xl px-6 sm:px-6 md:px-8">
           <FadeIn>
-            <h2 className="text-2xl font-semibold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
-              You&apos;re great at AI. Sales is a different skill.
+            <h2 className="text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
+              You&apos;re great at AI.
+              <br />
+              Sales is a different skill.
             </h2>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-neutral-600 sm:mt-8 sm:space-y-5 sm:text-lg">
               <p>
                 Most AI creators and agencies are light-years ahead of their
-                potential clients. The challenge isn&apos;t the work — it&apos;s
-                finding the people who understand the value of what you do, are
-                ready to invest, and won&apos;t waste your time with scope creep
-                and ghosting.
+                potential clients.
+                <br />
+                The challenge isn&apos;t the work — it&apos;s finding the people
+                who understand the value of what you do, are ready to invest, and
+                won&apos;t waste your time with scope creep and ghosting.
               </p>
               <p className="font-medium text-neutral-800">
                 {PLATFORM_NAME} exists to solve that problem. We build the demand.
@@ -80,9 +83,9 @@ export default function ForCreatorsPage() {
       </section>
 
       <section className="border-b border-neutral-200 bg-[#ebebeb] py-16 sm:py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
+        <div className="mx-auto max-w-7xl px-6 sm:px-6 md:px-8">
           <FadeIn>
-            <h2 className="text-center text-2xl font-semibold text-neutral-900 sm:text-4xl md:text-5xl">
+            <h2 className="text-center text-3xl font-semibold text-neutral-900 sm:text-4xl md:text-5xl">
               What you get
             </h2>
           </FadeIn>
@@ -104,10 +107,12 @@ export default function ForCreatorsPage() {
       </section>
 
       <section className="border-b border-neutral-200 bg-[#F2F2F2] py-16 sm:py-24 md:py-32">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 md:px-8">
+        <div className="mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
           <FadeIn>
-            <h2 className="text-2xl font-semibold text-neutral-900 sm:text-4xl md:text-5xl">
-              We don&apos;t list everyone. That&apos;s the point.
+            <h2 className="text-3xl font-semibold text-neutral-900 sm:text-4xl md:text-5xl">
+              We don&apos;t list everyone.
+              <br />
+              That&apos;s the point.
             </h2>
             <p className="mt-6 text-left text-base leading-relaxed text-neutral-600 sm:mt-8 sm:text-lg">
               To be listed on {PLATFORM_NAME}, creators go through a review

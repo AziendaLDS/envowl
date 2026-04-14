@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -69,10 +70,10 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-200/80 bg-[#F2F2F2]/85 backdrop-blur-md relative">
-      <div className="mx-auto flex min-h-[3.5rem] max-w-7xl items-center justify-between gap-2 px-4 py-2.5 sm:min-h-[4.5rem] sm:gap-3 sm:px-6 md:px-8 md:py-0">
+      <div className="mx-auto flex min-h-[3.5rem] max-w-7xl items-center justify-between gap-2 px-6 py-2.5 sm:min-h-[4.5rem] sm:gap-3 sm:px-6 md:px-8 md:py-0">
         <Link
           href="/"
-          className="relative shrink-0 flex h-8 w-[7.5rem] items-center sm:h-9 sm:w-[8.5rem]"
+          className="relative flex h-8 w-[7.5rem] shrink-0 items-center sm:h-9 sm:w-[8.5rem]"
           onClick={() => setOpen(false)}
         >
           <Image
@@ -128,35 +129,47 @@ export function Navbar() {
         </div>
       </div>
 
-      {open ? (
-        <>
-          <button
-            type="button"
-            className="fixed inset-0 z-40 bg-black/35 md:hidden"
-            aria-hidden
-            tabIndex={-1}
-            onClick={() => setOpen(false)}
-          />
-          <nav
-            id="mobile-menu"
-            className="absolute left-0 right-0 top-full z-50 border-b border-neutral-200 bg-[#F2F2F2] px-4 py-3 shadow-lg md:hidden"
-            aria-label="Mobile"
-          >
-            <div className="mx-auto flex max-w-7xl flex-col gap-0.5">
-              {links.map((l) => (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  className="rounded-lg px-3 py-3.5 text-base font-medium text-neutral-800 active:bg-neutral-200/70"
-                  onClick={() => setOpen(false)}
-                >
-                  {l.label}
-                </Link>
-              ))}
-            </div>
-          </nav>
-        </>
-      ) : null}
+      <AnimatePresence initial={false}>
+        {open ? (
+          <>
+            <motion.button
+              key="nav-backdrop"
+              type="button"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 z-40 bg-black/35 md:hidden"
+              aria-hidden
+              tabIndex={-1}
+              onClick={() => setOpen(false)}
+            />
+            <motion.nav
+              key="mobile-menu"
+              id="mobile-menu"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.22, ease: [0.4, 0, 0.2, 1] }}
+              className="absolute left-0 right-0 top-full z-50 border-b border-neutral-200 bg-[#F2F2F2] shadow-lg md:hidden"
+              aria-label="Mobile"
+            >
+              <div className="mx-auto flex max-w-7xl flex-col gap-0.5 px-6 py-3">
+                {links.map((l) => (
+                  <Link
+                    key={l.href}
+                    href={l.href}
+                    className="rounded-lg px-3 py-3.5 text-base font-medium text-neutral-800 active:bg-neutral-200/70"
+                    onClick={() => setOpen(false)}
+                  >
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            </motion.nav>
+          </>
+        ) : null}
+      </AnimatePresence>
     </header>
   );
 }

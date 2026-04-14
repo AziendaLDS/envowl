@@ -50,7 +50,7 @@ export function ResourcesGrid() {
         onChange={(e) => setQuery(e.target.value)}
         className="w-full min-h-12 rounded-xl border-2 border-neutral-200 bg-white px-4 py-3.5 text-base text-neutral-900 outline-none ring-2 ring-transparent transition placeholder:text-neutral-400 focus:border-accent focus:ring-accent/20 sm:min-h-14 sm:px-5 sm:py-4"
       />
-      <div className="mt-6 flex gap-2 overflow-x-auto pb-2 md:flex-wrap md:overflow-visible">
+      <div className="mt-6 flex max-w-full gap-2 overflow-x-auto overscroll-x-contain pb-2 [-webkit-overflow-scrolling:touch] md:flex-wrap md:overflow-visible">
         {resourceFilters.map((f) => (
           <button
             key={f}

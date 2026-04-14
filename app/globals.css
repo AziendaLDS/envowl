@@ -9,10 +9,16 @@
   --accent-hover: #d63d20;
 }
 
+html {
+  overflow-x: clip;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
+  overflow-x: clip;
+  min-width: 0;
 }
 
 @layer utilities {

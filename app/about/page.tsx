@@ -13,11 +13,11 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white text-black">
       {/* Hero */}
-      <section className="mx-auto max-w-4xl px-4 pb-12 pt-24 sm:px-6 sm:pb-16 sm:pt-32 md:px-8 md:pb-16 md:pt-40 lg:pt-44">
+      <section className="mx-auto max-w-4xl px-6 pb-12 pt-24 sm:px-6 sm:pb-16 sm:pt-32 md:px-8 md:pb-16 md:pt-40 lg:pt-44">
         <p className="mb-4 text-sm uppercase tracking-widest text-neutral-500 sm:mb-6">
           What we believe
         </p>
-        <h1 className="mb-6 text-3xl font-semibold leading-tight sm:mb-8 sm:text-4xl md:text-5xl lg:text-6xl">
+        <h1 className="mb-6 text-3xl font-semibold leading-tight sm:mb-8 sm:text-4xl md:text-5xl lg:text-6xl xl:text-[3.25rem]">
           AI isn&apos;t the great equalizer.
           <br />
           <span className="text-neutral-400">
@@ -27,7 +27,7 @@ export default function AboutPage() {
       </section>
 
       {/* Manifesto body */}
-      <section className="mx-auto max-w-4xl space-y-8 px-4 pb-16 text-neutral-600 sm:space-y-10 sm:px-6 sm:pb-24 md:px-8">
+      <section className="mx-auto max-w-4xl space-y-8 px-6 pb-16 text-neutral-600 sm:space-y-10 sm:px-6 sm:pb-24 md:px-8">
         <p className="text-lg leading-loose lg:text-xl">
           Something strange is happening. The most transformative technology in
           a generation is available to everyone — and most people still
@@ -122,7 +122,7 @@ export default function AboutPage() {
 
       {/* Divider + CTA */}
       <section className="border-t border-neutral-200 bg-neutral-50">
-        <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 md:px-8">
+        <div className="mx-auto max-w-4xl px-6 py-16 sm:px-6 sm:py-24 md:px-8">
           <div className="mb-12 grid grid-cols-1 gap-8 sm:mb-16 md:grid-cols-3 md:gap-8">
             {[
               {

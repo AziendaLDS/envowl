@@ -30,11 +30,11 @@ export default function ArticlePage({ params }: Props) {
 
   return (
     <article className="border-b border-neutral-200 bg-[#F2F2F2] py-16 sm:py-24 md:py-28">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 md:px-8">
+      <div className="mx-auto max-w-3xl px-6 sm:px-6 md:px-8">
         <p className="text-sm font-semibold uppercase tracking-wider text-accent">
           {article.tag}
         </p>
-        <h1 className="mt-4 text-2xl font-semibold tracking-tight text-neutral-900 sm:mt-5 sm:text-4xl md:text-5xl">
+        <h1 className="mt-4 text-3xl font-semibold tracking-tight text-neutral-900 sm:mt-5 sm:text-4xl md:text-5xl">
           {article.title}
         </h1>
         <div className="mt-5 flex flex-wrap gap-3 text-base text-neutral-500">

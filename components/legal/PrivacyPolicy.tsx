@@ -1,12 +1,12 @@
 export function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-[#F2F2F2] text-black">
-      <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24 md:px-10 md:py-40">
+      <div className="mx-auto max-w-4xl px-6 py-16 sm:px-6 sm:py-24 md:px-8 md:py-40">
         <div className="mb-16 sm:mb-24 md:mb-28">
           <p className="mb-4 text-sm font-medium uppercase tracking-widest text-black/55 sm:mb-5 sm:text-base">
             Legal
           </p>
-          <h1 className="mb-4 text-3xl font-semibold tracking-tight text-black sm:mb-5 sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="mb-4 text-3xl font-semibold tracking-tight text-black sm:mb-5 sm:text-4xl md:text-5xl lg:text-6xl">
             Privacy Policy
           </h1>
           <p className="text-base text-black/60 sm:text-lg">

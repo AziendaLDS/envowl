@@ -2,7 +2,7 @@ import { WaitlistForm } from "@/components/WaitlistForm";
 
 export function ResourcesNewsletter() {
   return (
-    <div className="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm sm:p-10">
+    <div className="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm sm:p-10 min-w-0">
       <h3 className="text-xl font-semibold text-neutral-900 sm:text-2xl">
         Get the weekly AI briefing.
       </h3>

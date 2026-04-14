@@ -18,16 +18,16 @@ export function AudienceWaitlist() {
   return (
     <div
       id="audience-waitlist"
-      className="mx-auto mt-12 max-w-xl scroll-mt-24 rounded-3xl border border-neutral-200 bg-white/90 p-5 shadow-sm backdrop-blur-sm sm:mt-16 sm:scroll-mt-28 sm:p-8 md:p-10"
+      className="mx-auto mt-12 w-full min-w-0 max-w-xl scroll-mt-24 rounded-3xl border border-neutral-200 bg-white/90 p-5 shadow-sm backdrop-blur-sm sm:mt-16 sm:scroll-mt-28 sm:p-8 md:p-10"
     >
       <p className="text-center text-base font-medium text-neutral-900">
         Join the waitlist
       </p>
-      <div className="mt-5 flex flex-wrap justify-center gap-2 sm:gap-3">
+      <div className="mt-5 flex w-full flex-col gap-2 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-3">
         <button
           type="button"
           onClick={() => setType("client")}
-          className={`min-h-[44px] rounded-full px-4 py-2 text-sm font-semibold transition sm:px-5 ${
+          className={`min-h-[44px] w-full rounded-full px-4 py-2.5 text-sm font-semibold transition sm:w-auto sm:px-5 ${
             type === "client"
               ? "bg-neutral-900 text-white"
               : "bg-neutral-200/80 text-neutral-600 hover:bg-neutral-200"
@@ -38,7 +38,7 @@ export function AudienceWaitlist() {
         <button
           type="button"
           onClick={() => setType("creator")}
-          className={`min-h-[44px] rounded-full px-4 py-2 text-sm font-semibold transition sm:px-5 ${
+          className={`min-h-[44px] w-full rounded-full px-4 py-2.5 text-sm font-semibold transition sm:w-auto sm:px-5 ${
             type === "creator"
               ? "bg-accent text-white"
               : "bg-neutral-200/80 text-neutral-600 hover:bg-neutral-200"

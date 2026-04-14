@@ -8,7 +8,7 @@ const linkClass =
 export function Footer() {
   return (
     <footer className="border-t border-neutral-200 bg-[#F2F2F2]">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24">
+      <div className="mx-auto max-w-7xl px-6 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24">
         <div className="flex flex-col gap-10 sm:gap-14 lg:flex-row lg:justify-between lg:gap-12">
           <div className="max-w-md shrink-0">
             <p className="text-lg font-semibold text-neutral-900">

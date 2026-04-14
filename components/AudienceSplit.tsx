@@ -7,9 +7,9 @@ import { PLATFORM_NAME } from "@/lib/constants";
 export function AudienceSplit() {
   return (
     <section className="border-b border-neutral-200 bg-[#ebebeb] py-16 sm:py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
+      <div className="mx-auto max-w-7xl px-6 sm:px-6 md:px-8">
         <FadeIn>
-          <h2 className="text-center text-2xl font-semibold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
+          <h2 className="text-center text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
             Who is {PLATFORM_NAME} for?
           </h2>
         </FadeIn>

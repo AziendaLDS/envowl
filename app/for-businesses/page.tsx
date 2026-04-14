@@ -22,9 +22,9 @@ export default function ForBusinessesPage() {
   return (
     <>
       <section className="border-b border-neutral-200 bg-[#0a0a0a] py-16 text-white sm:py-24 md:py-36">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 md:px-8">
+        <div className="mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
           <FadeIn>
-            <h1 className="text-3xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
+            <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
               AI for your business, without the guesswork.
             </h1>
             <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/80 sm:mt-8 sm:text-lg md:text-xl">
@@ -46,9 +46,9 @@ export default function ForBusinessesPage() {
       </section>
 
       <section className="border-b border-neutral-200 bg-[#F2F2F2] py-16 sm:py-24 md:py-32">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 md:px-8">
+        <div className="mx-auto max-w-4xl px-6 sm:px-6 md:px-8">
           <FadeIn>
-            <h2 className="text-2xl font-semibold text-neutral-900 sm:text-4xl md:text-5xl">
+            <h2 className="text-3xl font-semibold text-neutral-900 sm:text-4xl md:text-5xl">
               You don&apos;t need to understand AI. You need results.
             </h2>
             <p className="mt-6 text-base leading-relaxed text-neutral-600 sm:mt-8 sm:text-lg">
@@ -73,9 +73,9 @@ export default function ForBusinessesPage() {
       </section>
 
       <section className="border-b border-neutral-200 bg-[#ebebeb] py-16 sm:py-24 md:py-32">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 md:px-8">
+        <div className="mx-auto max-w-4xl px-6 sm:px-6 md:px-8">
           <FadeIn>
-            <h2 className="text-2xl font-semibold text-neutral-900 sm:text-4xl md:text-5xl">
+            <h2 className="text-3xl font-semibold text-neutral-900 sm:text-4xl md:text-5xl">
               One bad AI experience can set you back months.
             </h2>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-neutral-600 sm:mt-8 sm:space-y-5 sm:text-lg">
@@ -96,9 +96,9 @@ export default function ForBusinessesPage() {
       </section>
 
       <section className="border-b border-neutral-200 bg-[#F2F2F2] py-16 sm:py-24 md:py-32">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 md:px-8">
+        <div className="mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
           <FadeIn>
-            <h2 className="text-2xl font-semibold text-neutral-900 sm:text-4xl md:text-5xl">
+            <h2 className="text-3xl font-semibold text-neutral-900 sm:text-4xl md:text-5xl">
               Not ready to hire yet? Start here.
             </h2>
             <p className="mt-6 text-base leading-relaxed text-neutral-600 sm:mt-8 sm:text-lg">

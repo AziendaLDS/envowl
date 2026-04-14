@@ -71,7 +71,7 @@ export function AudienceSubscribeForm({
   }
 
   return (
-    <div className="w-full max-w-lg">
+    <div className="w-full min-w-0 max-w-lg">
       <form
         key={type}
         onSubmit={onSubmit}

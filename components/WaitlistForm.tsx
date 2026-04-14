@@ -80,7 +80,7 @@ export function WaitlistForm({
   }
 
   return (
-    <div className={className}>
+    <div className={`w-full min-w-0 ${className}`}>
       <form
         onSubmit={onSubmit}
         className="flex w-full max-w-2xl flex-col gap-3 sm:flex-row sm:items-stretch sm:gap-4"

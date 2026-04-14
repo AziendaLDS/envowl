@@ -7,9 +7,9 @@ export function WaitlistCTA({ id = "waitlist" }: { id?: string }) {
       id={id}
       className="scroll-mt-20 border-b border-neutral-900/10 bg-[#0a0a0a] py-16 text-white sm:scroll-mt-24 sm:py-24 md:py-36"
     >
-      <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 md:px-8">
+      <div className="mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
         <FadeIn>
-          <h2 className="text-2xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
             Be first when we launch.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-balance text-base leading-relaxed text-white/75 sm:mt-6 sm:text-lg md:text-xl">

@@ -25,7 +25,7 @@ export default function WaitlistConfirmedPage({ searchParams }: PageProps) {
 
   return (
     <section className="min-h-[70vh] border-b border-neutral-200 bg-[#F2F2F2] py-16 sm:py-24 md:py-32">
-      <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 md:px-8">
+      <div className="mx-auto max-w-5xl px-6 text-center sm:px-6 md:px-8">
         {subscribed ? (
           <FadeIn>
             <div className="mx-auto mb-10 inline-flex items-center gap-4 rounded-full border border-emerald-200 bg-emerald-50 px-6 py-3 text-emerald-900 shadow-sm">
@@ -55,7 +55,7 @@ export default function WaitlistConfirmedPage({ searchParams }: PageProps) {
         ) : null}
 
         <FadeIn delay={subscribed ? 0.06 : 0}>
-          <h1 className="text-3xl font-semibold tracking-tight text-neutral-900 sm:text-5xl md:text-6xl">
+          <h1 className="text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl lg:text-6xl">
             You&apos;re on the list.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-neutral-600 sm:mt-8 sm:text-lg md:text-xl">
@@ -74,7 +74,7 @@ export default function WaitlistConfirmedPage({ searchParams }: PageProps) {
           </p>
         </FadeIn>
 
-        <div className="mt-16 grid gap-6 text-left sm:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-6 text-left sm:grid-cols-3">
           {[
             {
               title: "Read the resources",
@@ -111,7 +111,7 @@ export default function WaitlistConfirmedPage({ searchParams }: PageProps) {
                   {...(card.external
                     ? { target: "_blank", rel: "noopener noreferrer" }
                     : {})}
-                  className="mt-5 inline-flex text-base font-semibold text-accent hover:underline"
+                  className="mt-5 flex w-full min-h-[44px] items-center justify-center rounded-xl bg-neutral-100 px-4 py-3 text-base font-semibold text-accent transition hover:bg-neutral-200/80 sm:inline-flex sm:w-auto sm:bg-transparent sm:px-0 sm:py-0 sm:hover:bg-transparent"
                 >
                   {card.label}
                 </a>

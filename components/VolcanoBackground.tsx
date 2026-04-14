@@ -361,12 +361,12 @@ export function VolcanoBackground({
   return (
     <div
       ref={wrapRef}
-      className={`pointer-events-none absolute inset-0 z-0 overflow-hidden ${className}`}
+      className={`pointer-events-none absolute inset-0 z-0 max-h-full min-h-0 min-w-0 max-w-full overflow-hidden ${className}`}
       aria-hidden
     >
       <canvas
         ref={canvasRef}
-        className="block h-full w-full"
+        className="block h-full max-h-full w-full max-w-full"
       />
     </div>
   );

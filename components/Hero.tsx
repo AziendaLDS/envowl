@@ -9,7 +9,7 @@ const NEXT_SECTION_BG = "#F2F2F2";
 
 export function Hero({ children }: { children: React.ReactNode }) {
   return (
-    <section className="relative min-h-[calc(100svh+min(5rem,8vh))] overflow-hidden border-b-0 text-white">
+    <section className="relative min-h-[calc(100svh+min(5rem,8vh))] w-full min-w-0 overflow-x-clip overflow-hidden border-b-0 text-white">
       <VolcanoBackground
         skyTop="#0f0c29"
         skyBottom="#302b63"
@@ -37,7 +37,7 @@ export function Hero({ children }: { children: React.ReactNode }) {
         }}
         aria-hidden
       />
-      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-5xl flex-col items-center justify-center px-4 pb-32 pt-28 text-center sm:px-10 sm:pb-44 sm:pt-36 md:pb-48 md:pt-40">
+      <div className="relative z-10 mx-auto flex min-h-[100svh] w-full min-w-0 max-w-5xl flex-col items-center justify-center px-6 pb-28 pt-24 text-center sm:px-10 sm:pb-44 sm:pt-36 md:pb-48 md:pt-40">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ export function Hero({ children }: { children: React.ReactNode }) {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.05 }}
-          className="text-balance text-3xl font-semibold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl lg:leading-[1.05]"
+          className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl md:leading-[1.08] lg:text-6xl lg:leading-[1.05] xl:text-7xl"
         >
           Find vetted AI experts. Or become one.
         </motion.h1>
