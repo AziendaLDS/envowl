@@ -69,8 +69,8 @@ export function Navbar() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-neutral-200/80 bg-[#F2F2F2]/85 backdrop-blur-md relative">
-      <div className="mx-auto flex min-h-[3.5rem] max-w-7xl items-center justify-between gap-2 px-6 py-2.5 sm:min-h-[4.5rem] sm:gap-3 sm:px-6 md:px-8 md:py-0">
+    <header className="sticky top-0 z-50 relative overflow-visible border-b border-neutral-200/80 bg-[#F2F2F2]/85 backdrop-blur-md">
+      <div className="mx-auto flex min-h-[4.25rem] max-w-7xl items-center justify-between gap-2 overflow-visible px-6 py-2.5 sm:min-h-[4.75rem] sm:gap-3 sm:px-6 md:px-8 md:py-0">
         <Link
           href="/"
           className="flex shrink-0 items-center self-center"
@@ -79,9 +79,9 @@ export function Navbar() {
           <Image
             src="/logo.png"
             alt="Envowl"
-            width={180}
-            height={54}
-            className="h-12 w-auto max-h-12 max-w-none self-center object-contain bg-transparent [mix-blend-mode:multiply]"
+            width={240}
+            height={72}
+            className="h-[52px] w-auto max-h-[52px] max-w-none self-center object-contain bg-transparent [mix-blend-mode:multiply]"
             style={{ objectFit: "contain", background: "transparent" }}
             priority
             quality={100}
