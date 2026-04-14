@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { FadeIn } from "@/components/FadeIn";
 import { ShootingStarsHeroBackground } from "@/components/ShootingStarsHeroBackground";
-import { WaitlistCTA } from "@/components/WaitlistCTA";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { pageMetadata } from "@/lib/seo";
 
@@ -14,7 +13,7 @@ export const metadata = pageMetadata({
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-neutral-200 bg-[#0a0a0a] py-16 text-white sm:py-24 md:py-36">
+    <section className="relative overflow-hidden bg-[#0a0a0a] py-16 text-white sm:py-24 md:py-36">
       <ShootingStarsHeroBackground fadeVariant="lower" />
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
         <FadeIn>
@@ -27,8 +26,8 @@ function Hero() {
             Get ahead of it.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/80 sm:mt-8 sm:text-lg md:text-xl">
-            You do not need to become an engineer. You need to know enough to lead,
-            not follow, and to make yourself impossible to replace.
+            You don&apos;t need to become an engineer. You need to know enough to
+            lead, not follow, and make yourself impossible to replace.
           </p>
         </FadeIn>
         <FadeIn delay={0.1}>
@@ -51,7 +50,7 @@ function TheFear() {
   const fears = [
     {
       role: "Marketing Manager",
-      fear: "My team can do in 2 hours what used to take 2 weeks. I do not know how to manage that yet.",
+      fear: "My team can do in 2 hours what used to take 2 weeks. I don't know how to manage that yet.",
     },
     {
       role: "Operations Lead",
@@ -63,7 +62,7 @@ function TheFear() {
     },
     {
       role: "Procurement Specialist",
-      fear: "Vendors are pitching AI tools I do not understand. I need to evaluate them with confidence.",
+      fear: "Vendors are pitching AI tools I don't understand. I need to evaluate them with confidence.",
     },
   ];
 
@@ -137,8 +136,8 @@ function WhatYouGet() {
         <div className="mt-10 grid gap-5 sm:mt-14 sm:grid-cols-2">
           {offerings.map((item, i) => (
             <FadeIn key={item.title} delay={i * 0.06}>
-              <div className="group rounded-2xl border border-neutral-200 bg-white p-7 transition-all hover:border-accent/30 hover:shadow-sm">
-                <span className="rounded-full border border-neutral-200 px-3 py-1 text-xs font-medium text-neutral-500">
+              <div className="group flex h-full flex-col rounded-2xl border border-neutral-200 bg-white p-7 transition-all hover:border-accent/30 hover:shadow-sm">
+                <span className="inline-flex min-w-[10.5rem] justify-center rounded-full border border-neutral-200 px-3 py-1 text-xs font-medium text-neutral-500">
                   {item.tag}
                 </span>
                 <h3 className="mb-2 mt-4 text-lg font-semibold text-neutral-900 transition-colors group-hover:text-accent">
@@ -175,12 +174,13 @@ function WhoThisIsFor() {
               Who this is for
             </p>
             <h2 className="mb-6 text-3xl font-semibold leading-tight text-neutral-900 sm:text-4xl md:text-5xl">
-              You do not need to be in tech to benefit from AI.
+              You don&apos;t need to be in tech to benefit from AI.
             </h2>
             <p className="text-base leading-relaxed text-neutral-600">
               Every function is being reshaped by AI. The professionals who
-              understand it, even at a strategic level, will lead the teams that do
-              not. Envowl is built for people in the middle: skilled, experienced,
+              understand it, even at a strategic level, will lead the teams that
+              don&apos;t. Envowl is built for people in the middle: skilled,
+              experienced,
               and ready to level up.
             </p>
           </FadeIn>
@@ -237,7 +237,6 @@ export default function ForProfessionalsPage() {
       <WhatYouGet />
       <WhoThisIsFor />
       <FinalCTA />
-      <WaitlistCTA />
       <div className="bg-[#F2F2F2] py-10 text-center sm:py-12">
         <Link
           href="/"
