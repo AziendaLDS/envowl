@@ -23,7 +23,7 @@ export default function Home() {
       <Hero>
         <WaitlistForm
           defaultType="client"
-          source="hero"
+          source="homepage"
           microcopyTone="onDark"
           microcopy={
             <>

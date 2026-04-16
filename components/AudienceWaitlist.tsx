@@ -50,7 +50,7 @@ export function AudienceWaitlist() {
       <div className="mt-8">
         <AudienceSubscribeForm
           type={type}
-          source={`audience-${type}`}
+          source={`homepage-audience-${type}`}
           buttonLabel={
             type === "client" ? "Join as a Client" : "Apply as a Creator"
           }

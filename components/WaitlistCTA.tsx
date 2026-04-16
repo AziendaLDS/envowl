@@ -21,7 +21,7 @@ export function WaitlistCTA({ id = "waitlist" }: { id?: string }) {
           <div className="mx-auto mt-10 flex w-full max-w-2xl justify-center sm:mt-14">
             <WaitlistForm
               defaultType="client"
-              source="bottom-cta"
+              source="homepage-bottom-cta"
               microcopyTone="onDark"
               microcopy={
                 <>

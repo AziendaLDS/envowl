@@ -1,12 +1,12 @@
 "use client";
 
 import type { FormEvent, ReactNode } from "react";
-import { useRouter } from "next/navigation";
 import { useState } from "react";
 import {
   SUBSCRIBE_BUTTON_CLASS,
   SUBSCRIBE_INPUT_CLASS,
 } from "@/lib/subscribe-classes";
+import { submitToWaitlist } from "@/lib/waitlist";
 
 export function WaitlistForm({
   defaultType = "client",
@@ -24,56 +24,37 @@ export function WaitlistForm({
   className?: string;
   microcopyTone?: "default" | "onDark";
 }) {
-  const router = useRouter();
   const [error, setError] = useState<string | null>(null);
   const [pending, setPending] = useState(false);
+  const [email, setEmail] = useState("");
+  const [success, setSuccess] = useState(false);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (success) return;
     setError(null);
     const form = e.currentTarget;
     const fd = new FormData(form);
-    const email = String(fd.get("email") ?? "").trim();
+    const emailValue = String(fd.get("email") ?? "").trim();
     const type = fd.get("type") === "creator" ? "creator" : "client";
     const src = String(fd.get("source") ?? source);
-    const successRedirect = String(
-      fd.get("success_redirect") ?? "/waitlist-confirmed",
-    );
 
     setPending(true);
     try {
-      const res = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email,
-          type,
-          source: src,
-        }),
+      const result = await submitToWaitlist({
+        email: emailValue,
+        role: type,
+        source: src,
       });
 
-      let data: { error?: string } = {};
-      try {
-        data = (await res.json()) as { error?: string };
-      } catch {
-        /* non-JSON */
-      }
-
-      if (!res.ok) {
-        setError(
-          typeof data.error === "string" && data.error
-            ? data.error
-            : "Something went wrong. Please try again.",
-        );
+      if (!result.success) {
+        setError(result.message);
         return;
       }
-
-      const dest = successRedirect.startsWith("/")
-        ? successRedirect
-        : "/waitlist-confirmed";
-      router.push(`${dest}?subscribed=1`);
+      setEmail("");
+      setSuccess(true);
     } catch {
-      setError("Network error. Please try again.");
+      setError("Something went wrong. Try again.");
     } finally {
       setPending(false);
     }
@@ -96,17 +77,14 @@ export function WaitlistForm({
           autoComplete="email"
           placeholder="Enter your email"
           className={SUBSCRIBE_INPUT_CLASS}
-          disabled={pending}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          disabled={pending || success}
         />
         <input type="hidden" name="type" value={defaultType} />
         <input type="hidden" name="source" value={source} />
-        <input
-          type="hidden"
-          name="success_redirect"
-          value="/waitlist-confirmed"
-        />
-        <button type="submit" className={SUBSCRIBE_BUTTON_CLASS} disabled={pending}>
-          {pending ? "Please wait…" : buttonLabel}
+        <button type="submit" className={SUBSCRIBE_BUTTON_CLASS} disabled={pending || success}>
+          {pending ? "Joining..." : success ? "You're in ✓" : buttonLabel}
         </button>
       </form>
       {error ? (
