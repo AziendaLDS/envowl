@@ -6,7 +6,6 @@ import {
   SUBSCRIBE_BUTTON_CLASS,
   SUBSCRIBE_INPUT_CLASS,
 } from "@/lib/subscribe-classes";
-import { submitToWaitlist } from "@/lib/waitlist";
 
 export function WaitlistForm({
   defaultType = "client",
@@ -41,14 +40,19 @@ export function WaitlistForm({
 
     setPending(true);
     try {
-      const result = await submitToWaitlist({
-        email: emailValue,
-        role: type,
-        source: src,
+      const response = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: emailValue,
+          role: type,
+          source: src,
+        }),
       });
+      const result = (await response.json()) as { success?: boolean; message?: string };
 
       if (!result.success) {
-        setError(result.message);
+        setError(result.message ?? "Something went wrong. Try again.");
         return;
       }
       setEmail("");
