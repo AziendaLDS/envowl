@@ -21,7 +21,8 @@ export async function submitToWaitlist({ email, role, source }: WaitlistEntry) {
     if (!beehiivApiKey) {
       console.warn("Beehiiv API key is missing. Skipping Beehiiv subscription.");
     } else {
-      const response = await fetch(
+      console.log("Attempting Beehiiv submission for: " + email);
+      const beehiivRes = await fetch(
         "https://api.beehiiv.com/v2/publications/pub_efd97886-adbd-48b8-b1a6-8a202556d5c7/subscriptions",
         {
           method: "POST",
@@ -37,15 +38,12 @@ export async function submitToWaitlist({ email, role, source }: WaitlistEntry) {
           }),
         }
       );
+      const beehiivBody = await beehiivRes.json();
+      console.log("Beehiiv status:", beehiivRes.status);
+      console.log("Beehiiv response:", JSON.stringify(beehiivBody));
 
-      if (!response.ok) {
-        let errorDetails = "";
-        try {
-          errorDetails = await response.text();
-        } catch {
-          errorDetails = "Unable to read Beehiiv error response.";
-        }
-        console.error("Beehiiv subscription failed:", response.status, errorDetails);
+      if (!beehiivRes.ok) {
+        console.error("Beehiiv subscription failed:", beehiivRes.status, JSON.stringify(beehiivBody));
       }
     }
   } catch (error) {
