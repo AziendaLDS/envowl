@@ -8,8 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "content:articles": "node scripts/build-articles-from-md.mjs",
-    "content:social": "node scripts/extract-social-content.mjs"
+    "content:articles": "node scripts/build-articles-from-md.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.103.3",
