@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SocialIcons } from "@/components/SocialIcons";
 import { PLATFORM_NAME, SITE } from "@/lib/constants";
 
@@ -11,9 +12,15 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24">
         <div className="flex flex-col gap-10 sm:gap-14 lg:flex-row lg:justify-between lg:gap-12">
           <div className="max-w-md shrink-0">
-            <p className="text-lg font-semibold text-neutral-900">
-              {PLATFORM_NAME}
-            </p>
+            <Link href="/" className="inline-flex items-center">
+              <Image
+                src="/logo.png"
+                alt="Envowl"
+                width={220}
+                height={66}
+                className="h-11 w-auto object-contain"
+              />
+            </Link>
             <p className="mt-3 max-w-md text-base leading-relaxed text-neutral-600">
               {PLATFORM_NAME} — Where AI expertise meets real-world problems.
             </p>

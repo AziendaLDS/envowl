@@ -82,7 +82,7 @@ export function Navbar() {
             alt="Envowl"
             width={240}
             height={72}
-            className="h-[52px] w-auto max-h-[52px] max-w-none self-center object-contain bg-transparent [mix-blend-mode:multiply]"
+            className="h-[52px] w-auto max-h-[52px] max-w-none self-center object-contain bg-transparent"
             style={{ objectFit: "contain", background: "transparent" }}
             priority
             quality={100}
