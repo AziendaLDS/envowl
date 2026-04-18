@@ -70,13 +70,14 @@ export function ArticleBlocks({ blocks }: { blocks: ArticleBlock[] }) {
           return (
             <figure
               key={i}
-              className="relative mb-10 aspect-[21/9] w-full overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-900 shadow-sm sm:mb-12"
+              className="mb-10 flex w-full justify-center overflow-hidden rounded-2xl border border-neutral-200 bg-[#000b1a] shadow-sm sm:mb-12"
             >
               <Image
                 src={block.src}
                 alt={block.alt}
-                fill
-                className="object-cover object-center"
+                width={block.width}
+                height={block.height}
+                className="h-auto max-h-[min(62svh,571px)] w-auto max-w-full object-contain"
                 sizes="(max-width: 768px) 100vw, 768px"
                 priority={i === 0}
               />

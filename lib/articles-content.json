@@ -908,11 +908,14 @@
     "teaser": "A practical under-30-minute foundation in Claude Code: the interface, the WAT framework, better prompting, MCP servers, skills, and a live workflow build with Nate Herk.",
     "readTime": "28 min watch",
     "date": "Apr 18, 2026",
+    "curatedLine": "Curated from Nate Herk · Tools & Tutorials",
     "blocks": [
       {
         "type": "banner",
         "src": "/resources/master-claude-code-automation-hero.png",
-        "alt": "AI automation workflows graphic with a glowing brain and workflow labels: input, process, automate, output"
+        "alt": "AI automation workflows graphic with a glowing brain and workflow labels: input, process, automate, output",
+        "width": 1024,
+        "height": 571
       },
       {
         "type": "p",

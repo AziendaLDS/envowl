@@ -7,7 +7,7 @@ export type ArticleBlock =
   | { type: "ul"; items: string[] }
   | { type: "ol"; items: string[] }
   | { type: "pre"; text: string; lang?: string }
-  | { type: "banner"; src: string; alt: string };
+  | { type: "banner"; src: string; alt: string; width: number; height: number };
 
 export type Article = {
   slug: string;
@@ -16,6 +16,8 @@ export type Article = {
   teaser: string;
   readTime: string;
   date: string;
+  /** Optional line under read time / date (e.g. curated video attribution). */
+  curatedLine?: string;
   blocks: ArticleBlock[];
 };
 

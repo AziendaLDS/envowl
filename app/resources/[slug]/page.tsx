@@ -43,6 +43,9 @@ export default function ArticlePage({ params }: Props) {
           <span aria-hidden>·</span>
           <span>{article.date}</span>
         </div>
+        {article.curatedLine ? (
+          <p className="mt-3 text-sm text-neutral-500">{article.curatedLine}</p>
+        ) : null}
         <div className="mt-12">
           <ArticleBlocks blocks={article.blocks} />
         </div>
