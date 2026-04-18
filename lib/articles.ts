@@ -6,7 +6,8 @@ export type ArticleBlock =
   | { type: "h3"; text: string }
   | { type: "ul"; items: string[] }
   | { type: "ol"; items: string[] }
-  | { type: "pre"; text: string; lang?: string };
+  | { type: "pre"; text: string; lang?: string }
+  | { type: "banner"; src: string; alt: string };
 
 export type Article = {
   slug: string;

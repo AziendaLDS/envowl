@@ -900,5 +900,56 @@
         "text": "That's it. You don't need to read every article. You need to take small, consistent actions."
       }
     ]
+  },
+  {
+    "slug": "master-claude-code-automation",
+    "tag": "Tools & Tutorials",
+    "title": "How to Master Claude Code for AI Automation",
+    "teaser": "A practical under-30-minute foundation in Claude Code: the interface, the WAT framework, better prompting, MCP servers, skills, and a live workflow build with Nate Herk.",
+    "readTime": "28 min watch",
+    "date": "Apr 18, 2026",
+    "blocks": [
+      {
+        "type": "banner",
+        "src": "/resources/master-claude-code-automation-hero.png",
+        "alt": "AI automation workflows graphic with a glowing brain and workflow labels: input, process, automate, output"
+      },
+      {
+        "type": "p",
+        "text": "**If you're building AI automations and you haven't touched Claude Code yet, this is where to start.**"
+      },
+      {
+        "type": "p",
+        "text": "Nate Herk's tutorial cuts through the noise and gives you a working foundation in under 30 minutes. He covers the actual interface, a framework called WAT that structures how you approach every automation build, how to communicate with Claude Code so it asks the right questions before it starts building, MCP servers and Claude skills which are the features that separate casual users from people getting real results, and a live workflow build so you can see everything in context."
+      },
+      {
+        "type": "p",
+        "text": "It's built for beginners but it's not dumbed down. If you've been putting off learning Claude Code because it felt intimidating, this removes that excuse."
+      },
+      {
+        "type": "p",
+        "text": "**Who this is for:**"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "AI creators and freelancers looking to accelerate their workflow builds",
+          "Professionals who want to understand what Claude Code actually does before they hire someone who uses it"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "**Watch it here:** [Nate Herk's tutorial on YouTube](https://youtu.be/zKBPwDpBfhs?si=QXdjZsWWLRzoZBj6)"
+      },
+      {
+        "type": "p",
+        "text": "Originally published by Nate Herk on YouTube. Check out his channel for more AI automation tutorials.",
+        "italic": true
+      },
+      {
+        "type": "p",
+        "text": "**The Envowl take:** Tools like Claude Code are widening the gap between AI creators who deliver fast and those who don't. If you're hiring an AI freelancer in 2026, asking whether they use Claude Code in their workflow is a reasonable qualifier. If they don't know what it is, that tells you something."
+      }
+    ]
   }
 ]

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { ArticleBlock } from "@/lib/articles";
 
@@ -65,6 +66,23 @@ export function ArticleBlocks({ blocks }: { blocks: ArticleBlock[] }) {
   return (
     <>
       {blocks.map((block, i) => {
+        if (block.type === "banner") {
+          return (
+            <figure
+              key={i}
+              className="relative mb-10 aspect-[21/9] w-full overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-900 shadow-sm sm:mb-12"
+            >
+              <Image
+                src={block.src}
+                alt={block.alt}
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 768px) 100vw, 768px"
+                priority={i === 0}
+              />
+            </figure>
+          );
+        }
         if (block.type === "p") {
           const className = `mb-5 text-base leading-relaxed text-neutral-600 last:mb-0 sm:mb-6 sm:text-lg${
             block.italic ? " italic" : ""
