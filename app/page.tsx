@@ -5,7 +5,6 @@ import { ProblemSection } from "@/components/ProblemSection";
 import { ResourcesPreview } from "@/components/ResourcesPreview";
 import { WaitlistCTA } from "@/components/WaitlistCTA";
 import { WaitlistForm } from "@/components/WaitlistForm";
-import { WAITLIST_MICROCOPY_SHORT } from "@/lib/constants";
 import {
   DEFAULT_DESCRIPTION,
   DEFAULT_TITLE,
@@ -22,12 +21,7 @@ export default function Home() {
   return (
     <>
       <Hero>
-        <WaitlistForm
-          defaultType="client"
-          source="homepage"
-          microcopyTone="onDark"
-          microcopy={<>{WAITLIST_MICROCOPY_SHORT}</>}
-        />
+        <WaitlistForm defaultType="client" source="homepage" />
       </Hero>
       <ProblemSection />
       <HowItWorks />

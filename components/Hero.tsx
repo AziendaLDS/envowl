@@ -47,9 +47,11 @@ export function Hero({ children }: { children: React.ReactNode }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.35 }}
-          className="mt-12 max-w-3xl text-center text-sm font-medium leading-snug text-white sm:mt-20 sm:text-base md:text-lg"
+          className="mt-12 flex w-full max-w-3xl justify-center sm:mt-20"
         >
-          {WAITLIST_MICROCOPY_SHORT}
+          <span className="inline-block rounded-2xl bg-white px-5 py-3 text-center text-sm font-medium leading-snug text-neutral-900 shadow-sm sm:text-base md:text-lg">
+            {WAITLIST_MICROCOPY_SHORT}
+          </span>
         </motion.p>
       </div>
     </section>

@@ -13,7 +13,7 @@ export function WaitlistForm({
   buttonLabel = "Join the Waitlist",
   microcopy,
   className = "",
-  /** Use `onDark` when the form sits on a dark section (microcopy stays light). */
+  /** `onDark` = light text on dark sections. `hero` = centered black copy on a light pill (dark heroes). */
   microcopyTone = "default",
 }: {
   defaultType?: "client" | "creator";
@@ -21,7 +21,7 @@ export function WaitlistForm({
   buttonLabel?: string;
   microcopy?: ReactNode;
   className?: string;
-  microcopyTone?: "default" | "onDark";
+  microcopyTone?: "default" | "onDark" | "hero";
 }) {
   const [error, setError] = useState<string | null>(null);
   const [pending, setPending] = useState(false);
@@ -93,7 +93,7 @@ export function WaitlistForm({
       </form>
       {error ? (
         <p
-          className={`mt-3 text-center text-sm sm:text-left ${
+          className={`mt-3 text-center text-sm ${
             microcopyTone === "onDark" ? "text-red-300" : "text-red-600"
           }`}
           role="alert"
@@ -103,10 +103,12 @@ export function WaitlistForm({
       ) : null}
       {microcopy ? (
         <p
-          className={`mt-4 text-center text-base sm:text-left ${
-            microcopyTone === "onDark"
-              ? "text-white/70"
-              : "text-neutral-600"
+          className={`mt-4 text-center text-base ${
+            microcopyTone === "hero"
+              ? "mx-auto max-w-lg rounded-2xl bg-white px-5 py-3 text-sm font-medium text-neutral-900 shadow-sm sm:text-base"
+              : microcopyTone === "onDark"
+                ? "text-white/70"
+                : "text-neutral-600"
           }`}
         >
           {microcopy}

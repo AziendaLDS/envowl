@@ -57,7 +57,7 @@ export function AudienceWaitlist() {
           }
         />
       </div>
-      <p className="mt-4 text-center text-base text-neutral-600 sm:text-left">
+      <p className="mt-4 text-center text-base text-neutral-600">
         {WAITLIST_MICROCOPY_SHORT}
       </p>
     </div>
