@@ -3,11 +3,11 @@ export const PLATFORM_NAME =
 
 export const SITE = {
   contactEmail: "envowlsupport@gmail.com",
-  linkedin: "https://www.linkedin.com",
+  linkedin: "https://www.linkedin.com/company/envowl/",
   twitter: "https://x.com/envowl",
   instagram: "https://www.instagram.com/envowl/",
   tiktok: "https://www.tiktok.com/@envowl",
-  facebook: "https://www.facebook.com",
+  facebook: "https://www.facebook.com/profile.php?id=61572078663152",
   youtube: "https://www.youtube.com/@envowl",
   reddit: "https://www.reddit.com/user/envowl/",
 } as const;
