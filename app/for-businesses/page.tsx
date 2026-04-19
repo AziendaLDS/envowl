@@ -46,7 +46,7 @@ export default function ForBusinessesPage() {
               <WaitlistForm
                 defaultType="client"
                 source="for-businesses-hero"
-                microcopyTone="hero"
+                microcopyTone="onDark"
                 buttonLabel="Join the Waitlist"
                 microcopy={WAITLIST_MICROCOPY_SHORT}
               />

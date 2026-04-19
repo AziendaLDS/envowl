@@ -13,15 +13,18 @@ export function WaitlistForm({
   buttonLabel = "Join the Waitlist",
   microcopy,
   className = "",
-  /** `onDark` = light text on dark sections. `hero` = centered black copy on a light pill (dark heroes). */
+  /** `onDark` = light text on dark sections (no background box). */
   microcopyTone = "default",
+  /** Tighter gap between the email row and microcopy (e.g. homepage hero). */
+  microcopySpacing = "default",
 }: {
   defaultType?: "client" | "creator";
   source?: string;
   buttonLabel?: string;
   microcopy?: ReactNode;
   className?: string;
-  microcopyTone?: "default" | "onDark" | "hero";
+  microcopyTone?: "default" | "onDark";
+  microcopySpacing?: "default" | "tight";
 }) {
   const [error, setError] = useState<string | null>(null);
   const [pending, setPending] = useState(false);
@@ -103,12 +106,12 @@ export function WaitlistForm({
       ) : null}
       {microcopy ? (
         <p
-          className={`mt-4 text-center text-base ${
-            microcopyTone === "hero"
-              ? "mx-auto max-w-lg rounded-2xl bg-white px-5 py-3 text-sm font-medium text-neutral-900 shadow-sm sm:text-base"
-              : microcopyTone === "onDark"
-                ? "text-white/70"
-                : "text-neutral-600"
+          className={`text-center text-sm font-medium leading-snug sm:text-base ${
+            microcopySpacing === "tight" ? "mt-2.5" : "mt-4"
+          } ${
+            microcopyTone === "onDark"
+              ? "text-white/75"
+              : "text-neutral-600"
           }`}
         >
           {microcopy}

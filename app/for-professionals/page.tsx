@@ -36,7 +36,7 @@ function Hero() {
             <WaitlistForm
               defaultType="client"
               source="for-professionals-hero"
-              microcopyTone="hero"
+              microcopyTone="onDark"
               buttonLabel="Join the Waitlist"
               microcopy={WAITLIST_MICROCOPY_SHORT}
             />

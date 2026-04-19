@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ShootingStarsHeroBackground } from "@/components/ShootingStarsHeroBackground";
-import { PLATFORM_NAME, WAITLIST_MICROCOPY_SHORT } from "@/lib/constants";
+import { PLATFORM_NAME } from "@/lib/constants";
 
 export function Hero({ children }: { children: React.ReactNode }) {
   return (
@@ -43,16 +43,6 @@ export function Hero({ children }: { children: React.ReactNode }) {
         >
           {children}
         </motion.div>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.35 }}
-          className="mt-12 flex w-full max-w-3xl justify-center sm:mt-20"
-        >
-          <span className="inline-block rounded-2xl bg-white px-5 py-3 text-center text-sm font-medium leading-snug text-neutral-900 shadow-sm sm:text-base md:text-lg">
-            {WAITLIST_MICROCOPY_SHORT}
-          </span>
-        </motion.p>
       </div>
     </section>
   );
