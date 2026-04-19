@@ -1,5 +1,6 @@
 import { FadeIn } from "@/components/FadeIn";
 import { WaitlistForm } from "@/components/WaitlistForm";
+import { WAITLIST_MICROCOPY_SHORT } from "@/lib/constants";
 
 export function WaitlistCTA({ id = "waitlist" }: { id?: string }) {
   return (
@@ -23,11 +24,7 @@ export function WaitlistCTA({ id = "waitlist" }: { id?: string }) {
               defaultType="client"
               source="homepage-bottom-cta"
               microcopyTone="onDark"
-              microcopy={
-                <>
-                  Already 500+ people signed up. Unsubscribe anytime.
-                </>
-              }
+              microcopy={<>{WAITLIST_MICROCOPY_SHORT}</>}
             />
           </div>
         </FadeIn>

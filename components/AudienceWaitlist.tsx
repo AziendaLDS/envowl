@@ -3,6 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AudienceSubscribeForm } from "@/components/AudienceSubscribeForm";
+import { WAITLIST_MICROCOPY_SHORT } from "@/lib/constants";
 
 export function AudienceWaitlist() {
   const searchParams = useSearchParams();
@@ -57,7 +58,7 @@ export function AudienceWaitlist() {
         />
       </div>
       <p className="mt-4 text-center text-base text-neutral-600 sm:text-left">
-        Free to join. No spam.
+        {WAITLIST_MICROCOPY_SHORT}
       </p>
     </div>
   );

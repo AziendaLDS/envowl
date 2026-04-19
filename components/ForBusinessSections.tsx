@@ -112,7 +112,7 @@ export function UseCaseCategories() {
 
 export function SocialProofStats() {
   const stats = [
-    { value: "500+", label: "Waitlist members" },
+    { value: "Free", label: "To join" },
     { value: "100%", label: "Manually vetted creators" },
     { value: "$0", label: "To browse and compare" },
   ];

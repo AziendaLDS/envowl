@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FadeIn } from "@/components/FadeIn";
 import { ShootingStarsHeroBackground } from "@/components/ShootingStarsHeroBackground";
 import { WaitlistForm } from "@/components/WaitlistForm";
+import { WAITLIST_MICROCOPY_SHORT } from "@/lib/constants";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -37,7 +38,7 @@ function Hero() {
               source="for-professionals-hero"
               microcopyTone="onDark"
               buttonLabel="Join the Waitlist"
-              microcopy="Already 500+ professionals signed up."
+              microcopy={WAITLIST_MICROCOPY_SHORT}
             />
           </div>
         </FadeIn>
@@ -221,7 +222,7 @@ function FinalCTA() {
             source="for-professionals-cta"
             microcopyTone="onDark"
             buttonLabel="Join the Waitlist"
-            microcopy="Already 500+ people signed up. Unsubscribe anytime."
+            microcopy={WAITLIST_MICROCOPY_SHORT}
           />
         </FadeIn>
       </div>

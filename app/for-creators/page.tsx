@@ -6,7 +6,7 @@ import {
 import { FadeIn } from "@/components/FadeIn";
 import { ShootingStarsHeroBackground } from "@/components/ShootingStarsHeroBackground";
 import { WaitlistForm } from "@/components/WaitlistForm";
-import { PLATFORM_NAME } from "@/lib/constants";
+import { PLATFORM_NAME, WAITLIST_MICROCOPY_SHORT } from "@/lib/constants";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -58,6 +58,7 @@ export default function ForCreatorsPage() {
                 source="for-creators-hero"
                 microcopyTone="onDark"
                 buttonLabel="Apply to Join the Creator Waitlist"
+                microcopy={WAITLIST_MICROCOPY_SHORT}
               />
             </div>
           </FadeIn>
@@ -140,6 +141,7 @@ export default function ForCreatorsPage() {
                 defaultType="creator"
                 source="for-creators-vetting"
                 buttonLabel="Start Your Application"
+                microcopy={WAITLIST_MICROCOPY_SHORT}
               />
             </div>
           </FadeIn>

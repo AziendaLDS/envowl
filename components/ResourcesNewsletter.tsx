@@ -1,4 +1,5 @@
 import { WaitlistForm } from "@/components/WaitlistForm";
+import { WAITLIST_MICROCOPY_SHORT } from "@/lib/constants";
 
 export function ResourcesNewsletter() {
   return (
@@ -15,6 +16,7 @@ export function ResourcesNewsletter() {
           defaultType="client"
           source="resources-newsletter"
           buttonLabel="Subscribe"
+          microcopy={WAITLIST_MICROCOPY_SHORT}
         />
       </div>
     </div>

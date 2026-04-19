@@ -7,7 +7,7 @@ import {
 import { FadeIn } from "@/components/FadeIn";
 import { ShootingStarsHeroBackground } from "@/components/ShootingStarsHeroBackground";
 import { WaitlistForm } from "@/components/WaitlistForm";
-import { PLATFORM_NAME } from "@/lib/constants";
+import { PLATFORM_NAME, WAITLIST_MICROCOPY_SHORT } from "@/lib/constants";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -48,6 +48,7 @@ export default function ForBusinessesPage() {
                 source="for-businesses-hero"
                 microcopyTone="onDark"
                 buttonLabel="Join the Waitlist"
+                microcopy={WAITLIST_MICROCOPY_SHORT}
               />
             </div>
           </FadeIn>

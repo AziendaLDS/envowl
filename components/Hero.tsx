@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ShootingStarsHeroBackground } from "@/components/ShootingStarsHeroBackground";
-import { PLATFORM_NAME } from "@/lib/constants";
+import { PLATFORM_NAME, WAITLIST_MICROCOPY_SHORT } from "@/lib/constants";
 
 export function Hero({ children }: { children: React.ReactNode }) {
   return (
@@ -43,24 +43,14 @@ export function Hero({ children }: { children: React.ReactNode }) {
         >
           {children}
         </motion.div>
-        <motion.div
+        <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.35 }}
-          className="mt-12 grid w-full max-w-3xl grid-cols-1 gap-6 sm:mt-20 sm:grid-cols-3 sm:gap-6"
+          className="mt-12 max-w-3xl text-center text-sm font-medium leading-snug text-white sm:mt-20 sm:text-base md:text-lg"
         >
-          {[
-            { label: "500+ AI creators applying", k: "a" },
-            { label: "2,400 people on the waitlist", k: "b" },
-            { label: "Launching Q3 2026", k: "c" },
-          ].map((s) => (
-            <div key={s.k} className="text-center sm:text-left">
-              <p className="text-sm font-medium leading-snug text-white sm:text-base md:text-lg">
-                {s.label}
-              </p>
-            </div>
-          ))}
-        </motion.div>
+          {WAITLIST_MICROCOPY_SHORT}
+        </motion.p>
       </div>
     </section>
   );
