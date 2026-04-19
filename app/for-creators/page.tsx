@@ -56,7 +56,7 @@ export default function ForCreatorsPage() {
               <WaitlistForm
                 defaultType="creator"
                 source="for-creators-hero"
-                microcopyTone="onDark"
+                microcopyTone="hero"
                 buttonLabel="Apply to Join the Creator Waitlist"
                 microcopy={WAITLIST_MICROCOPY_SHORT}
               />
