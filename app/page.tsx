@@ -25,7 +25,7 @@ export default function Home() {
         <WaitlistForm
           defaultType="client"
           source="homepage"
-          microcopyTone="hero"
+          microcopyTone="onDark"
           microcopySpacing="tight"
           microcopy={WAITLIST_MICROCOPY_SHORT}
         />
