@@ -21,6 +21,8 @@ const files = [
   { path: () => resolveMd("article-4-operations.md"), mode: "single" },
   { path: () => resolveMd("article-5-prompting.md"), mode: "single" },
   { path: () => resolveMd("article-6-trends.md"), mode: "single" },
+  { path: () => resolveMd("article-7-openclaw.md"), mode: "single" },
+  { path: () => resolveMd("article-8-gold-rush.md"), mode: "single" },
 ];
 
 function parseMetaLine(line) {
@@ -257,8 +259,8 @@ function main() {
       all.push(parseSingle(raw));
     }
   }
-  if (all.length !== 6) {
-    console.error("Expected 6 articles, got", all.length);
+  if (all.length !== 8) {
+    console.error("Expected 8 articles, got", all.length);
     process.exit(1);
   }
   const outPath = path.join(__dirname, "../lib/articles-content.json");
