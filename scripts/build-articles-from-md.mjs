@@ -260,10 +260,17 @@ function main() {
     }
   }
   if (all.length !== 8) {
-    console.error("Expected 8 articles, got", all.length);
+    console.error("Expected 8 generated articles, got", all.length);
     process.exit(1);
   }
   const outPath = path.join(__dirname, "../lib/articles-content.json");
+  if (fs.existsSync(outPath)) {
+    const existing = JSON.parse(fs.readFileSync(outPath, "utf8"));
+    const preserved = existing.filter(
+      (a) => a && a.curatedLine && !all.some((n) => n.slug === a.slug),
+    );
+    all.push(...preserved);
+  }
   fs.writeFileSync(outPath, JSON.stringify(all, null, 2), "utf8");
   console.log("Wrote", outPath);
 }

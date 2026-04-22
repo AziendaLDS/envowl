@@ -25,7 +25,7 @@
       },
       {
         "type": "p",
-        "text": "Most trade businesses lose jobs not because their price was wrong but because they didn't follow up fast enough. A homeowner gets three quotes, the first one to respond wins — and most contractors are too busy on the job to respond quickly."
+        "text": "Most trade businesses lose jobs not because their price was wrong but because they didn't follow up fast enough. A homeowner gets three quotes, the first one to respond wins \u2014 and most contractors are too busy on the job to respond quickly."
       },
       {
         "type": "p",
@@ -33,7 +33,7 @@
       },
       {
         "type": "p",
-        "text": "Tools like automated text and email sequences can follow up with every estimate automatically — 24 hours after sending, then again at 72 hours, then once more at a week. You set it up once. It runs forever. The average trade business that implements this recovers 15-20% of estimates that would have otherwise gone cold."
+        "text": "Tools like automated text and email sequences can follow up with every estimate automatically \u2014 24 hours after sending, then again at 72 hours, then once more at a week. You set it up once. It runs forever. The average trade business that implements this recovers 15-20% of estimates that would have otherwise gone cold."
       },
       {
         "type": "p",
@@ -49,7 +49,7 @@
       },
       {
         "type": "p",
-        "text": "Every trade business owner answers these questions dozens of times a week — by text, by phone, by email, through their website contact form. It's the same ten questions on rotation."
+        "text": "Every trade business owner answers these questions dozens of times a week \u2014 by text, by phone, by email, through their website contact form. It's the same ten questions on rotation."
       },
       {
         "type": "p",
@@ -57,7 +57,7 @@
       },
       {
         "type": "p",
-        "text": "The best part: these tools qualify leads too. They can ask the right questions, collect contact information, and even book appointments directly into your calendar — all without you picking up the phone."
+        "text": "The best part: these tools qualify leads too. They can ask the right questions, collect contact information, and even book appointments directly into your calendar \u2014 all without you picking up the phone."
       },
       {
         "type": "p",
@@ -77,7 +77,7 @@
       },
       {
         "type": "p",
-        "text": "For client emails specifically — the \"we're running 30 minutes behind,\" the \"here's what we found and here's what we recommend,\" the \"your job is complete here's your invoice\" — all of these can be templated and generated with AI in under a minute each."
+        "text": "For client emails specifically \u2014 the \"we're running 30 minutes behind,\" the \"here's what we found and here's what we recommend,\" the \"your job is complete here's your invoice\" \u2014 all of these can be templated and generated with AI in under a minute each."
       },
       {
         "type": "p",
@@ -89,7 +89,7 @@
       },
       {
         "type": "p",
-        "text": "Coordinating jobs, managing your crew's schedule, handling last-minute changes — this is where a lot of trade business owners lose hours they can never get back."
+        "text": "Coordinating jobs, managing your crew's schedule, handling last-minute changes \u2014 this is where a lot of trade business owners lose hours they can never get back."
       },
       {
         "type": "p",
@@ -105,7 +105,7 @@
       },
       {
         "type": "p",
-        "text": "Most trade businesses know reviews matter. Most of them don't have a consistent system for asking. So they rely on happy customers to leave reviews voluntarily — and most happy customers don't, because they're busy too."
+        "text": "Most trade businesses know reviews matter. Most of them don't have a consistent system for asking. So they rely on happy customers to leave reviews voluntarily \u2014 and most happy customers don't, because they're busy too."
       },
       {
         "type": "p",
@@ -129,7 +129,7 @@
       },
       {
         "type": "p",
-        "text": "That's 9-13 hours per week. For a 50-week work year, that's 450-650 hours annually — the equivalent of 11-16 full work weeks handed back to you."
+        "text": "That's 9-13 hours per week. For a 50-week work year, that's 450-650 hours annually \u2014 the equivalent of 11-16 full work weeks handed back to you."
       },
       {
         "type": "p",
@@ -151,7 +151,7 @@
     "blocks": [
       {
         "type": "p",
-        "text": "There's a version of the AI conversation that's all doom — robots taking jobs, humans becoming obsolete, the end of knowledge work as we know it."
+        "text": "There's a version of the AI conversation that's all doom \u2014 robots taking jobs, humans becoming obsolete, the end of knowledge work as we know it."
       },
       {
         "type": "p",
@@ -171,7 +171,7 @@
       },
       {
         "type": "p",
-        "text": "You don't need to understand how large language models work. You don't need to know what a transformer architecture is. But you do need to know how to get useful outputs from AI tools — and that skill is called prompt engineering, even though the name makes it sound more technical than it is."
+        "text": "You don't need to understand how large language models work. You don't need to know what a transformer architecture is. But you do need to know how to get useful outputs from AI tools \u2014 and that skill is called prompt engineering, even though the name makes it sound more technical than it is."
       },
       {
         "type": "p",
@@ -191,7 +191,7 @@
       },
       {
         "type": "p",
-        "text": "AI tools are not one-size-fits-all. ChatGPT is a starting point, not a destination. Every industry and every role now has specialized AI tools built specifically for it — and knowing which ones exist for your job is itself a competitive advantage."
+        "text": "AI tools are not one-size-fits-all. ChatGPT is a starting point, not a destination. Every industry and every role now has specialized AI tools built specifically for it \u2014 and knowing which ones exist for your job is itself a competitive advantage."
       },
       {
         "type": "p",
@@ -203,7 +203,7 @@
       },
       {
         "type": "h3",
-        "text": "3. Output Verification — Knowing When AI is Wrong"
+        "text": "3. Output Verification \u2014 Knowing When AI is Wrong"
       },
       {
         "type": "p",
@@ -211,7 +211,7 @@
       },
       {
         "type": "p",
-        "text": "AI tools hallucinate. They make things up confidently. They produce outputs that look correct but contain errors — wrong statistics, misattributed quotes, outdated information, subtly flawed logic. If you use AI outputs without verification you will eventually produce something embarrassing or worse."
+        "text": "AI tools hallucinate. They make things up confidently. They produce outputs that look correct but contain errors \u2014 wrong statistics, misattributed quotes, outdated information, subtly flawed logic. If you use AI outputs without verification you will eventually produce something embarrassing or worse."
       },
       {
         "type": "p",
@@ -223,7 +223,7 @@
       },
       {
         "type": "h3",
-        "text": "4. Workflow Integration — Making AI Part of How You Work, Not a Separate Thing"
+        "text": "4. Workflow Integration \u2014 Making AI Part of How You Work, Not a Separate Thing"
       },
       {
         "type": "p",
@@ -235,7 +235,7 @@
       },
       {
         "type": "p",
-        "text": "The goal is to make AI invisible — not a thing you \"use\" but a thing that's just part of how you work."
+        "text": "The goal is to make AI invisible \u2014 not a thing you \"use\" but a thing that's just part of how you work."
       },
       {
         "type": "h3",
@@ -267,7 +267,7 @@
       },
       {
         "type": "p",
-        "text": "You need to be a version of what you already are — a marketer, a lawyer, an accountant, an operations manager — who works faster, produces better first drafts, and makes fewer low-value tasks take up high-value time."
+        "text": "You need to be a version of what you already are \u2014 a marketer, a lawyer, an accountant, an operations manager \u2014 who works faster, produces better first drafts, and makes fewer low-value tasks take up high-value time."
       },
       {
         "type": "p",
@@ -289,11 +289,11 @@
     "blocks": [
       {
         "type": "p",
-        "text": "Hiring an AI freelancer in 2026 is a bit like hiring a web developer in 2010. The demand is real, the use cases are legitimate, but the market is flooded with people who learned just enough to sound credible — and not enough to actually deliver."
+        "text": "Hiring an AI freelancer in 2026 is a bit like hiring a web developer in 2010. The demand is real, the use cases are legitimate, but the market is flooded with people who learned just enough to sound credible \u2014 and not enough to actually deliver."
       },
       {
         "type": "p",
-        "text": "The cost of a bad hire isn't just the money. It's the time lost, the frustration, and — maybe most damaging — the conclusion that AI \"doesn't work\" when really you just hired the wrong person."
+        "text": "The cost of a bad hire isn't just the money. It's the time lost, the frustration, and \u2014 maybe most damaging \u2014 the conclusion that AI \"doesn't work\" when really you just hired the wrong person."
       },
       {
         "type": "p",
@@ -321,7 +321,7 @@
       },
       {
         "type": "p",
-        "text": "The best AI freelancers aren't generalists who \"do AI.\" They're specialists in a particular industry or type of implementation — AI for e-commerce, AI for professional services, AI for trade businesses, AI for content creation. Specialization means they've seen your type of problem before and know how to solve it without a learning curve you're paying for."
+        "text": "The best AI freelancers aren't generalists who \"do AI.\" They're specialists in a particular industry or type of implementation \u2014 AI for e-commerce, AI for professional services, AI for trade businesses, AI for content creation. Specialization means they've seen your type of problem before and know how to solve it without a learning curve you're paying for."
       },
       {
         "type": "p",
@@ -329,7 +329,7 @@
       },
       {
         "type": "p",
-        "text": "Before any good AI implementation begins, the freelancer needs to understand your business deeply — your workflows, your pain points, your existing tools, your team's technical comfort level. If someone jumps straight to proposing solutions without asking detailed questions first, that's a red flag. Good implementers ask before they build."
+        "text": "Before any good AI implementation begins, the freelancer needs to understand your business deeply \u2014 your workflows, your pain points, your existing tools, your team's technical comfort level. If someone jumps straight to proposing solutions without asking detailed questions first, that's a red flag. Good implementers ask before they build."
       },
       {
         "type": "p",
@@ -365,7 +365,7 @@
       },
       {
         "type": "p",
-        "text": "\"I'll automate 80% of your business in 30 days.\" \"This will 10x your revenue.\" These aren't promises — they're sales tactics. Real AI implementation produces real results, but they're specific, measured, and realistic. Anyone promising transformation without understanding your business first is overselling."
+        "text": "\"I'll automate 80% of your business in 30 days.\" \"This will 10x your revenue.\" These aren't promises \u2014 they're sales tactics. Real AI implementation produces real results, but they're specific, measured, and realistic. Anyone promising transformation without understanding your business first is overselling."
       },
       {
         "type": "p",
@@ -381,7 +381,7 @@
       },
       {
         "type": "p",
-        "text": "Before committing to a large project, ask if they'll do a smaller scoped piece of work first — a single automation, a proof of concept, a one-week sprint. Good freelancers are comfortable with this. People who are worried about what you'll find aren't."
+        "text": "Before committing to a large project, ask if they'll do a smaller scoped piece of work first \u2014 a single automation, a proof of concept, a one-week sprint. Good freelancers are comfortable with this. People who are worried about what you'll find aren't."
       },
       {
         "type": "p",
@@ -402,13 +402,13 @@
       {
         "type": "ol",
         "items": [
-          "Can you walk me through a specific project similar to what I need — what the problem was, what you built, and what results it produced?",
+          "Can you walk me through a specific project similar to what I need \u2014 what the problem was, what you built, and what results it produced?",
           "What industries or use cases do you specialize in?",
           "What questions do you need answered before you could propose a solution?",
           "What would make this project fail, and how would you prevent that?",
           "Can you provide two or three client references I can contact?",
           "What does the first two weeks look like if we work together?",
-          "What happens after you deliver — what does ongoing support look like?"
+          "What happens after you deliver \u2014 what does ongoing support look like?"
         ]
       },
       {
@@ -421,7 +421,7 @@
       },
       {
         "type": "p",
-        "text": "The AI freelancer market has a trust problem. Not because the work isn't valuable — it is. But because the barrier to calling yourself an \"AI expert\" is essentially zero, and the people who get burned by bad hires often walk away convinced the whole category is a scam."
+        "text": "The AI freelancer market has a trust problem. Not because the work isn't valuable \u2014 it is. But because the barrier to calling yourself an \"AI expert\" is essentially zero, and the people who get burned by bad hires often walk away convinced the whole category is a scam."
       },
       {
         "type": "p",
@@ -429,7 +429,7 @@
       },
       {
         "type": "p",
-        "text": "That's exactly the problem Envowl is built to solve — a curated marketplace where every creator is vetted by our team before they're listed. Real portfolios, real references, real results. No guesswork."
+        "text": "That's exactly the problem Envowl is built to solve \u2014 a curated marketplace where every creator is vetted by our team before they're listed. Real portfolios, real references, real results. No guesswork."
       }
     ]
   },
@@ -451,7 +451,7 @@
       },
       {
         "type": "p",
-        "text": "The tools that were enterprise-only two years ago are now available to any business with a laptop and a subscription. The operations teams getting the most out of AI right now aren't at Fortune 500 companies — they're at 20-person businesses that decided to figure it out before their competitors did."
+        "text": "The tools that were enterprise-only two years ago are now available to any business with a laptop and a subscription. The operations teams getting the most out of AI right now aren't at Fortune 500 companies \u2014 they're at 20-person businesses that decided to figure it out before their competitors did."
       },
       {
         "type": "p",
@@ -463,23 +463,23 @@
       },
       {
         "type": "p",
-        "text": "Not every operational problem is an AI problem. But there's a specific category of work — repetitive, rule-based, time-consuming, and low-creativity — where AI consistently delivers. If your operations team spends significant time on any of the following, you have an immediate opportunity."
+        "text": "Not every operational problem is an AI problem. But there's a specific category of work \u2014 repetitive, rule-based, time-consuming, and low-creativity \u2014 where AI consistently delivers. If your operations team spends significant time on any of the following, you have an immediate opportunity."
       },
       {
         "type": "p",
-        "text": "**Document processing and data entry.** Purchase orders, invoices, contracts, intake forms — anything that involves pulling information from one place and putting it somewhere else. AI can read documents, extract the relevant fields, and populate your systems automatically. What used to take an hour per document takes seconds."
+        "text": "**Document processing and data entry.** Purchase orders, invoices, contracts, intake forms \u2014 anything that involves pulling information from one place and putting it somewhere else. AI can read documents, extract the relevant fields, and populate your systems automatically. What used to take an hour per document takes seconds."
       },
       {
         "type": "p",
-        "text": "**Reporting and summaries.** If someone on your team spends time every week pulling numbers from multiple sources and assembling them into a report, that process can be largely automated. AI tools can connect to your data sources, pull the relevant figures, and generate a formatted summary — daily, weekly, or on demand."
+        "text": "**Reporting and summaries.** If someone on your team spends time every week pulling numbers from multiple sources and assembling them into a report, that process can be largely automated. AI tools can connect to your data sources, pull the relevant figures, and generate a formatted summary \u2014 daily, weekly, or on demand."
       },
       {
         "type": "p",
-        "text": "**Internal knowledge management.** Most operations teams have a scattered knowledge base — SOPs in Google Drive, policies in email threads, training materials spread across three different platforms. AI can sit on top of all of that and answer questions in plain language. New hire asks how to process a return? Instead of hunting through folders, they ask the AI and get an accurate answer in seconds."
+        "text": "**Internal knowledge management.** Most operations teams have a scattered knowledge base \u2014 SOPs in Google Drive, policies in email threads, training materials spread across three different platforms. AI can sit on top of all of that and answer questions in plain language. New hire asks how to process a return? Instead of hunting through folders, they ask the AI and get an accurate answer in seconds."
       },
       {
         "type": "p",
-        "text": "**Vendor and supplier communication.** Routine vendor emails — order confirmations, delivery updates, invoice disputes — follow predictable patterns. AI can draft responses, flag anomalies, and handle the back-and-forth that doesn't require human judgment."
+        "text": "**Vendor and supplier communication.** Routine vendor emails \u2014 order confirmations, delivery updates, invoice disputes \u2014 follow predictable patterns. AI can draft responses, flag anomalies, and handle the back-and-forth that doesn't require human judgment."
       },
       {
         "type": "h2",
@@ -491,7 +491,7 @@
       },
       {
         "type": "p",
-        "text": "**No-code automation platforms.** Tools like Make (formerly Integromat), n8n, and Zapier let you connect your existing software and build automated workflows without writing a line of code. When X happens in system A, do Y in system B. These tools have become dramatically more powerful with AI built in — you can now include AI steps that read, interpret, and generate content as part of your automations."
+        "text": "**No-code automation platforms.** Tools like Make (formerly Integromat), n8n, and Zapier let you connect your existing software and build automated workflows without writing a line of code. When X happens in system A, do Y in system B. These tools have become dramatically more powerful with AI built in \u2014 you can now include AI steps that read, interpret, and generate content as part of your automations."
       },
       {
         "type": "p",
@@ -499,7 +499,7 @@
       },
       {
         "type": "p",
-        "text": "**AI-enhanced spreadsheets.** If your operations still run significantly on spreadsheets — and most do — tools like Microsoft Copilot in Excel and Google Duet AI in Sheets can write formulas for you, analyze data, generate charts, and answer questions about your data in plain language. The spreadsheet isn't going away; it's just getting a lot smarter."
+        "text": "**AI-enhanced spreadsheets.** If your operations still run significantly on spreadsheets \u2014 and most do \u2014 tools like Microsoft Copilot in Excel and Google Duet AI in Sheets can write formulas for you, analyze data, generate charts, and answer questions about your data in plain language. The spreadsheet isn't going away; it's just getting a lot smarter."
       },
       {
         "type": "p",
@@ -519,7 +519,7 @@
       },
       {
         "type": "p",
-        "text": "**Pick one process.** Identify the single most repetitive, time-consuming, low-judgment task your operations team does every week. Not the most complex one — the most repetitive one. That's your starting point."
+        "text": "**Pick one process.** Identify the single most repetitive, time-consuming, low-judgment task your operations team does every week. Not the most complex one \u2014 the most repetitive one. That's your starting point."
       },
       {
         "type": "p",
@@ -527,11 +527,11 @@
       },
       {
         "type": "p",
-        "text": "**Use existing tools before buying new ones.** There's a good chance the software you already use has AI features you haven't turned on. Microsoft 365, Google Workspace, Notion, HubSpot, Salesforce — all of them have rolled out significant AI capabilities in the last 18 months. Check what you already have before adding a new subscription."
+        "text": "**Use existing tools before buying new ones.** There's a good chance the software you already use has AI features you haven't turned on. Microsoft 365, Google Workspace, Notion, HubSpot, Salesforce \u2014 all of them have rolled out significant AI capabilities in the last 18 months. Check what you already have before adding a new subscription."
       },
       {
         "type": "p",
-        "text": "**Measure before and after.** Time the manual process before you automate it. Track the time saved after. This isn't just about justifying the cost — it's about building the internal case for doing more of this, and knowing which automations are actually worth maintaining."
+        "text": "**Measure before and after.** Time the manual process before you automate it. Track the time saved after. This isn't just about justifying the cost \u2014 it's about building the internal case for doing more of this, and knowing which automations are actually worth maintaining."
       },
       {
         "type": "h2",
@@ -543,15 +543,15 @@
       },
       {
         "type": "p",
-        "text": "The hours your team used to spend on data entry, report assembly, and routine communication don't just disappear — they get redirected toward judgment work, problem-solving, and the things that actually require a human. That's the real value proposition: not a smaller team, but a team that spends its time on higher-leverage work."
+        "text": "The hours your team used to spend on data entry, report assembly, and routine communication don't just disappear \u2014 they get redirected toward judgment work, problem-solving, and the things that actually require a human. That's the real value proposition: not a smaller team, but a team that spends its time on higher-leverage work."
       },
       {
         "type": "p",
-        "text": "It also takes longer than vendors will tell you. A workflow that looks simple — \"automatically process these invoices\" — often has edge cases, exceptions, and integration quirks that take time to work through. Budget for iteration, not just implementation."
+        "text": "It also takes longer than vendors will tell you. A workflow that looks simple \u2014 \"automatically process these invoices\" \u2014 often has edge cases, exceptions, and integration quirks that take time to work through. Budget for iteration, not just implementation."
       },
       {
         "type": "p",
-        "text": "And someone on your team needs to own it. AI implementations don't maintain themselves. Someone needs to notice when an automation breaks, when outputs start degrading, when the business process changes and the automation needs to change with it. That person doesn't need to be technical — but they need to be accountable."
+        "text": "And someone on your team needs to own it. AI implementations don't maintain themselves. Someone needs to notice when an automation breaks, when outputs start degrading, when the business process changes and the automation needs to change with it. That person doesn't need to be technical \u2014 but they need to be accountable."
       },
       {
         "type": "h2",
@@ -575,7 +575,7 @@
     "slug": "prompting-for-marketing-teams",
     "tag": "Tools & Tutorials",
     "title": "Prompting for Marketing Teams: A Short Primer",
-    "teaser": "Most marketers use AI like a search engine and get mediocre results. Here's how to prompt properly — with templates your team can reuse today.",
+    "teaser": "Most marketers use AI like a search engine and get mediocre results. Here's how to prompt properly \u2014 with templates your team can reuse today.",
     "readTime": "5 min read",
     "date": "Apr 14, 2026",
     "blocks": [
@@ -585,7 +585,7 @@
       },
       {
         "type": "p",
-        "text": "Not wrong in a catastrophic way — wrong in a \"leaving 80% of the value on the table\" way. They open ChatGPT or Claude, type something like \"write me a caption for this product,\" get a generic output, decide AI isn't that useful for creative work, and go back to doing it manually."
+        "text": "Not wrong in a catastrophic way \u2014 wrong in a \"leaving 80% of the value on the table\" way. They open ChatGPT or Claude, type something like \"write me a caption for this product,\" get a generic output, decide AI isn't that useful for creative work, and go back to doing it manually."
       },
       {
         "type": "p",
@@ -593,7 +593,7 @@
       },
       {
         "type": "p",
-        "text": "Prompting is a skill. It's learnable in an afternoon, and once your team has it, the quality of AI outputs goes from mediocre to genuinely useful. Here's the framework — and the templates to go with it."
+        "text": "Prompting is a skill. It's learnable in an afternoon, and once your team has it, the quality of AI outputs goes from mediocre to genuinely useful. Here's the framework \u2014 and the templates to go with it."
       },
       {
         "type": "h2",
@@ -601,11 +601,11 @@
       },
       {
         "type": "p",
-        "text": "AI language models are pattern-completion engines. They take what you give them and produce the most statistically likely continuation. When you give them nothing — no context, no constraints, no tone guidance, no audience — they produce the average of everything they've seen. Which is, by definition, generic."
+        "text": "AI language models are pattern-completion engines. They take what you give them and produce the most statistically likely continuation. When you give them nothing \u2014 no context, no constraints, no tone guidance, no audience \u2014 they produce the average of everything they've seen. Which is, by definition, generic."
       },
       {
         "type": "p",
-        "text": "The more specific and constrained your input, the more specific and useful your output. This isn't a quirk of AI — it's the same reason a creative brief produces better work than \"make something good.\""
+        "text": "The more specific and constrained your input, the more specific and useful your output. This isn't a quirk of AI \u2014 it's the same reason a creative brief produces better work than \"make something good.\""
       },
       {
         "type": "p",
@@ -621,15 +621,15 @@
       },
       {
         "type": "p",
-        "text": "**1. Role** — Tell the AI what kind of expert it's acting as.\n*\"You are a direct-response copywriter with 10 years of experience writing for e-commerce brands.\"*"
+        "text": "**1. Role** \u2014 Tell the AI what kind of expert it's acting as.\n*\"You are a direct-response copywriter with 10 years of experience writing for e-commerce brands.\"*"
       },
       {
         "type": "p",
-        "text": "This isn't magic — it calibrates the model's output style and vocabulary toward the domain you're working in."
+        "text": "This isn't magic \u2014 it calibrates the model's output style and vocabulary toward the domain you're working in."
       },
       {
         "type": "p",
-        "text": "**2. Context** — Tell it about your brand, audience, and situation.\n*\"Our brand sells premium sustainable activewear to women aged 28-42 who are serious about fitness but also care about environmental impact. Our tone is confident, direct, and never preachy.\"*"
+        "text": "**2. Context** \u2014 Tell it about your brand, audience, and situation.\n*\"Our brand sells premium sustainable activewear to women aged 28-42 who are serious about fitness but also care about environmental impact. Our tone is confident, direct, and never preachy.\"*"
       },
       {
         "type": "p",
@@ -637,7 +637,7 @@
       },
       {
         "type": "p",
-        "text": "**3. Task** — Be specific about exactly what you want.\n*\"Write three versions of an Instagram caption for a new product launch. Each caption should be under 150 characters, include a call to action, and feel distinct from the others — one punchy, one story-driven, one question-based.\"*"
+        "text": "**3. Task** \u2014 Be specific about exactly what you want.\n*\"Write three versions of an Instagram caption for a new product launch. Each caption should be under 150 characters, include a call to action, and feel distinct from the others \u2014 one punchy, one story-driven, one question-based.\"*"
       },
       {
         "type": "p",
@@ -645,7 +645,7 @@
       },
       {
         "type": "p",
-        "text": "**4. Format** — Tell it how to structure the response.\n*\"Present each caption numbered, with a one-line note underneath explaining the approach.\"*"
+        "text": "**4. Format** \u2014 Tell it how to structure the response.\n*\"Present each caption numbered, with a one-line note underneath explaining the approach.\"*"
       },
       {
         "type": "p",
@@ -665,7 +665,7 @@
       },
       {
         "type": "pre",
-        "text": "You are a social media copywriter for [brand name], a [brief brand description].\nOur audience is [audience description]. Our tone is [tone description — e.g. witty and direct, warm and conversational, authoritative but approachable].\n\nWrite [number] Instagram captions for [describe the post/product/campaign].\nRequirements:\n- Under [character count] characters each\n- Include a call to action\n- No hashtags in the caption body\n- Each version should have a distinct angle: [e.g. benefit-focused, curiosity-driven, social proof]\n\nPresent each caption numbered with a one-line note on the approach."
+        "text": "You are a social media copywriter for [brand name], a [brief brand description].\nOur audience is [audience description]. Our tone is [tone description \u2014 e.g. witty and direct, warm and conversational, authoritative but approachable].\n\nWrite [number] Instagram captions for [describe the post/product/campaign].\nRequirements:\n- Under [character count] characters each\n- Include a call to action\n- No hashtags in the caption body\n- Each version should have a distinct angle: [e.g. benefit-focused, curiosity-driven, social proof]\n\nPresent each caption numbered with a one-line note on the approach."
       },
       {
         "type": "p",
@@ -673,7 +673,7 @@
       },
       {
         "type": "pre",
-        "text": "You are an email marketing specialist. I need subject lines for a [campaign type — e.g. promotional, nurture, re-engagement] email.\n\nContext:\n- Brand: [brand name and brief description]\n- Audience: [subscriber segment]\n- Email content: [one sentence describing what the email contains]\n- Goal: [what you want the reader to do]\n\nWrite 10 subject line options. Include a mix of: curiosity-based, benefit-focused, urgency-driven, and question-format. Flag your top three and explain why."
+        "text": "You are an email marketing specialist. I need subject lines for a [campaign type \u2014 e.g. promotional, nurture, re-engagement] email.\n\nContext:\n- Brand: [brand name and brief description]\n- Audience: [subscriber segment]\n- Email content: [one sentence describing what the email contains]\n- Goal: [what you want the reader to do]\n\nWrite 10 subject line options. Include a mix of: curiosity-based, benefit-focused, urgency-driven, and question-format. Flag your top three and explain why."
       },
       {
         "type": "p",
@@ -697,7 +697,7 @@
       },
       {
         "type": "pre",
-        "text": "You are a paid media copywriter. Write [number] variants of ad copy for [platform — Facebook, Google, LinkedIn] for the following:\n\nProduct/service: [description]\nAudience: [who you're targeting]\nOffer: [what you're promoting — discount, free trial, lead magnet, etc.]\nKey benefit: [the main reason someone should click]\n\nFor each variant provide: headline (under [character limit]), body copy (under [character limit]), and CTA text. Make each variant meaningfully different in angle — not just word-swaps."
+        "text": "You are a paid media copywriter. Write [number] variants of ad copy for [platform \u2014 Facebook, Google, LinkedIn] for the following:\n\nProduct/service: [description]\nAudience: [who you're targeting]\nOffer: [what you're promoting \u2014 discount, free trial, lead magnet, etc.]\nKey benefit: [the main reason someone should click]\n\nFor each variant provide: headline (under [character limit]), body copy (under [character limit]), and CTA text. Make each variant meaningfully different in angle \u2014 not just word-swaps."
       },
       {
         "type": "h2",
@@ -705,7 +705,7 @@
       },
       {
         "type": "p",
-        "text": "One prompt, one output, done — that's not how the best marketers use AI. They treat the first output as a starting point, then iterate."
+        "text": "One prompt, one output, done \u2014 that's not how the best marketers use AI. They treat the first output as a starting point, then iterate."
       },
       {
         "type": "p",
@@ -715,14 +715,14 @@
         "type": "ul",
         "items": [
           "*\"Make version 2 more direct and cut the word count by 30%.\"*",
-          "*\"Rewrite this for a more skeptical audience — someone who's heard this kind of claim before.\"*",
+          "*\"Rewrite this for a more skeptical audience \u2014 someone who's heard this kind of claim before.\"*",
           "*\"The second option is closest to what I want. Give me five more variations in that direction.\"*",
           "*\"What's missing from this that would make it more persuasive?\"*"
         ]
       },
       {
         "type": "p",
-        "text": "That last one is underused. Asking AI to critique its own output — or your draft — often surfaces the gap faster than trying to articulate it yourself."
+        "text": "That last one is underused. Asking AI to critique its own output \u2014 or your draft \u2014 often surfaces the gap faster than trying to articulate it yourself."
       },
       {
         "type": "h2",
@@ -734,7 +734,7 @@
       },
       {
         "type": "p",
-        "text": "That knowledge lives with your team. The job of prompting is to inject that knowledge into the AI so it can use it. The more brand-specific, audience-specific, and insight-specific your prompt, the more the output sounds like it came from someone who actually knows your customer — rather than someone who's read a lot of marketing copy."
+        "text": "That knowledge lives with your team. The job of prompting is to inject that knowledge into the AI so it can use it. The more brand-specific, audience-specific, and insight-specific your prompt, the more the output sounds like it came from someone who actually knows your customer \u2014 rather than someone who's read a lot of marketing copy."
       },
       {
         "type": "p",
@@ -746,7 +746,7 @@
     "slug": "ai-trends-small-business-q2-2026",
     "tag": "News & Trends",
     "title": "News and Trends That Matter for Small Business This Quarter",
-    "teaser": "Not every AI headline is worth your time. Here's what's actually changed in Q2 2026 — and what it means for small business owners who want to stay ahead without drowning in noise.",
+    "teaser": "Not every AI headline is worth your time. Here's what's actually changed in Q2 2026 \u2014 and what it means for small business owners who want to stay ahead without drowning in noise.",
     "readTime": "4 min read",
     "date": "Apr 14, 2026",
     "blocks": [
@@ -760,7 +760,7 @@
       },
       {
         "type": "p",
-        "text": "Here's what's worth paying attention to this quarter — and more importantly, what it means for your business."
+        "text": "Here's what's worth paying attention to this quarter \u2014 and more importantly, what it means for your business."
       },
       {
         "type": "h2",
@@ -784,11 +784,11 @@
       },
       {
         "type": "p",
-        "text": "AI voice agents — tools that can handle inbound phone calls, answer questions, and book appointments — have improved dramatically. The robotic quality that made them feel unprofessional 18 months ago is largely gone. Several platforms now produce voice interactions that are genuinely hard to distinguish from a human agent in a structured conversation."
+        "text": "AI voice agents \u2014 tools that can handle inbound phone calls, answer questions, and book appointments \u2014 have improved dramatically. The robotic quality that made them feel unprofessional 18 months ago is largely gone. Several platforms now produce voice interactions that are genuinely hard to distinguish from a human agent in a structured conversation."
       },
       {
         "type": "p",
-        "text": "*What this means for you:* If you're a service business that misses calls or spends significant time on repetitive phone inquiries, this is no longer a \"future technology\" — it's deployable now. The businesses implementing this in trades, home services, healthcare, and hospitality are seeing real results."
+        "text": "*What this means for you:* If you're a service business that misses calls or spends significant time on repetitive phone inquiries, this is no longer a \"future technology\" \u2014 it's deployable now. The businesses implementing this in trades, home services, healthcare, and hospitality are seeing real results."
       },
       {
         "type": "p",
@@ -796,7 +796,7 @@
       },
       {
         "type": "p",
-        "text": "Platforms like Make, n8n, and Zapier have added significant AI capabilities in recent months. You can now build workflows that don't just move data between apps — they read content, make decisions based on it, generate outputs, and handle exceptions. The complexity you used to need a developer for is increasingly achievable without one."
+        "text": "Platforms like Make, n8n, and Zapier have added significant AI capabilities in recent months. You can now build workflows that don't just move data between apps \u2014 they read content, make decisions based on it, generate outputs, and handle exceptions. The complexity you used to need a developer for is increasingly achievable without one."
       },
       {
         "type": "p",
@@ -808,11 +808,11 @@
       },
       {
         "type": "p",
-        "text": "ChatGPT, Perplexity, and Google's AI Overviews are now a meaningful part of how people look up local businesses and service providers. The optimization rules are still being written, but early signals suggest that well-structured websites with clear, specific content — what you do, who you serve, where you operate — are performing better in AI-generated search results than thin or generic sites."
+        "text": "ChatGPT, Perplexity, and Google's AI Overviews are now a meaningful part of how people look up local businesses and service providers. The optimization rules are still being written, but early signals suggest that well-structured websites with clear, specific content \u2014 what you do, who you serve, where you operate \u2014 are performing better in AI-generated search results than thin or generic sites."
       },
       {
         "type": "p",
-        "text": "*What this means for you:* This isn't a reason to panic about SEO. It's a reason to make sure your website clearly and specifically describes what you do. The businesses showing up in AI search results aren't doing anything exotic — they have clear, complete, well-organized content."
+        "text": "*What this means for you:* This isn't a reason to panic about SEO. It's a reason to make sure your website clearly and specifically describes what you do. The businesses showing up in AI search results aren't doing anything exotic \u2014 they have clear, complete, well-organized content."
       },
       {
         "type": "p",
@@ -820,7 +820,7 @@
       },
       {
         "type": "p",
-        "text": "A consistent theme in small business surveys this quarter: owners know AI matters, don't know where to start, and are losing ground to competitors who figured it out first. The businesses that made early moves — even small ones — are now operating with structural advantages in cost, speed, and capacity that are getting harder to close."
+        "text": "A consistent theme in small business surveys this quarter: owners know AI matters, don't know where to start, and are losing ground to competitors who figured it out first. The businesses that made early moves \u2014 even small ones \u2014 are now operating with structural advantages in cost, speed, and capacity that are getting harder to close."
       },
       {
         "type": "p",
@@ -836,7 +836,7 @@
       },
       {
         "type": "p",
-        "text": "**New model releases.** GPT-5, Claude 4, Gemini Ultra — new model releases generate enormous coverage and are mostly irrelevant to small business owners. The improvements happen at the frontier; the tools you use day-to-day update quietly in the background. You don't need to track model releases."
+        "text": "**New model releases.** GPT-5, Claude 4, Gemini Ultra \u2014 new model releases generate enormous coverage and are mostly irrelevant to small business owners. The improvements happen at the frontier; the tools you use day-to-day update quietly in the background. You don't need to track model releases."
       },
       {
         "type": "p",
@@ -844,7 +844,7 @@
       },
       {
         "type": "p",
-        "text": "**AI \"replacing jobs\" headlines.** Directionally true in aggregate, not useful at the individual business level. The question isn't whether AI will change employment — it's which specific tasks in your business are worth automating now. That's a local question with a local answer."
+        "text": "**AI \"replacing jobs\" headlines.** Directionally true in aggregate, not useful at the individual business level. The question isn't whether AI will change employment \u2014 it's which specific tasks in your business are worth automating now. That's a local question with a local answer."
       },
       {
         "type": "p",
@@ -889,11 +889,11 @@
       },
       {
         "type": "p",
-        "text": "**One tool per quarter.** Commit to genuinely trying one new AI tool every three months. Not reading about it — using it for a real task, for at least two weeks. That's 4 tools a year, which is more than enough to build a real picture of what works for your business."
+        "text": "**One tool per quarter.** Commit to genuinely trying one new AI tool every three months. Not reading about it \u2014 using it for a real task, for at least two weeks. That's 4 tools a year, which is more than enough to build a real picture of what works for your business."
       },
       {
         "type": "p",
-        "text": "**One conversation per quarter.** Talk to someone who's actually implemented AI in a business like yours. Not a vendor, not a consultant pitching you — someone who's done it and can tell you honestly what worked and what didn't."
+        "text": "**One conversation per quarter.** Talk to someone who's actually implemented AI in a business like yours. Not a vendor, not a consultant pitching you \u2014 someone who's done it and can tell you honestly what worked and what didn't."
       },
       {
         "type": "p",
@@ -905,9 +905,9 @@
     "slug": "what-is-openclaw-ai-agent",
     "tag": "Tools & Tutorials",
     "title": "OpenClaw: The AI Agent That Actually Does Things for You",
-    "teaser": "OpenClaw is the fastest-growing open source project in GitHub history. It doesn't chat — it acts. Here's what it is, what it can do, and what you need to know before you use it.",
+    "teaser": "OpenClaw is the fastest-growing open source project in GitHub history. It doesn't chat \u2014 it acts. Here's what it is, what it can do, and what you need to know before you use it.",
     "readTime": "7 min read",
-    "date": "Apr 14, 2026",
+    "date": "Apr 22, 2026",
     "blocks": [
       {
         "type": "p",
@@ -915,11 +915,11 @@
       },
       {
         "type": "p",
-        "text": "ChatGPT, Claude, Gemini — these are conversational tools. You ask, they answer. You still have to execute. OpenClaw is something different. Unlike chatbots that only generate text, OpenClaw autonomously executes multi-step tasks: reading emails, running shell commands, browsing websites, and controlling APIs. [Bockdev](https://bockdev.com/posts/open-claw) You tell it what you want. It does it."
+        "text": "ChatGPT, Claude, Gemini \u2014 these are conversational tools. You ask, they answer. You still have to execute. OpenClaw is something different. Unlike chatbots that only generate text, OpenClaw autonomously executes multi-step tasks: reading emails, running shell commands, browsing websites, and controlling APIs ([Bockdev](https://bockdev.com/posts/open-claw)). You tell it what you want. It does it."
       },
       {
         "type": "p",
-        "text": "It surpassed 337,000 GitHub stars by April 2026, making it the most-starred project in GitHub history — breaking records held by React and Linux. [GitHub](https://github.com/openclaw/openclaw) Jensen Huang of NVIDIA called it \"the operating system for personal AI.\" [NVIDIA Newsroom](https://nvidianews.nvidia.com/news/nvidia-announces-nemoclaw) That's the level of attention this thing is getting."
+        "text": "It surpassed 337,000 GitHub stars by April 2026, making it the most-starred project in GitHub history \u2014 breaking records held by React and Linux ([GitHub](https://github.com/openclaw/openclaw)). Jensen Huang of NVIDIA called it \"the operating system for personal AI\" ([NVIDIA Newsroom](https://nvidianews.nvidia.com/news/nvidia-announces-nemoclaw)). That's the level of attention this thing is getting."
       },
       {
         "type": "p",
@@ -931,19 +931,19 @@
       },
       {
         "type": "p",
-        "text": "OpenClaw is an open-source personal AI agent — essentially a digital assistant that doesn't just chat, but takes actions on your behalf. It runs on your own hardware and connects to everyday apps like WhatsApp, Slack, Discord, email, calendars, and more, acting as a proactive helper across your digital life. [o-mega](https://o-mega.ai/articles/openclaw-creating-the-ai-agent-workforce-ultimate-guide-2026)"
+        "text": "OpenClaw is an open-source personal AI agent \u2014 essentially a digital assistant that doesn't just chat, but takes actions on your behalf. It runs on your own hardware and connects to everyday apps like WhatsApp, Slack, Discord, email, calendars, and more, acting as a proactive helper across your digital life ([o-mega](https://o-mega.ai/articles/openclaw-creating-the-ai-agent-workforce-ultimate-guide-2026))."
       },
       {
         "type": "p",
-        "text": "The key word is agent. A chatbot responds. An agent acts. When you ask a chatbot to \"clean up my inbox,\" it tells you how. When you ask OpenClaw the same thing, it logs into your email client, categorizes messages, drafts replies to the important ones, and unsubscribes from spam. [Bockdev](https://bockdev.com/posts/open-claw)"
+        "text": "The key word is agent. A chatbot responds. An agent acts. When you ask a chatbot to \"clean up my inbox,\" it tells you how. When you ask OpenClaw the same thing, it logs into your email client, categorizes messages, drafts replies to the important ones, and unsubscribes from spam ([Bockdev](https://bockdev.com/posts/open-claw))."
       },
       {
         "type": "p",
-        "text": "You operate it through messaging apps you already use. Supported channels include WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage, Microsoft Teams, and dozens more. [GitHub](https://github.com/openclaw/openclaw) You're not learning a new interface — you're texting your existing apps and watching them respond."
+        "text": "You operate it through messaging apps you already use. Supported channels include WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage, Microsoft Teams, and dozens more ([GitHub](https://github.com/openclaw/openclaw)). You're not learning a new interface \u2014 you're texting your existing apps and watching them respond."
       },
       {
         "type": "p",
-        "text": "It's also completely free and open source under an MIT license. You bring your own API key for whatever AI model you want to use — Claude, GPT, Gemini, or even a local model running entirely on your own machine."
+        "text": "It's also completely free and open source under an MIT license. You bring your own API key for whatever AI model you want to use \u2014 Claude, GPT, Gemini, or even a local model running entirely on your own machine."
       },
       {
         "type": "p",
@@ -955,27 +955,27 @@
       },
       {
         "type": "p",
-        "text": "Email management: Documented real-world cases show the agent autonomously scanning, categorizing, and clearing over 4,000 unread emails in two days, drafting replies for critical messages and unsubscribing from spam. [Bockdev](https://bockdev.com/posts/open-claw)"
+        "text": "Email management: Documented real-world cases show the agent autonomously scanning, categorizing, and clearing over 4,000 unread emails in two days, drafting replies for critical messages and unsubscribing from spam ([Bockdev](https://bockdev.com/posts/open-claw))."
       },
       {
         "type": "p",
-        "text": "Development work: People are running OpenClaw on dedicated machines overnight — coding agents build features, run tests, and commit code while the owner sleeps. One user built a functional Laravel app while grabbing coffee, on DigitalOcean infrastructure. [DigitalOcean](https://www.digitalocean.com/resources/articles/what-is-openclaw)"
+        "text": "Development work: People are running OpenClaw on dedicated machines overnight \u2014 coding agents build features, run tests, and commit code while the owner sleeps. One user built a functional Laravel app while grabbing coffee, on DigitalOcean infrastructure ([DigitalOcean](https://www.digitalocean.com/resources/articles/what-is-openclaw))."
       },
       {
         "type": "p",
-        "text": "Personal productivity: Manage your day across Apple Notes, Reminders, Notion, Obsidian, and Trello — all from a single conversation in WhatsApp or Telegram. [DigitalOcean](https://www.digitalocean.com/resources/articles/what-is-openclaw)"
+        "text": "Personal productivity: Manage your day across Apple Notes, Reminders, Notion, Obsidian, and Trello \u2014 all from a single conversation in WhatsApp or Telegram ([DigitalOcean](https://www.digitalocean.com/resources/articles/what-is-openclaw))."
       },
       {
         "type": "p",
-        "text": "Smart home control: Control Philips Hue lights, Elgato devices, and Home Assistant setups, or pull health data from wearables to track your daily metrics. [DigitalOcean](https://www.digitalocean.com/resources/articles/what-is-openclaw) One user configured it to monitor air quality and adjust their smart home environment based on biomarker data."
+        "text": "Smart home control: Control Philips Hue lights, Elgato devices, and Home Assistant setups, or pull health data from wearables to track your daily metrics ([DigitalOcean](https://www.digitalocean.com/resources/articles/what-is-openclaw)). One user configured it to monitor air quality and adjust their smart home environment based on biomarker data."
       },
       {
         "type": "p",
-        "text": "Content and social: Draft and schedule posts to Twitter/X and Bluesky, or manage email workflows through Gmail — without leaving your chat app. [DigitalOcean](https://www.digitalocean.com/resources/articles/what-is-openclaw)"
+        "text": "Content and social: Draft and schedule posts to Twitter/X and Bluesky, or manage email workflows through Gmail \u2014 without leaving your chat app ([DigitalOcean](https://www.digitalocean.com/resources/articles/what-is-openclaw))."
       },
       {
         "type": "p",
-        "text": "The ecosystem has over 13,000 skills available through ClawHub. [GitHub](https://github.com/openclaw/openclaw) Each one extends what the agent can do. There are skills for project management, financial tracking, customer communication, research, and more. If a skill doesn't exist for what you need, you can build one."
+        "text": "The ecosystem has over 13,000 skills available through ClawHub ([GitHub](https://github.com/openclaw/openclaw)). Each one extends what the agent can do. There are skills for project management, financial tracking, customer communication, research, and more. If a skill doesn't exist for what you need, you can build one."
       },
       {
         "type": "p",
@@ -983,15 +983,15 @@
       },
       {
         "type": "p",
-        "text": "Here's where it gets interesting. A growing number of serious users aren't running OpenClaw on their main computer — they're buying dedicated Mac minis or Raspberry Pis specifically for it."
+        "text": "Here's where it gets interesting. A growing number of serious users aren't running OpenClaw on their main computer \u2014 they're buying dedicated Mac minis or Raspberry Pis specifically for it."
       },
       {
         "type": "p",
-        "text": "The reasons are practical. First, you want it running 24/7 without draining your laptop battery or slowing your main machine. Second, and more importantly, you want it isolated. An AI agent with access to your files, email, calendar, and messaging apps is powerful — but you probably don't want it sharing a machine with your banking apps and personal documents."
+        "text": "The reasons are practical. First, you want it running 24/7 without draining your laptop battery or slowing your main machine. Second, and more importantly, you want it isolated. An AI agent with access to your files, email, calendar, and messaging apps is powerful \u2014 but you probably don't want it sharing a machine with your banking apps and personal documents."
       },
       {
         "type": "p",
-        "text": "Running it on a dedicated device creates a clean security boundary. The agent operates in its own environment. If something goes wrong — a misconfigured skill, an unexpected action — it's contained."
+        "text": "Running it on a dedicated device creates a clean security boundary. The agent operates in its own environment. If something goes wrong \u2014 a misconfigured skill, an unexpected action \u2014 it's contained."
       },
       {
         "type": "p",
@@ -1007,23 +1007,23 @@
       },
       {
         "type": "p",
-        "text": "Because the software can access email accounts, calendars, messaging platforms, and other sensitive services, misconfigured or exposed instances present security and privacy risks. The agent is also susceptible to prompt injection attacks, in which harmful instructions are embedded in data with the intent of getting the LLM to interpret them as legitimate user instructions. [Wikipedia](https://en.wikipedia.org/wiki/OpenClaw)"
+        "text": "Because the software can access email accounts, calendars, messaging platforms, and other sensitive services, misconfigured or exposed instances present security and privacy risks. The agent is also susceptible to prompt injection attacks, in which harmful instructions are embedded in data with the intent of getting the LLM to interpret them as legitimate user instructions ([Wikipedia](https://en.wikipedia.org/wiki/OpenClaw))."
       },
       {
         "type": "p",
-        "text": "Cisco's AI security research team tested a third-party OpenClaw skill and found it performed data exfiltration and prompt injection without user awareness, noting that the skill repository lacked adequate vetting to prevent malicious submissions. [Wikipedia](https://en.wikipedia.org/wiki/OpenClaw)"
+        "text": "Cisco's AI security research team tested a third-party OpenClaw skill and found it performed data exfiltration and prompt injection without user awareness, noting that the skill repository lacked adequate vetting to prevent malicious submissions ([Wikipedia](https://en.wikipedia.org/wiki/OpenClaw))."
       },
       {
         "type": "p",
-        "text": "One of OpenClaw's own maintainers warned that \"if you can't understand how to run a command line, this is far too dangerous of a project for you to use safely.\" [Wikipedia](https://en.wikipedia.org/wiki/OpenClaw)"
+        "text": "One of OpenClaw's own maintainers warned that \"if you can't understand how to run a command line, this is far too dangerous of a project for you to use safely\" ([Wikipedia](https://en.wikipedia.org/wiki/OpenClaw))."
       },
       {
         "type": "p",
-        "text": "This isn't a reason to avoid it — it's a reason to set it up carefully. The recommended approach is to run it in a Docker container or on a dedicated machine with restricted permissions. Don't give it access to everything on day one. Start with low-stakes tasks, understand what it's doing, then expand from there."
+        "text": "This isn't a reason to avoid it \u2014 it's a reason to set it up carefully. The recommended approach is to run it in a Docker container or on a dedicated machine with restricted permissions. Don't give it access to everything on day one. Start with low-stakes tasks, understand what it's doing, then expand from there."
       },
       {
         "type": "p",
-        "text": "The Chinese government moved to restrict state agencies and banks from using OpenClaw, citing concerns about unauthorized data deletion and leaks. [Wikipedia](https://en.wikipedia.org/wiki/OpenClaw) That's an extreme response, but it signals how seriously the access question needs to be taken."
+        "text": "The Chinese government moved to restrict state agencies and banks from using OpenClaw, citing concerns about unauthorized data deletion and leaks ([Wikipedia](https://en.wikipedia.org/wiki/OpenClaw)). That's an extreme response, but it signals how seriously the access question needs to be taken."
       },
       {
         "type": "p",
@@ -1035,11 +1035,11 @@
       },
       {
         "type": "p",
-        "text": "But if you're a developer, a technically minded founder, or someone who manages a lot of digital work and isn't afraid of a setup process — this is one of the most powerful tools available right now at any price. The fact that it's free makes it even more remarkable."
+        "text": "But if you're a developer, a technically minded founder, or someone who manages a lot of digital work and isn't afraid of a setup process \u2014 this is one of the most powerful tools available right now at any price. The fact that it's free makes it even more remarkable."
       },
       {
         "type": "p",
-        "text": "The people getting the most out of it are treating it like a new hire with broad access and strong capabilities — giving it clear instructions, monitoring what it does, and expanding its responsibilities as trust builds."
+        "text": "The people getting the most out of it are treating it like a new hire with broad access and strong capabilities \u2014 giving it clear instructions, monitoring what it does, and expanding its responsibilities as trust builds."
       },
       {
         "type": "p",
@@ -1051,11 +1051,11 @@
       },
       {
         "type": "p",
-        "text": "Industry experts argue that OpenClaw could mark the moment when agents move from research labs into everyday use. [KDnuggets](https://www.kdnuggets.com/openclaw-explained-the-free-ai-agent-tool-going-viral-already-in-2026) The speed of adoption suggests they might be right."
+        "text": "Industry experts argue that OpenClaw could mark the moment when agents move from research labs into everyday use ([KDnuggets](https://www.kdnuggets.com/openclaw-explained-the-free-ai-agent-tool-going-viral-already-in-2026)). The speed of adoption suggests they might be right."
       },
       {
         "type": "p",
-        "text": "The model is shifting. AI tools that help you think are valuable. AI tools that act on your behalf — reliably, securely, across your existing workflow — are a different category entirely. OpenClaw is an early and imperfect version of that future. But it's a real one, available today, and the trajectory is clear."
+        "text": "The model is shifting. AI tools that help you think are valuable. AI tools that act on your behalf \u2014 reliably, securely, across your existing workflow \u2014 are a different category entirely. OpenClaw is an early and imperfect version of that future. But it's a real one, available today, and the trajectory is clear."
       },
       {
         "type": "p",
@@ -1066,18 +1066,18 @@
   {
     "slug": "the-rise-of-the-ai-creator-economy",
     "tag": "Industry Guides",
-    "title": "The new gold rush is invisible — And most business are watching it pass them by",
-    "teaser": "A new class of AI builder is reshaping the workforce — and the businesses that find them first will win. Here's why the AI creator economy is real, growing fast, and why most companies are still missing it.",
+    "title": "The New Gold Rush Is Invisible \u2014 And Most Business Are Watching It Pass Them By",
+    "teaser": "A new class of AI builder is reshaping the workforce \u2014 and the businesses that find them first will win. Here's why the AI creator economy is real, growing fast, and why most companies are still missing it.",
     "readTime": "5 min read",
-    "date": "Apr 14, 2026",
+    "date": "Apr 22, 2026",
     "blocks": [
       {
         "type": "p",
-        "text": "A new class of builder is emerging — one who doesn't write code in the traditional sense, but builds entire workflows, automations, and custom tools using AI. Here's why that changes everything."
+        "text": "A new class of builder is emerging \u2014 one who doesn't write code in the traditional sense, but builds entire workflows, automations, and custom tools using AI. Here's why that changes everything."
       },
       {
         "type": "p",
-        "text": "There's a new kind of professional quietly reshaping the workforce. They don't have computer science degrees. They didn't get here through a traditional tech career path. What they have is something rarer right now: the ability to make AI actually work — for real businesses, real problems, real people."
+        "text": "There's a new kind of professional quietly reshaping the workforce. They don't have computer science degrees. They didn't get here through a traditional tech career path. What they have is something rarer right now: the ability to make AI actually work \u2014 for real businesses, real problems, real people."
       },
       {
         "type": "p",
@@ -1101,7 +1101,7 @@
       },
       {
         "type": "p",
-        "text": "When people talk about AI adoption, the conversation usually centers on tools — which model to use, what platform to buy, how much it costs. But the data tells a different story. One of the main reasons organizations abandon AI projects isn't budget or software availability. It's skills."
+        "text": "When people talk about AI adoption, the conversation usually centers on tools \u2014 which model to use, what platform to buy, how much it costs. But the data tells a different story. One of the main reasons organizations abandon AI projects isn't budget or software availability. It's skills."
       },
       {
         "type": "p",
@@ -1137,11 +1137,11 @@
       },
       {
         "type": "p",
-        "text": "The split between large and small businesses isn't just a statistic — it's a widening structural divide. Large enterprises with dedicated tech teams and deep pockets are scaling AI fast. Smaller organizations are trying to catch up while running lean."
+        "text": "The split between large and small businesses isn't just a statistic \u2014 it's a widening structural divide. Large enterprises with dedicated tech teams and deep pockets are scaling AI fast. Smaller organizations are trying to catch up while running lean."
       },
       {
         "type": "p",
-        "text": "Research from multiple industry sources points to major projected economic losses tied to AI skills shortages — delayed projects, missed revenue, and reduced competitiveness."
+        "text": "Research from multiple industry sources points to major projected economic losses tied to AI skills shortages \u2014 delayed projects, missed revenue, and reduced competitiveness."
       },
       {
         "type": "p",
@@ -1154,6 +1154,60 @@
       {
         "type": "p",
         "text": "That's the window. It won't be open forever."
+      }
+    ]
+  },
+  {
+    "slug": "master-claude-code-automation",
+    "tag": "Tools & Tutorials",
+    "title": "How to Master Claude Code for AI Automation",
+    "teaser": "A practical under-30-minute foundation in Claude Code: the interface, the WAT framework, better prompting, MCP servers, skills, and a live workflow build with Nate Herk.",
+    "readTime": "28 min watch",
+    "date": "Apr 18, 2026",
+    "curatedLine": "Curated from Nate Herk \u00b7 Tools & Tutorials",
+    "blocks": [
+      {
+        "type": "banner",
+        "src": "/resources/master-claude-code-automation-hero.png",
+        "alt": "AI automation workflows graphic with a glowing brain and workflow labels: input, process, automate, output",
+        "width": 1024,
+        "height": 571
+      },
+      {
+        "type": "p",
+        "text": "**If you're building AI automations and you haven't touched Claude Code yet, this is where to start.**"
+      },
+      {
+        "type": "p",
+        "text": "Nate Herk's tutorial cuts through the noise and gives you a working foundation in under 30 minutes. He covers the actual interface, a framework called WAT that structures how you approach every automation build, how to communicate with Claude Code so it asks the right questions before it starts building, MCP servers and Claude skills which are the features that separate casual users from people getting real results, and a live workflow build so you can see everything in context."
+      },
+      {
+        "type": "p",
+        "text": "It's built for beginners but it's not dumbed down. If you've been putting off learning Claude Code because it felt intimidating, this removes that excuse."
+      },
+      {
+        "type": "p",
+        "text": "**Who this is for:**"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "AI creators and freelancers looking to accelerate their workflow builds",
+          "Professionals who want to understand what Claude Code actually does before they hire someone who uses it"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "**Watch it here:** [Nate Herk's tutorial on YouTube](https://youtu.be/zKBPwDpBfhs?si=QXdjZsWWLRzoZBj6)"
+      },
+      {
+        "type": "p",
+        "text": "Originally published by Nate Herk on YouTube. Check out his channel for more AI automation tutorials.",
+        "italic": true
+      },
+      {
+        "type": "p",
+        "text": "**The Envowl take:** Tools like Claude Code are widening the gap between AI creators who deliver fast and those who don't. If you're hiring an AI freelancer in 2026, asking whether they use Claude Code in their workflow is a reasonable qualifier. If they don't know what it is, that tells you something."
       }
     ]
   }
