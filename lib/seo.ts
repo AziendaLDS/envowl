@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 export const SITE_URL = "https://envowl.com";
 export const SITE_NAME = "Envowl";
+export const SITE_TWITTER_HANDLE = "@envowl";
+export const COMPANY_LEGAL_NAME = "LDS Ventures LLC";
 export const DEFAULT_TITLE = "Envowl — The AI Talent Marketplace";
 export const DEFAULT_DESCRIPTION =
   "Find vetted AI experts or apply as a creator. Envowl connects businesses and individuals with trusted AI talent — curated, verified, and built for where the world is going.";
@@ -45,6 +47,8 @@ export function pageMetadata(opts: PageMetadataOptions): Metadata {
     },
     twitter: {
       card: "summary_large_image",
+      site: SITE_TWITTER_HANDLE,
+      creator: SITE_TWITTER_HANDLE,
       title: opts.title,
       description: opts.description,
       images: [ogImage.url],

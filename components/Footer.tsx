@@ -31,6 +31,9 @@ export function Footer() {
 
           <div className="grid flex-1 grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-12 md:gap-14 lg:max-w-3xl lg:justify-end">
             <div className="flex flex-col gap-4">
+              <Link href="/platform" className={linkClass}>
+                Platform
+              </Link>
               <Link href="/for-businesses" className={linkClass}>
                 For Businesses
               </Link>

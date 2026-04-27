@@ -2,7 +2,9 @@ import { Suspense } from "react";
 import { FadeIn } from "@/components/FadeIn";
 import { ResourcesGrid } from "@/components/ResourcesGrid";
 import { ResourcesNewsletter } from "@/components/ResourcesNewsletter";
-import { pageMetadata } from "@/lib/seo";
+import { articles } from "@/lib/articles";
+import { breadcrumbSchema } from "@/lib/schema";
+import { pageMetadata, SITE_URL } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "AI Resources & Guides",
@@ -11,9 +13,32 @@ export const metadata = pageMetadata({
   path: "/resources",
 });
 
+const resourceListSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Envowl AI Resources",
+  hasPart: articles.map((article) => ({
+    "@type": "Article",
+    headline: article.title,
+    url: `${SITE_URL}/resources/${article.slug}`,
+    keywords: article.tag,
+  })),
+};
+
+const resourceBreadcrumbSchema = breadcrumbSchema([
+  { name: "Home", path: "/" },
+  { name: "Resources", path: "/resources" },
+]);
+
 export default function ResourcesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([resourceListSchema, resourceBreadcrumbSchema]),
+        }}
+      />
       <section className="border-b border-neutral-200 bg-[#F2F2F2] py-16 sm:py-24 md:py-28">
         <div className="mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
           <FadeIn>

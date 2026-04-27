@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const links = [
+  { href: "/platform", label: "Platform" },
   { href: "/for-creators", label: "For Creators" },
   { href: "/for-professionals", label: "For Professionals" },
   { href: "/for-businesses", label: "For Businesses" },
@@ -85,7 +86,7 @@ export function Navbar() {
             className="h-[52px] w-auto max-h-[52px] max-w-none self-center object-contain bg-transparent"
             style={{ objectFit: "contain", background: "transparent" }}
             priority
-            quality={100}
+            quality={85}
             sizes="(max-width: 768px) 150px, 180px"
           />
         </Link>

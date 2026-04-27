@@ -10,6 +10,11 @@ export const metadata = pageMetadata({
   path: "/waitlist-confirmed",
 });
 
+metadata.robots = {
+  index: false,
+  follow: false,
+};
+
 const shareText = encodeURIComponent(
   `I just joined the waitlist for ${PLATFORM_NAME} — vetted AI experts for real projects.`,
 );

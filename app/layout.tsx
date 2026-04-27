@@ -10,6 +10,7 @@ import {
   SITE_NAME,
   SITE_URL,
 } from "@/lib/seo";
+import { organizationSchema, websiteSchema } from "@/lib/schema";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -65,8 +66,17 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
+
+const baseSchemas = [organizationSchema(), websiteSchema()];
 
 export default function RootLayout({
   children,
@@ -95,8 +105,20 @@ gtag('config', 'G-XC358QBGN7');`}
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen min-w-0 overflow-x-clip bg-[#F2F2F2] font-sans text-[0.9375rem] leading-relaxed antialiased text-neutral-900 sm:text-[1.0625rem]`}
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-neutral-900 focus:ring-2 focus:ring-accent"
+        >
+          Skip to main content
+        </a>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(baseSchemas) }}
+        />
         <Navbar />
-        <main className="min-h-[50vh] min-w-0">{children}</main>
+        <main id="main-content" className="min-h-[50vh] min-w-0">
+          {children}
+        </main>
         <Footer />
         <Analytics />
       </body>
