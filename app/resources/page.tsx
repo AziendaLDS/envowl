@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { FadeIn } from "@/components/FadeIn";
+import ClickSpark from "@/components/ClickSpark";
 import { ResourcesGrid } from "@/components/ResourcesGrid";
 import { ResourcesNewsletter } from "@/components/ResourcesNewsletter";
 import { ShootingStarsHeroBackground } from "@/components/ShootingStarsHeroBackground";
@@ -42,20 +43,22 @@ export default function ResourcesPage() {
       />
       <section className="relative overflow-hidden bg-[#0a0a0a] py-16 text-white sm:py-24 md:py-36 min-h-[600px] flex items-center">    
        <ShootingStarsHeroBackground fadeVariant="lower" nextSectionBg="#ebebeb" />
-        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
-          <FadeIn>
-            <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-accent">
-              Resources
-            </p>
-            <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-              The AI resource library.
-            </h1>
-            <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/80 sm:mt-8 sm:text-lg md:text-xl">
-              Practical guides for businesses, professionals, and anyone trying to
-              keep up with where the world is going.
-            </p>
-          </FadeIn>
-        </div>
+        <ClickSpark sparkColor="#f54927" sparkSize={12} sparkRadius={22} sparkCount={10} duration={500}>
+          <div className="relative z-10 mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
+            <FadeIn>
+              <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-accent">
+                Resources
+              </p>
+              <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+                The AI resource library.
+              </h1>
+              <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/80 sm:mt-8 sm:text-lg md:text-xl">
+                Practical guides for businesses, professionals, and anyone trying to
+                keep up with where the world is going.
+              </p>
+            </FadeIn>
+          </div>
+        </ClickSpark>
       </section>
 
       <section className="bg-[#ebebeb] py-16 sm:py-24 md:py-28">

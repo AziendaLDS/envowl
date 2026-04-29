@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BorderGlow from "@/components/BorderGlow";
 import { FadeIn } from "@/components/FadeIn";
 import { ShootingStarsHeroBackground } from "@/components/ShootingStarsHeroBackground";
 import { WaitlistForm } from "@/components/WaitlistForm";
@@ -82,14 +83,24 @@ function TheFear() {
         <div className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-2">
           {fears.map((item, i) => (
             <FadeIn key={item.role} delay={i * 0.06}>
-              <div className="rounded-2xl border border-neutral-200 p-6 transition-all hover:border-accent/20">
+              <BorderGlow
+                className="rounded-2xl border border-neutral-200 bg-white p-6"
+                backgroundColor="#ffffff"
+                borderRadius={16}
+                glowColor="16 90 56"
+                glowRadius={22}
+                edgeSensitivity={28}
+                coneSpread={24}
+                fillOpacity={0.3}
+                colors={["#f54927", "#f97316", "#fb7185"]}
+              >
                 <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent">
                   {item.role}
                 </p>
                 <p className="text-base italic leading-relaxed text-neutral-600">
                   &quot;{item.fear}&quot;
                 </p>
-              </div>
+              </BorderGlow>
             </FadeIn>
           ))}
         </div>
@@ -137,7 +148,17 @@ function WhatYouGet() {
         <div className="mt-10 grid gap-5 sm:mt-14 sm:grid-cols-2">
           {offerings.map((item, i) => (
             <FadeIn key={item.title} delay={i * 0.06}>
-              <div className="group flex h-full flex-col rounded-2xl border border-neutral-200 bg-white p-7 transition-all hover:border-accent/30 hover:shadow-sm">
+              <BorderGlow
+                className="group flex h-full flex-col rounded-2xl border border-neutral-200 bg-white p-7"
+                backgroundColor="#ffffff"
+                borderRadius={16}
+                glowColor="16 90 56"
+                glowRadius={22}
+                edgeSensitivity={28}
+                coneSpread={24}
+                fillOpacity={0.3}
+                colors={["#f54927", "#f97316", "#fb7185"]}
+              >
                 <span className="inline-flex min-w-[10.5rem] justify-center rounded-full border border-neutral-200 px-3 py-1 text-xs font-medium text-neutral-500">
                   {item.tag}
                 </span>
@@ -145,7 +166,7 @@ function WhatYouGet() {
                   {item.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-neutral-600">{item.body}</p>
-              </div>
+              </BorderGlow>
             </FadeIn>
           ))}
         </div>

@@ -3,6 +3,7 @@ import {
   CreatorExperience,
   CreatorTypes,
 } from "@/components/ForCreatorSections";
+import BorderGlow from "@/components/BorderGlow";
 import { FadeIn } from "@/components/FadeIn";
 import { ShootingStarsHeroBackground } from "@/components/ShootingStarsHeroBackground";
 import { WaitlistForm } from "@/components/WaitlistForm";
@@ -103,14 +104,24 @@ export default function ForCreatorsPage() {
           <div className="mt-10 grid grid-cols-1 gap-6 sm:mt-14 sm:gap-8 md:grid-cols-3">
             {benefits.map((b, i) => (
               <FadeIn key={b.title} delay={i * 0.06}>
-                <div className="h-full rounded-3xl border border-neutral-200 bg-[#F2F2F2] p-6 sm:p-10">
+                <BorderGlow
+                  className="h-full rounded-3xl border border-neutral-200 bg-[#F2F2F2] p-6 sm:p-10"
+                  backgroundColor="#F2F2F2"
+                  borderRadius={24}
+                  glowColor="16 90 56"
+                  glowRadius={28}
+                  edgeSensitivity={30}
+                  coneSpread={24}
+                  fillOpacity={0.3}
+                  colors={["#f54927", "#f97316", "#fb7185"]}
+                >
                   <h3 className="text-lg font-semibold text-neutral-900 sm:text-xl">
                     {b.title}
                   </h3>
                   <p className="mt-4 text-base leading-relaxed text-neutral-600">
                     {b.copy}
                   </p>
-                </div>
+                </BorderGlow>
               </FadeIn>
             ))}
           </div>

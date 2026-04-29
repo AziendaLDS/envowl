@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
+import Eyes from "@/components/Eyes";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import {
@@ -119,6 +120,7 @@ gtag('config', 'G-XC358QBGN7');`}
         <main id="main-content" className="min-h-[50vh] min-w-0">
           {children}
         </main>
+        <Eyes />
         <Footer />
         <Analytics />
       </body>

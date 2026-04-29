@@ -1,4 +1,5 @@
 import { FadeIn } from "@/components/FadeIn";
+import BorderGlow from "@/components/BorderGlow";
 
 export function HowItWorks() {
   const steps = [
@@ -96,12 +97,22 @@ export function UseCaseCategories() {
         <div className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((cat, i) => (
             <FadeIn key={cat.label} delay={i * 0.05}>
-              <div className="group rounded-2xl border border-neutral-200 bg-white p-6 transition-all duration-200 hover:border-accent/30 hover:shadow-sm">
+              <BorderGlow
+                className="group rounded-2xl border border-neutral-200 bg-white p-6"
+                backgroundColor="#ffffff"
+                borderRadius={16}
+                glowColor="16 90 56"
+                glowRadius={24}
+                edgeSensitivity={28}
+                coneSpread={24}
+                fillOpacity={0.35}
+                colors={["#f54927", "#f97316", "#fb7185"]}
+              >
                 <h3 className="mb-2 text-base font-semibold text-neutral-900 transition-colors group-hover:text-accent">
                   {cat.label}
                 </h3>
                 <p className="text-sm leading-relaxed text-neutral-500">{cat.desc}</p>
-              </div>
+              </BorderGlow>
             </FadeIn>
           ))}
         </div>
