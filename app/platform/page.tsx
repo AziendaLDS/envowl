@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PlatformAudienceCards } from "@/components/PlatformAudienceCards";
 import { pageMetadata, SITE_URL } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 
@@ -29,20 +30,18 @@ export default function PlatformPage() {
           What Envowl is and how it works
         </h1>
         <p className="mt-6 text-base leading-relaxed text-neutral-600 sm:text-lg">
-          Envowl is a curated AI talent marketplace. Businesses and professionals
-          use Envowl to find vetted AI experts, while creators use Envowl to find
-          qualified projects with clearer scope and expectations.
+          Most businesses don't fail at AI because the technology isn't ready. They
+          fail because they can't find people who actually know how to use it.
+          Envowl is a curated AI talent marketplace - where vetted creators and
+          agencies connect with businesses and professionals who need real outcomes,
+          not just deliverables.
         </p>
 
         <section className="mt-12">
           <h2 className="text-2xl font-semibold text-neutral-900 sm:text-3xl">
             Who Envowl serves
           </h2>
-          <ul className="mt-4 list-disc space-y-2 pl-6 text-base text-neutral-600 sm:text-lg">
-            <li>Businesses that need practical AI implementation support.</li>
-            <li>Professionals that want trusted AI guidance for their role.</li>
-            <li>Vetted AI creators, agencies, and freelancers seeking qualified leads.</li>
-          </ul>
+          <PlatformAudienceCards />
         </section>
 
         <section className="mt-12">
@@ -50,9 +49,11 @@ export default function PlatformPage() {
             How vetting and trust work
           </h2>
           <p className="mt-4 text-base leading-relaxed text-neutral-600 sm:text-lg">
-            Envowl is not an open directory. Creator applications are reviewed for
-            portfolio quality, delivery credibility, and fit. This reduces mismatch
-            risk for buyers and improves lead quality for creators.
+            Anyone can call themselves an AI expert right now. Envowl doesn't work
+            that way. Every creator on the platform is reviewed for portfolio
+            quality, delivery track record, and fit before they're ever surfaced to
+            a buyer. That means less wasted time on both sides - and better outcomes
+            on every engagement.
           </p>
         </section>
 

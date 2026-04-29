@@ -3,10 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --background: #f2f2f2;
-  --foreground: #171717;
+  /* HSL channels (space-separated) for Tailwind opacity modifiers */
+  --background: 0 0% 95%;
+  --foreground: 0 0% 9%;
   --accent: #f54927;
   --accent-hover: #d63d20;
+  /* Defaults for shadcn-style tokens (light); overridden in `.theme-purple-gradient` */
+  --border: 0 0% 90%;
+  --card: 0 0% 100%;
+  --secondary: 0 0% 96%;
+  --muted-foreground: 0 0% 45%;
 }
 
 html {
@@ -14,8 +20,8 @@ html {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
   font-family: var(--font-geist-sans), system-ui, sans-serif;
   overflow-x: clip;
   min-width: 0;
@@ -25,6 +31,21 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* v0-style service cards: deep purple anchored on #302b63 (not pure black) */
+.theme-purple-gradient {
+  --foreground: 0 0% 98%;
+  --muted-foreground: 245 12% 72%;
+  --card: 245 32% 22%;
+  --secondary: 245 28% 28%;
+  --border: 245 22% 38%;
+  background-image: linear-gradient(
+    160deg,
+    #302b63 0%,
+    #252050 45%,
+    #14122a 100%
+  );
 }
 
 .hero-noise {

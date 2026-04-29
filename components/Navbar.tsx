@@ -6,7 +6,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const links = [
-  { href: "/platform", label: "Platform" },
   { href: "/for-creators", label: "For Creators" },
   { href: "/for-professionals", label: "For Professionals" },
   { href: "/for-businesses", label: "For Businesses" },

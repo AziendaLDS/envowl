@@ -24,17 +24,32 @@ const homeFaq = [
   {
     question: "What is Envowl?",
     answer:
-      "Envowl is a curated AI talent marketplace that helps businesses and professionals find vetted AI experts, and helps qualified creators find better-fit projects.",
+      "Envowl is a curated AI talent marketplace. Businesses find vetted experts to implement AI the right way. Professionals get trusted guidance to stay ahead as their roles evolve. Creators and agencies get qualified leads from buyers who already understand the value of what they do.",
   },
   {
     question: "Who is Envowl for?",
     answer:
-      "Envowl serves businesses adopting AI, professionals upskilling with AI, and creators or agencies delivering practical AI outcomes.",
+      "Businesses that are adopting AI and need people who've actually done it before. Professionals whose roles are changing faster than their training is - and who want real guidance, not just courses. And creators or agencies who are tired of competing on price against people with no track record.",
   },
   {
     question: "How is Envowl different from a freelancer directory?",
     answer:
-      "Envowl emphasizes vetting, trust, and educational content so buyers can make informed hiring decisions and creators can work with qualified leads.",
+      "A directory will show you everyone. Envowl shows you who's actually good. Every creator is reviewed before they're listed - portfolio, delivery history, scope fit. We turn down a lot of applications. That's not gatekeeping, that's the whole product. Buyers waste less time. Creators get better clients. That doesn't happen in an open marketplace.",
+  },
+  {
+    question: "How does the vetting process work?",
+    answer:
+      "Every creator application is manually reviewed against three criteria: portfolio quality, delivery credibility, and scope fit. We don't approve everyone - that's the point.",
+  },
+  {
+    question: "Is Envowl free to use as a business?",
+    answer:
+      "Browsing and posting is free. You only pay when you're ready to engage a creator. The resources section is also free - practical AI guidance you can use whether you hire anyone or not.",
+  },
+  {
+    question: "Can I use Envowl if I don't know exactly what I need?",
+    answer:
+      "That's actually the best time to start. Vague briefs become sharp projects when the right people are involved. Post what you've got and the conversations that follow will result in the best work.",
   },
 ];
 
@@ -65,12 +80,23 @@ export default function Home() {
           <h2 className="text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
             Frequently asked questions
           </h2>
-          <div className="mt-8 space-y-6">
+          <div className="mt-8 space-y-4">
             {homeFaq.map((item) => (
-              <article key={item.question} className="rounded-2xl border border-neutral-200 bg-white p-6">
-                <h3 className="text-lg font-semibold text-neutral-900">{item.question}</h3>
-                <p className="mt-2 text-base leading-relaxed text-neutral-600">{item.answer}</p>
-              </article>
+              <details
+                key={item.question}
+                className="group rounded-2xl border border-neutral-200 bg-white px-6 py-5"
+              >
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
+                  <h3 className="text-lg font-semibold text-neutral-900">{item.question}</h3>
+                  <span
+                    aria-hidden
+                    className="mt-0.5 text-xl leading-none text-neutral-500 transition-transform group-open:rotate-45"
+                  >
+                    +
+                  </span>
+                </summary>
+                <p className="mt-3 text-base leading-relaxed text-neutral-600">{item.answer}</p>
+              </details>
             ))}
           </div>
           <p className="mt-8 text-sm text-neutral-600">
