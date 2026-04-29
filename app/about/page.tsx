@@ -21,7 +21,7 @@ export default function AboutPage() {
           AI isn&apos;t the great equalizer.
           <br />
           <span className="text-neutral-400">
-            Access to trusted AI expertise is.
+            Access to trusted AI expertise&nbsp;is.
           </span>
         </h1>
       </section>

@@ -11,7 +11,7 @@ export function ResourcesPreview() {
       <div className="mx-auto max-w-7xl px-6 sm:px-6 md:px-8">
         <FadeIn>
           <h2 className="text-center text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
-            Free resources. No fluff.
+            Free resources. Use them.
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-base text-neutral-600 sm:mt-6 sm:text-lg">
             <span className="block">Not sure where to start with AI?</span>

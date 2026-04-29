@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { FadeIn } from "@/components/FadeIn";
 import { ResourcesGrid } from "@/components/ResourcesGrid";
 import { ResourcesNewsletter } from "@/components/ResourcesNewsletter";
+import { ShootingStarsHeroBackground } from "@/components/ShootingStarsHeroBackground";
 import { articles } from "@/lib/articles";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata, SITE_URL } from "@/lib/seo";
@@ -39,13 +40,17 @@ export default function ResourcesPage() {
           __html: JSON.stringify([resourceListSchema, resourceBreadcrumbSchema]),
         }}
       />
-      <section className="border-b border-neutral-200 bg-[#F2F2F2] py-16 sm:py-24 md:py-28">
-        <div className="mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
+      <section className="relative overflow-hidden border-b border-neutral-200 bg-[#0a0a0a] py-16 text-white sm:py-24 md:py-36">
+        <ShootingStarsHeroBackground fadeVariant="lower" />
+        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
           <FadeIn>
-            <h1 className="text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl lg:text-6xl">
+            <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-accent">
+              Resources
+            </p>
+            <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
               The AI resource library.
             </h1>
-            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-neutral-600 sm:mt-6 sm:text-lg md:text-xl">
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/80 sm:mt-6 sm:text-lg md:text-xl">
               Practical guides for businesses, professionals, and anyone trying to
               keep up with where the world is going.
             </p>
