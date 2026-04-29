@@ -83,6 +83,7 @@ function animateValue({
 }
 
 type BorderGlowProps = {
+  id?: string;
   children: React.ReactNode;
   className?: string;
   edgeSensitivity?: number;
@@ -98,6 +99,7 @@ type BorderGlowProps = {
 };
 
 export default function BorderGlow({
+  id,
   children,
   className = "",
   edgeSensitivity = 30,
@@ -209,6 +211,7 @@ export default function BorderGlow({
 
   return (
     <div
+      id={id}
       ref={cardRef}
       onPointerMove={handlePointerMove}
       className={`border-glow-card ${className}`.trim()}

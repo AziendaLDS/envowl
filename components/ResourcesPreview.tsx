@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BorderGlow from "@/components/BorderGlow";
 import { FadeIn } from "@/components/FadeIn";
 import { ArticleCard } from "@/components/ArticleCard";
 import { articles } from "@/lib/articles";
@@ -23,7 +24,19 @@ export function ResourcesPreview() {
         <div className="mt-10 grid grid-cols-1 gap-6 sm:mt-16 sm:gap-8 md:grid-cols-3">
           {preview.map((a, i) => (
             <FadeIn key={a.slug} delay={i * 0.06}>
-              <ArticleCard article={a} compact />
+              <BorderGlow
+                className="rounded-3xl border border-neutral-200 bg-white"
+                backgroundColor="#ffffff"
+                borderRadius={24}
+                glowColor="16 90 56"
+                glowRadius={24}
+                edgeSensitivity={30}
+                coneSpread={24}
+                fillOpacity={0.25}
+                colors={["#f54927", "#f97316", "#fb7185"]}
+              >
+                <ArticleCard article={a} compact />
+              </BorderGlow>
             </FadeIn>
           ))}
         </div>

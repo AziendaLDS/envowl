@@ -1,4 +1,5 @@
 import { FadeIn } from "@/components/FadeIn";
+import BorderGlow from "@/components/BorderGlow";
 import { PLATFORM_NAME } from "@/lib/constants";
 
 const steps = [
@@ -33,7 +34,17 @@ export function HowItWorks() {
         <div className="mt-10 grid grid-cols-1 gap-8 sm:mt-16 sm:gap-10 md:grid-cols-3">
           {steps.map((s, i) => (
             <FadeIn key={s.label} delay={i * 0.06}>
-              <div className="flex h-full flex-col rounded-3xl border border-neutral-200/80 bg-white/60 p-6 shadow-sm sm:p-10">
+              <BorderGlow
+                className="flex h-full flex-col rounded-3xl border border-neutral-200/80 bg-white/60 p-6 shadow-sm sm:p-10"
+                backgroundColor="#ffffff"
+                borderRadius={24}
+                glowColor="16 90 56"
+                glowRadius={26}
+                edgeSensitivity={30}
+                coneSpread={24}
+                fillOpacity={0.28}
+                colors={["#f54927", "#f97316", "#fb7185"]}
+              >
                 <p className="text-sm font-semibold uppercase tracking-wider text-accent">
                   {s.label}
                 </p>
@@ -43,7 +54,7 @@ export function HowItWorks() {
                 <p className="mt-4 flex-1 text-base leading-relaxed text-neutral-600">
                   {s.copy}
                 </p>
-              </div>
+              </BorderGlow>
             </FadeIn>
           ))}
         </div>

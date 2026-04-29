@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Suspense } from "react";
 import { AudienceWaitlist } from "@/components/AudienceWaitlist";
+import BorderGlow from "@/components/BorderGlow";
 import { FadeIn } from "@/components/FadeIn";
 import { PLATFORM_NAME } from "@/lib/constants";
 
@@ -15,7 +16,17 @@ export function AudienceSplit() {
         </FadeIn>
         <div className="mt-10 grid grid-cols-1 gap-8 md:mt-14 md:grid-cols-2 md:gap-10">
           <FadeIn delay={0.05}>
-            <div className="flex h-full flex-col rounded-3xl border border-neutral-200 bg-[#F2F2F2] p-6 sm:p-10 md:p-12">
+            <BorderGlow
+              className="flex h-full flex-col rounded-3xl border border-neutral-200 bg-[#F2F2F2] p-6 sm:p-10 md:p-12"
+              backgroundColor="#F2F2F2"
+              borderRadius={24}
+              glowColor="16 90 56"
+              glowRadius={28}
+              edgeSensitivity={30}
+              coneSpread={24}
+              fillOpacity={0.3}
+              colors={["#f54927", "#f97316", "#fb7185"]}
+            >
               <p className="text-sm font-semibold uppercase tracking-wider text-accent">
                 I want to use AI
               </p>
@@ -34,10 +45,20 @@ export function AudienceSplit() {
               >
                 Join as a Client →
               </Link>
-            </div>
+            </BorderGlow>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <div className="flex h-full flex-col rounded-3xl border border-neutral-200 bg-[#F2F2F2] p-6 sm:p-10 md:p-12">
+            <BorderGlow
+              className="flex h-full flex-col rounded-3xl border border-neutral-200 bg-[#F2F2F2] p-6 sm:p-10 md:p-12"
+              backgroundColor="#F2F2F2"
+              borderRadius={24}
+              glowColor="16 90 56"
+              glowRadius={28}
+              edgeSensitivity={30}
+              coneSpread={24}
+              fillOpacity={0.3}
+              colors={["#f54927", "#f97316", "#fb7185"]}
+            >
               <p className="text-sm font-semibold uppercase tracking-wider text-accent">
                 I build with AI
               </p>
@@ -56,7 +77,7 @@ export function AudienceSplit() {
               >
                 Apply as a Creator →
               </Link>
-            </div>
+            </BorderGlow>
           </FadeIn>
         </div>
         <Suspense

@@ -72,7 +72,7 @@ export default function ForBusinessesPage() {
               {pills.map((p) => (
                 <span
                   key={p}
-                  className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-neutral-700 ring-1 ring-neutral-200"
+                  className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-neutral-700 ring-1 ring-neutral-200 shadow-[0_0_0_1px_rgba(255,255,255,0.65),0_0_16px_rgba(245,73,39,0.12)] transition-shadow hover:shadow-[0_0_0_1px_rgba(255,255,255,0.85),0_0_22px_rgba(245,73,39,0.2)]"
                 >
                   {p}
                 </span>

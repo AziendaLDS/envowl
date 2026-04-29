@@ -1,4 +1,5 @@
 import { AudienceSplit } from "@/components/AudienceSplit";
+import BorderGlow from "@/components/BorderGlow";
 import { Hero } from "@/components/Hero";
 import { HowItWorks } from "@/components/HowItWorks";
 import Link from "next/link";
@@ -82,21 +83,31 @@ export default function Home() {
           </h2>
           <div className="mt-8 space-y-4">
             {homeFaq.map((item) => (
-              <details
+              <BorderGlow
                 key={item.question}
-                className="group rounded-2xl border border-neutral-200 bg-white px-6 py-5"
+                className="rounded-2xl border border-neutral-200 bg-white px-6 py-5"
+                backgroundColor="#ffffff"
+                borderRadius={16}
+                glowColor="16 90 56"
+                glowRadius={22}
+                edgeSensitivity={30}
+                coneSpread={24}
+                fillOpacity={0.24}
+                colors={["#f54927", "#f97316", "#fb7185"]}
               >
-                <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
-                  <h3 className="text-lg font-semibold text-neutral-900">{item.question}</h3>
-                  <span
-                    aria-hidden
-                    className="mt-0.5 text-xl leading-none text-neutral-500 transition-transform group-open:rotate-45"
-                  >
-                    +
-                  </span>
-                </summary>
-                <p className="mt-3 text-base leading-relaxed text-neutral-600">{item.answer}</p>
-              </details>
+                <details className="group">
+                  <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
+                    <h3 className="text-lg font-semibold text-neutral-900">{item.question}</h3>
+                    <span
+                      aria-hidden
+                      className="mt-0.5 text-xl leading-none text-neutral-500 transition-transform group-open:rotate-45"
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <p className="mt-3 text-base leading-relaxed text-neutral-600">{item.answer}</p>
+                </details>
+              </BorderGlow>
             ))}
           </div>
           <p className="mt-8 text-sm text-neutral-600">

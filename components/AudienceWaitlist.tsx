@@ -3,6 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AudienceSubscribeForm } from "@/components/AudienceSubscribeForm";
+import BorderGlow from "@/components/BorderGlow";
 import { WAITLIST_MICROCOPY_SHORT } from "@/lib/constants";
 
 export function AudienceWaitlist() {
@@ -17,9 +18,17 @@ export function AudienceWaitlist() {
   }, [initial]);
 
   return (
-    <div
+    <BorderGlow
       id="audience-waitlist"
       className="mx-auto mt-12 w-full min-w-0 max-w-xl scroll-mt-24 rounded-3xl border border-neutral-200 bg-white/90 p-5 shadow-sm backdrop-blur-sm sm:mt-16 sm:scroll-mt-28 sm:p-8 md:p-10"
+      backgroundColor="#ffffff"
+      borderRadius={24}
+      glowColor="16 90 56"
+      glowRadius={28}
+      edgeSensitivity={30}
+      coneSpread={24}
+      fillOpacity={0.3}
+      colors={["#f54927", "#f97316", "#fb7185"]}
     >
       <p className="text-center text-base font-medium text-neutral-900">
         Join the waitlist
@@ -60,6 +69,6 @@ export function AudienceWaitlist() {
       <p className="mt-4 text-center text-base text-neutral-600">
         {WAITLIST_MICROCOPY_SHORT}
       </p>
-    </div>
+    </BorderGlow>
   );
 }
