@@ -20,7 +20,7 @@ export default function AboutPage() {
         <h1 className="mb-6 text-3xl font-semibold leading-tight sm:mb-8 sm:text-4xl md:text-5xl lg:text-6xl xl:text-[3.25rem]">
           AI isn&apos;t the great equalizer.
           <br />
-          <span className="text-neutral-400">
+          <span className="text-neutral-400 md:whitespace-nowrap">
             Access to trusted AI expertise&nbsp;is.
           </span>
         </h1>

@@ -40,7 +40,7 @@ export default function ResourcesPage() {
           __html: JSON.stringify([resourceListSchema, resourceBreadcrumbSchema]),
         }}
       />
-      <section className="relative overflow-hidden border-b border-neutral-200 bg-[#0a0a0a] py-16 text-white sm:py-24 md:py-36">
+      <section className="relative overflow-hidden border-b border-neutral-200 bg-[#0a0a0a] py-16 text-white sm:py-24 md:pb-44 md:pt-36">
         <ShootingStarsHeroBackground fadeVariant="lower" />
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
           <FadeIn>
@@ -58,8 +58,8 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section className="bg-[#ebebeb] py-16 sm:py-24 md:py-28">
-        <div className="mx-auto max-w-7xl px-6 sm:px-6 md:px-8">
+      <section className="relative bg-[#ebebeb] pb-16 pt-0 sm:pb-24 md:pb-28">
+        <div className="relative z-20 mx-auto mt-[-3.5rem] max-w-7xl px-6 sm:mt-[-5rem] sm:px-6 md:mt-[-6rem] md:px-8">
           <Suspense
             fallback={
               <div className="h-64 animate-pulse rounded-xl bg-neutral-200/70" />
