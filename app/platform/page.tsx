@@ -30,8 +30,8 @@ export default function PlatformPage() {
           What Envowl is and how it works
         </h1>
         <p className="mt-6 text-base leading-relaxed text-neutral-600 sm:text-lg">
-          Most businesses don't fail at AI because the technology isn't ready. They
-          fail because they can't find people who actually know how to use it.
+          Most businesses don&apos;t fail at AI because the technology isn&apos;t ready. They
+          fail because they can&apos;t find people who actually know how to use it.
           Envowl is a curated AI talent marketplace - where vetted creators and
           agencies connect with businesses and professionals who need real outcomes,
           not just deliverables.
@@ -49,9 +49,9 @@ export default function PlatformPage() {
             How vetting and trust work
           </h2>
           <p className="mt-4 text-base leading-relaxed text-neutral-600 sm:text-lg">
-            Anyone can call themselves an AI expert right now. Envowl doesn't work
+            Anyone can call themselves an AI expert right now. Envowl doesn&apos;t work
             that way. Every creator on the platform is reviewed for portfolio
-            quality, delivery track record, and fit before they're ever surfaced to
+            quality, delivery track record, and fit before they&apos;re ever surfaced to
             a buyer. That means less wasted time on both sides - and better outcomes
             on every engagement.
           </p>
