@@ -1,9 +1,20 @@
+import BorderGlow from "@/components/BorderGlow";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { WAITLIST_MICROCOPY_SHORT } from "@/lib/constants";
 
 export function ResourcesNewsletter() {
   return (
-    <div className="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm sm:p-10 min-w-0">
+    <BorderGlow
+      className="min-w-0 rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm sm:p-10"
+      backgroundColor="#ffffff"
+      borderRadius={24}
+      glowColor="16 90 56"
+      glowRadius={24}
+      edgeSensitivity={30}
+      coneSpread={24}
+      fillOpacity={0.28}
+      colors={["#f54927", "#f97316", "#fb7185"]}
+    >
       <h3 className="text-xl font-semibold text-neutral-900 sm:text-2xl">
         Get the weekly AI briefing.
       </h3>
@@ -19,6 +30,6 @@ export function ResourcesNewsletter() {
           microcopy={WAITLIST_MICROCOPY_SHORT}
         />
       </div>
-    </div>
+    </BorderGlow>
   );
 }

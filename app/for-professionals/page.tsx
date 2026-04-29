@@ -226,7 +226,7 @@ function WhoThisIsFor() {
 
 function FinalCTA() {
   return (
-    <section className="border-b border-neutral-200 bg-[#0a0a0a] py-16 text-white sm:py-24 md:py-32">
+    <section className="border-b border-neutral-200 bg-[#302b63] py-16 text-white sm:py-24 md:py-32">
       <div className="mx-auto max-w-2xl px-6 text-center sm:px-6 md:px-8">
         <FadeIn>
           <h2 className="text-3xl font-semibold sm:text-4xl md:text-5xl">

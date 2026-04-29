@@ -6,7 +6,7 @@ export function WaitlistCTA({ id = "waitlist" }: { id?: string }) {
   return (
     <section
       id={id}
-      className="scroll-mt-20 border-b border-neutral-900/10 bg-[#0a0a0a] py-16 text-white sm:scroll-mt-24 sm:py-24 md:py-36"
+      className="scroll-mt-20 border-b border-neutral-900/10 bg-[#302b63] py-16 text-white sm:scroll-mt-24 sm:py-24 md:py-36"
     >
       <div className="mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
         <FadeIn>

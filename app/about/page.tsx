@@ -72,7 +72,7 @@ export default function AboutPage() {
           and the people who can actually deliver it.
         </p>
 
-        <div className="my-10 space-y-5 rounded-2xl border border-neutral-800 bg-neutral-900 p-6 sm:my-12 sm:space-y-6 sm:p-10">
+        <div className="my-10 space-y-5 rounded-2xl border border-[#3d3679] bg-[#302b63] p-6 sm:my-12 sm:space-y-6 sm:p-10">
           <p className="text-lg font-medium leading-loose text-white lg:text-xl">
             We believe:
           </p>
