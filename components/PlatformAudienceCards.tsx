@@ -1,39 +1,54 @@
-"use client";
+import Link from 'next/link'
 
-import { BriefcaseBusiness, Sparkles, UserRoundCheck } from "lucide-react";
-import { ServiceCard } from "@/components/ServiceCard";
+const cards = [
+  {
+    label: 'For Businesses',
+    headline: "You don't need to understand AI. You need results.",
+    body: "Find a vetted expert who knows your industry, has done it before, and won't waste your time or budget.",
+    linkText: 'Find an expert',
+    href: '/for-businesses',
+  },
+  {
+    label: 'For Professionals',
+    headline: "AI is changing your job. Get ahead of it.",
+    body: "You don't need to become an engineer — you need to know enough to lead, not follow. We'll help get you there.",
+    linkText: 'Start upskilling',
+    href: '/for-professionals',
+  },
+  {
+    label: 'For Creators',
+    headline: "Your next client is already looking for you.",
+    body: "You handle the work. Envowl handles the demand. No cold pitching, no scope creep, no guessing who's legit.",
+    linkText: 'Join as a creator',
+    href: '/for-creators',
+  },
+]
 
-const audienceCards = [
-  {
-    title: "For Businesses",
-    subtitle: "Proven AI implementation support.",
-    Icon: BriefcaseBusiness,
-  },
-  {
-    title: "For Professionals",
-    subtitle: "Trusted role-specific guidance.",
-    Icon: UserRoundCheck,
-  },
-  {
-    title: "For Creators",
-    subtitle: "Qualified leads over price wars.",
-    Icon: Sparkles,
-  },
-] as const;
+function ArrowIcon() {
+  return (
+    <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+      <path d="M3 8h10M9 4l4 4-4 4" stroke="#e8410a" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
+}
 
 export function PlatformAudienceCards() {
   return (
-    <ul className="mt-6 grid gap-4 lg:grid-cols-3">
-      {audienceCards.map((card) => (
-        <li key={card.title}>
-          <ServiceCard
-            title={card.title}
-            subtitle={card.subtitle}
-            Icon={card.Icon}
-            className="h-auto min-h-[360px]"
-          />
-        </li>
-      ))}
-    </ul>
-  );
+    <div className="ew-cards-wrap">
+      <div className="ew-grid">
+        {cards.map((card) => (
+          <div key={card.label} className="ew-card">
+            <div className="ew-card-top" />
+            <span className="ew-label">{card.label}</span>
+            <p className="ew-headline">{card.headline}</p>
+            <p className="ew-body">{card.body}</p>
+            <Link href={card.href} className="ew-link">
+              {card.linkText}
+              <ArrowIcon />
+            </Link>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
 }

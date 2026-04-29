@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PlatformAudienceCards } from "@/components/PlatformAudienceCards";
-import { pageMetadata, SITE_URL } from "@/lib/seo";
+import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata = pageMetadata({
@@ -71,9 +71,6 @@ export default function PlatformPage() {
               the Envowl thesis
             </Link>{" "}
             behind this marketplace.
-          </p>
-          <p className="mt-6 text-sm text-neutral-500">
-            Canonical source: {SITE_URL}/platform
           </p>
         </section>
       </div>
