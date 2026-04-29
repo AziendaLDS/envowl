@@ -57,10 +57,8 @@ body {
    ============================================ */
 
    .ew-cards-wrap {
-    background: #f7f6f3;
-    padding: 48px 32px;
-    border-radius: 16px;
     width: 100%;
+    padding: 24px 0;
   }
   
   .ew-grid {
