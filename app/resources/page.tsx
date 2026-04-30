@@ -41,10 +41,10 @@ export default function ResourcesPage() {
           __html: JSON.stringify([resourceListSchema, resourceBreadcrumbSchema]),
         }}
       />
-      <section className="relative overflow-hidden bg-[#0a0a0a] py-16 text-white sm:py-24 md:py-36 min-h-[600px] flex items-center">    
+      <section className="relative flex min-h-[min(100svh,38rem)] items-center overflow-hidden bg-[#0a0a0a] py-14 text-white sm:py-24 md:min-h-[36rem] md:py-36">    
        <ShootingStarsHeroBackground fadeVariant="lower" nextSectionBg="#ebebeb" />
         <ClickSpark sparkColor="#f54927" sparkSize={12} sparkRadius={22} sparkCount={10} duration={500}>
-          <div className="relative z-10 mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
+          <div className="relative z-10 mx-auto max-w-4xl text-center pl-[max(1.5rem,env(safe-area-inset-left))] pr-[max(1.5rem,env(safe-area-inset-right))] sm:pl-6 sm:pr-6 md:pl-8 md:pr-8">
             <FadeIn>
               <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-accent">
                 Resources

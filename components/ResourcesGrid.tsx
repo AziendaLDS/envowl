@@ -56,7 +56,7 @@ export function ResourcesGrid() {
             key={f}
             type="button"
             onClick={() => setFilter(f)}
-            className={`min-h-[40px] shrink-0 rounded-full px-4 py-2 text-sm font-semibold transition sm:px-5 ${
+            className={`min-h-[44px] shrink-0 rounded-full px-4 py-2 text-sm font-semibold transition sm:px-5 ${
               filter === f
                 ? "bg-neutral-900 text-white"
                 : "bg-white text-neutral-600 ring-1 ring-neutral-200 hover:bg-neutral-50"

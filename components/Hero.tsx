@@ -8,7 +8,7 @@ export function Hero({ children }: { children: React.ReactNode }) {
   return (
     <section className="relative min-h-[calc(100svh+min(5rem,8vh))] w-full min-w-0 overflow-x-clip overflow-hidden border-b-0 text-white">
       <ShootingStarsHeroBackground />
-      <div className="relative z-10 mx-auto flex min-h-[100svh] w-full min-w-0 max-w-5xl flex-col items-center justify-center px-6 pb-28 pt-24 text-center sm:px-10 sm:pb-44 sm:pt-36 md:pb-48 md:pt-40">
+      <div className="relative z-10 mx-auto flex min-h-[100svh] w-full min-w-0 max-w-5xl flex-col items-center justify-center pb-28 pl-[max(1.5rem,env(safe-area-inset-left))] pr-[max(1.5rem,env(safe-area-inset-right))] pt-24 text-center sm:pb-44 sm:pl-[max(2.5rem,env(safe-area-inset-left))] sm:pr-[max(2.5rem,env(safe-area-inset-right))] sm:pt-36 md:pb-48 md:pt-40">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}

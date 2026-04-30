@@ -17,6 +17,8 @@
 
 html {
   overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -25,6 +27,15 @@ body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
   overflow-x: clip;
   min-width: 0;
+}
+
+@layer base {
+  button,
+  [type="button"],
+  [type="submit"],
+  summary {
+    touch-action: manipulation;
+  }
 }
 
 @layer utilities {

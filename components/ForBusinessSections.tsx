@@ -129,11 +129,11 @@ export function SocialProofStats() {
   ];
 
   return (
-    <div className="mt-10 grid grid-cols-3 gap-6 border-t border-neutral-200 pt-10">
+    <div className="mt-10 grid grid-cols-3 gap-3 border-t border-neutral-200 pt-10 sm:gap-6">
       {stats.map((stat) => (
-        <div key={stat.label} className="text-center">
-          <p className="text-3xl font-semibold text-neutral-900">{stat.value}</p>
-          <p className="mt-1 text-xs leading-snug text-neutral-500">{stat.label}</p>
+        <div key={stat.label} className="min-w-0 text-center">
+          <p className="text-2xl font-semibold tabular-nums text-neutral-900 sm:text-3xl">{stat.value}</p>
+          <p className="mt-1 px-0.5 text-[0.6875rem] leading-snug text-neutral-500 sm:text-xs">{stat.label}</p>
         </div>
       ))}
     </div>

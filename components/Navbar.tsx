@@ -70,8 +70,8 @@ export function Navbar() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 relative overflow-visible border-b border-neutral-200/80 bg-[#F2F2F2]/85 backdrop-blur-md">
-      <div className="mx-auto flex min-h-[4.25rem] max-w-7xl items-center justify-between gap-2 overflow-visible px-6 py-2.5 sm:min-h-[4.75rem] sm:gap-3 sm:px-6 md:px-8 md:py-0">
+    <header className="sticky top-0 z-50 relative overflow-visible border-b border-neutral-200/80 bg-[#F2F2F2]/85 pt-[env(safe-area-inset-top,0px)] backdrop-blur-md">
+      <div className="mx-auto flex min-h-[4.25rem] max-w-7xl items-center justify-between gap-2 overflow-visible py-2.5 pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] sm:min-h-[4.75rem] sm:gap-3 sm:pl-6 sm:pr-6 md:py-0 md:pl-[max(2rem,env(safe-area-inset-left))] md:pr-[max(2rem,env(safe-area-inset-right))]">
         <Link
           href="/"
           className="flex shrink-0 items-center self-center"
@@ -82,7 +82,7 @@ export function Navbar() {
             alt="Envowl"
             width={240}
             height={72}
-            className="h-[52px] w-auto max-h-[52px] max-w-none self-center object-contain bg-transparent"
+            className="h-9 w-auto max-h-9 max-w-[min(140px,42vw)] self-center object-contain bg-transparent sm:h-[52px] sm:max-h-[52px] sm:max-w-none"
             style={{ objectFit: "contain", background: "transparent" }}
             priority
             quality={85}
@@ -158,7 +158,7 @@ export function Navbar() {
               className="absolute left-0 right-0 top-full z-50 border-b border-neutral-200 bg-[#F2F2F2] shadow-lg md:hidden"
               aria-label="Mobile"
             >
-              <div className="mx-auto flex max-w-7xl flex-col gap-0.5 px-6 py-3">
+              <div className="mx-auto flex max-w-7xl flex-col gap-0.5 py-3 pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] sm:pl-6 sm:pr-6 md:pl-[max(2rem,env(safe-area-inset-left))] md:pr-[max(2rem,env(safe-area-inset-right))]">
                 {links.map((l) => (
                   <Link
                     key={l.href}

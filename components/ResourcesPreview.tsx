@@ -21,7 +21,7 @@ export function ResourcesPreview() {
             </span>
           </p>
         </FadeIn>
-        <div className="mt-10 grid grid-cols-1 gap-6 sm:mt-16 sm:gap-8 md:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:mt-16 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {preview.map((a, i) => (
             <FadeIn key={a.slug} delay={i * 0.06}>
               <BorderGlow
