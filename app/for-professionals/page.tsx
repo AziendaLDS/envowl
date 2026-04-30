@@ -1,9 +1,13 @@
 import Link from "next/link";
 import BorderGlow from "@/components/BorderGlow";
 import { FadeIn } from "@/components/FadeIn";
+import DarkVeil from "@/components/DarkVeil";
 import { ShootingStarsHeroBackground } from "@/components/ShootingStarsHeroBackground";
 import { WaitlistForm } from "@/components/WaitlistForm";
-import { WAITLIST_MICROCOPY_SHORT } from "@/lib/constants";
+import {
+  WAITLIST_BRAND_PURPLE,
+  WAITLIST_MICROCOPY_SHORT,
+} from "@/lib/constants";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -226,25 +230,36 @@ function WhoThisIsFor() {
 
 function FinalCTA() {
   return (
-    <section className="border-b border-neutral-200 bg-[#302b63] py-16 text-white sm:py-24 md:py-32">
-      <div className="mx-auto max-w-2xl px-6 text-center sm:px-6 md:px-8">
-        <FadeIn>
-          <h2 className="text-3xl font-semibold sm:text-4xl md:text-5xl">
-            Be first when we launch.
-          </h2>
-          <p className="mb-10 mt-6 leading-relaxed text-white/80 sm:mt-8">
-            Join the waitlist and get early access, role-specific AI guides, and
-            weekly insights before we open to the public.
-          </p>
-        </FadeIn>
+    <section className="relative overflow-hidden border-b border-neutral-200 bg-[#302b63] py-16 text-white sm:py-24 md:py-32">
+      <div className="pointer-events-none absolute inset-0 z-0">
+        <DarkVeil
+          speed={0.65}
+          warpAmount={0.12}
+          tintColor={WAITLIST_BRAND_PURPLE}
+        />
+      </div>
+      <div className="relative z-10 mx-auto max-w-2xl px-6 text-center sm:px-6 md:px-8">
+        <div className="pointer-events-none">
+          <FadeIn>
+            <h2 className="text-3xl font-semibold sm:text-4xl md:text-5xl">
+              Be first when we launch.
+            </h2>
+            <p className="mb-10 mt-6 leading-relaxed text-white/80 sm:mt-8">
+              Join the waitlist and get early access, role-specific AI guides, and
+              weekly insights before we open to the public.
+            </p>
+          </FadeIn>
+        </div>
         <FadeIn delay={0.08}>
-          <WaitlistForm
-            defaultType="client"
-            source="for-professionals-cta"
-            microcopyTone="onDark"
-            buttonLabel="Join the Waitlist"
-            microcopy={WAITLIST_MICROCOPY_SHORT}
-          />
+          <div className="pointer-events-auto">
+            <WaitlistForm
+              defaultType="client"
+              source="for-professionals-cta"
+              microcopyTone="onDark"
+              buttonLabel="Join the Waitlist"
+              microcopy={WAITLIST_MICROCOPY_SHORT}
+            />
+          </div>
         </FadeIn>
       </div>
     </section>
