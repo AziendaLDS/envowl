@@ -10,6 +10,7 @@ const links = [
   { href: "/for-professionals", label: "For Professionals" },
   { href: "/for-businesses", label: "For Businesses" },
   { href: "/resources", label: "Resources" },
+  { href: "/shop", label: "Shop" },
 ];
 
 function MenuIcon() {
