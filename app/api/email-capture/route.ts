@@ -2,6 +2,7 @@ import { createHash } from "crypto";
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { SITE_NAME, SITE_URL } from "@/lib/seo";
+import { getSupabaseAdmin } from "@/lib/supabase-admin";
 
 type Body = {
   email?: string;
@@ -57,12 +58,6 @@ function emailHtml(promptUrl: string): string {
 }
 
 export async function POST(request: NextRequest) {
-  // TODO: remove after confirming env — logs a secret to the server console
-  console.log(
-    "[email-capture] RESEND_API_KEY:",
-    process.env.RESEND_API_KEY
-  );
-
   let body: Body;
   try {
     body = (await request.json()) as Body;
@@ -90,6 +85,50 @@ export async function POST(request: NextRequest) {
   }
 
   const promptUrl = starterPackUrl();
+  let waitlistError: string | null = null;
+  try {
+    console.log("[email-capture] waitlist insert attempt", {
+      email: email.toLowerCase(),
+      usingServiceRoleClient: true,
+      hasServiceRoleKey: Boolean(process.env.SUPABASE_SERVICE_ROLE_KEY?.trim()),
+      supabaseUrlHost: process.env.NEXT_PUBLIC_SUPABASE_URL
+        ? new URL(process.env.NEXT_PUBLIC_SUPABASE_URL).host
+        : null,
+    });
+
+    const supabaseAdmin = getSupabaseAdmin();
+    const { data, error } = await supabaseAdmin
+      .from("waitlist")
+      .upsert(
+        {
+          email: email.toLowerCase(),
+        },
+        {
+          onConflict: "email",
+          ignoreDuplicates: true,
+        }
+      )
+      .select("id, email, created_at");
+
+    console.log("[email-capture] waitlist insert response", { data, error });
+
+    if (error) {
+      waitlistError = error.message;
+    }
+  } catch (error) {
+    console.log("[email-capture] waitlist insert exception", {
+      error: error instanceof Error ? error.message : error,
+    });
+    waitlistError = error instanceof Error ? error.message : "Unknown waitlist error.";
+  }
+
+  if (waitlistError) {
+    return NextResponse.json(
+      { success: false, message: "Could not save email right now. Please try again." },
+      { status: 500 }
+    );
+  }
+
   const resend = new Resend(apiKey);
   const idempotencyKey = `starter-pack/${createHash("sha256").update(email.toLowerCase()).digest("hex").slice(0, 48)}`;
 
