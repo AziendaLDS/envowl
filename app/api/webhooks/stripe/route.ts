@@ -152,7 +152,7 @@ export async function POST(request: NextRequest) {
 
   const { data, error } = await resend.emails.send(
     {
-      from: `${SITE_NAME} <onboarding@resend.dev>`,
+      from: `${SITE_NAME} <hello@envowl.com>`,
       to: [email],
       subject: "Your Envowl pack is ready",
       html: packPurchaseEmailHtml(promptUrl, packTitle),

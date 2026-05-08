@@ -95,7 +95,7 @@ export async function POST(request: NextRequest) {
 
   const { error } = await resend.emails.send(
     {
-      from: `${SITE_NAME} <onboarding@resend.dev>`,
+      from: `${SITE_NAME} <hello@envowl.com>`,
       to: [email],
       subject: "Your Claude Starter Pack is here",
       html: emailHtml(promptUrl),

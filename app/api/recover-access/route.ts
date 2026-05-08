@@ -126,7 +126,7 @@ export async function POST(request: NextRequest) {
 
   const resend = new Resend(resendApiKey);
   const { error: emailError } = await resend.emails.send({
-    from: `${SITE_NAME} <onboarding@resend.dev>`,
+    from: `${SITE_NAME} <hello@envowl.com>`,
     to: [email],
     subject: "Your Envowl access links",
     html: recoveryEmailHtml(email, entries),
