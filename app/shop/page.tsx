@@ -1,6 +1,8 @@
 import Link from "next/link";
 import BorderGlow from "@/components/BorderGlow";
 import { FadeIn } from "@/components/FadeIn";
+import { FreePackEmailModal } from "@/components/FreePackEmailModal";
+import { ShopBuyNowButton } from "@/components/ShopBuyNowButton";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -24,6 +26,7 @@ const packs = [
     price: "Free",
     cta: "Get Free Pack",
     href: "#",
+    freePackEmailCapture: true,
   },
   {
     name: "Claude for Life",
@@ -42,6 +45,8 @@ const packs = [
     price: "$15",
     cta: "Buy Now",
     href: "#",
+    freePackEmailCapture: false,
+    checkoutPack: "claude-for-life" as const,
   },
   {
     name: "Claude for Business",
@@ -67,6 +72,8 @@ const packs = [
     price: "$27",
     cta: "Buy Now",
     href: "#",
+    freePackEmailCapture: false,
+    checkoutPack: "claude-for-business" as const,
   },
 ];
 
@@ -123,12 +130,26 @@ export default function ShopPage() {
                   ))}
                 </ul>
 
-                <Link
-                  href={pack.href}
-                  className="mt-8 inline-flex min-h-[44px] items-center justify-center rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-neutral-800"
-                >
-                  {pack.cta}
-                </Link>
+                {pack.freePackEmailCapture ? (
+                  <FreePackEmailModal
+                    buttonLabel={pack.cta}
+                    buttonClassName="mt-8 inline-flex min-h-[44px] w-full items-center justify-center rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-neutral-800"
+                  />
+                ) : "checkoutPack" in pack && pack.checkoutPack ? (
+                  <ShopBuyNowButton
+                    packName={pack.checkoutPack}
+                    packTitle={pack.name}
+                    buttonLabel={pack.cta}
+                    buttonClassName="mt-8 inline-flex min-h-[44px] w-full items-center justify-center rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-neutral-800 disabled:cursor-not-allowed disabled:opacity-60"
+                  />
+                ) : (
+                  <Link
+                    href={pack.href}
+                    className="mt-8 inline-flex min-h-[44px] items-center justify-center rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-neutral-800"
+                  >
+                    {pack.cta}
+                  </Link>
+                )}
               </BorderGlow>
             </FadeIn>
           ))}

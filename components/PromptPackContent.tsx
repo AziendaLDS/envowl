@@ -9,6 +9,34 @@ export type PromptItem = {
   prompt: string;
 };
 
+function splitPromptContent(promptTitle: string, rawPrompt: string): {
+  whenToUse: string;
+  copyableBody: string;
+} {
+  const marker = "You are a";
+  let splitIndex = rawPrompt.indexOf(marker);
+
+  if (
+    splitIndex === -1 &&
+    (promptTitle === "Explain It Like I Know Nothing About It" ||
+      promptTitle === "The Cold Outreach Writer")
+  ) {
+    splitIndex = rawPrompt.indexOf("You are ");
+  }
+
+  if (splitIndex === -1) {
+    return {
+      whenToUse: "",
+      copyableBody: rawPrompt.trim(),
+    };
+  }
+
+  return {
+    whenToUse: rawPrompt.slice(0, splitIndex).trim(),
+    copyableBody: rawPrompt.slice(splitIndex).trim(),
+  };
+}
+
 type PromptPackContentProps = {
   eyebrow: string;
   title: string;
@@ -52,7 +80,13 @@ export function PromptPackContent({
         </FadeIn>
 
         <div className="mt-10 space-y-6 sm:mt-14 sm:space-y-8">
-          {prompts.map((item, i) => (
+          {prompts.map((item, i) => {
+            const { whenToUse, copyableBody } = splitPromptContent(
+              item.title,
+              item.prompt
+            );
+
+            return (
             <FadeIn key={item.title} delay={i * 0.04}>
               <BorderGlow
                 className="rounded-3xl border border-neutral-200 bg-white p-6 sm:p-8"
@@ -66,12 +100,19 @@ export function PromptPackContent({
                 colors={["#f54927", "#f97316", "#fb7185"]}
               >
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                  <h2 className="text-xl font-semibold tracking-tight text-neutral-900 sm:text-2xl">
-                    {item.title}
-                  </h2>
+                  <div className="space-y-2">
+                    <h2 className="text-xl font-semibold tracking-tight text-neutral-900 sm:text-2xl">
+                      {item.title}
+                    </h2>
+                    {whenToUse ? (
+                      <p className="text-sm leading-relaxed text-neutral-600 sm:text-base">
+                        {whenToUse}
+                      </p>
+                    ) : null}
+                  </div>
                   <button
                     type="button"
-                    onClick={() => copyPrompt(item.title, item.prompt)}
+                    onClick={() => copyPrompt(item.title, copyableBody)}
                     className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-neutral-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-neutral-800"
                   >
                     {copiedTitle === item.title ? "Copied" : "Copy"}
@@ -80,12 +121,13 @@ export function PromptPackContent({
 
                 <pre className="mt-5 overflow-x-auto rounded-2xl border border-neutral-200 bg-neutral-50 p-4 text-sm leading-relaxed text-neutral-800 sm:mt-6 sm:p-5">
                   <code className="whitespace-pre-wrap break-words font-mono">
-                    {item.prompt}
+                    {copyableBody}
                   </code>
                 </pre>
               </BorderGlow>
             </FadeIn>
-          ))}
+          );
+          })}
         </div>
       </div>
     </section>
