@@ -5,9 +5,10 @@ import {
   UseCaseCategories,
 } from "@/components/ForBusinessSections";
 import { FadeIn } from "@/components/FadeIn";
+import { PurpleBurstBackdrop } from "@/components/PurpleBurstBackdrop";
 import { ShootingStarsHeroBackground } from "@/components/ShootingStarsHeroBackground";
 import { WaitlistForm } from "@/components/WaitlistForm";
-import { PLATFORM_NAME, WAITLIST_MICROCOPY_SHORT } from "@/lib/constants";
+import { PLATFORM_NAME, WAITLIST_CTA_SURFACE, WAITLIST_MICROCOPY_SHORT } from "@/lib/constants";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -109,13 +110,17 @@ export default function ForBusinessesPage() {
         </div>
       </section>
 
-      <section className="border-b border-neutral-200 bg-[#F2F2F2] py-16 sm:py-24 md:py-32">
-        <div className="mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
+      <section
+        className="relative overflow-hidden border-b border-white/25 py-16 sm:py-24 md:py-32"
+        style={{ backgroundColor: WAITLIST_CTA_SURFACE }}
+      >
+        <PurpleBurstBackdrop />
+        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
           <FadeIn>
-            <h2 className="text-3xl font-semibold text-neutral-900 sm:text-4xl md:text-5xl">
+            <h2 className="text-3xl font-semibold tracking-tight text-white [text-shadow:0_2px_28px_rgb(32_24_51_/_0.42)] sm:text-4xl md:text-5xl">
               Not ready to hire yet? Start here.
             </h2>
-            <p className="mt-6 text-base leading-relaxed text-neutral-600 sm:mt-8 sm:text-lg">
+            <p className="mt-6 text-base leading-relaxed text-white/80 [text-shadow:0_1px_14px_rgb(32_24_51_/_0.32)] sm:mt-8 sm:text-lg">
               Browse our free library of guides, videos, and industry-specific
               breakdowns. Get smart on AI before you spend a dollar.
             </p>

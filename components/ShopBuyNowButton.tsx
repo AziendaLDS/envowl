@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useId, useRef, useState } from "react";
+import CardSpotlight from "@/components/CardSpotlight";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -139,8 +140,9 @@ export function ShopBuyNowButton({
             role="dialog"
             aria-modal="true"
             aria-labelledby={titleId}
-            className="relative z-[101] w-full max-w-md rounded-3xl border border-neutral-200 bg-white p-6 shadow-xl sm:p-8"
+            className="relative z-[101] w-full max-w-md"
           >
+            <CardSpotlight className="rounded-3xl border border-neutral-200 bg-white p-6 shadow-xl sm:p-8">
             <div className="flex items-start justify-between gap-4">
               <h2
                 id={titleId}
@@ -209,6 +211,7 @@ export function ShopBuyNowButton({
                 {submitting ? "Redirecting…" : "Continue to checkout"}
               </button>
             </form>
+            </CardSpotlight>
           </div>
         </div>
       ) : null}

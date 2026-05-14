@@ -1,12 +1,14 @@
 import { Suspense } from "react";
 import { FadeIn } from "@/components/FadeIn";
 import ClickSpark from "@/components/ClickSpark";
+import { PurpleBurstBackdrop } from "@/components/PurpleBurstBackdrop";
 import { ResourcesGrid } from "@/components/ResourcesGrid";
 import { ResourcesNewsletter } from "@/components/ResourcesNewsletter";
 import { ShootingStarsHeroBackground } from "@/components/ShootingStarsHeroBackground";
 import { articles } from "@/lib/articles";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata, SITE_URL } from "@/lib/seo";
+import { WAITLIST_CTA_SURFACE } from "@/lib/constants";
 
 export const metadata = pageMetadata({
   title: "AI Resources & Guides",
@@ -73,8 +75,12 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section className="border-t border-neutral-200 bg-[#F2F2F2] py-16 sm:py-24 md:py-28">
-        <div className="mx-auto max-w-2xl px-6 sm:px-6 md:px-8">
+      <section
+        className="relative overflow-hidden border-t border-white/25 py-16 sm:py-24 md:py-28"
+        style={{ backgroundColor: WAITLIST_CTA_SURFACE }}
+      >
+        <PurpleBurstBackdrop />
+        <div className="relative z-10 mx-auto max-w-2xl px-6 sm:px-6 md:px-8">
           <ResourcesNewsletter />
         </div>
       </section>

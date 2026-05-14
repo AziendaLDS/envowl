@@ -35,7 +35,7 @@ export function ResourcesPreview() {
                 fillOpacity={0.25}
                 colors={["#f54927", "#f97316", "#fb7185"]}
               >
-                <ArticleCard article={a} compact />
+                <ArticleCard article={a} compact omitSpotlight />
               </BorderGlow>
             </FadeIn>
           ))}

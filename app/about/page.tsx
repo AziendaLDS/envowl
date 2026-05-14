@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { PLATFORM_NAME, SITE } from "@/lib/constants";
+import { PurpleBurstBackdrop } from "@/components/PurpleBurstBackdrop";
+import { PLATFORM_NAME, SITE, WAITLIST_CTA_SURFACE } from "@/lib/constants";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -121,8 +122,12 @@ export default function AboutPage() {
       </section>
 
       {/* Divider + CTA */}
-      <section className="border-t border-neutral-200 bg-neutral-50">
-        <div className="mx-auto max-w-4xl px-6 py-16 sm:px-6 sm:py-24 md:px-8">
+      <section
+        className="relative overflow-hidden border-t border-white/25"
+        style={{ backgroundColor: WAITLIST_CTA_SURFACE }}
+      >
+        <PurpleBurstBackdrop />
+        <div className="relative z-10 mx-auto max-w-4xl px-6 py-16 sm:px-6 sm:py-24 md:px-8">
           <div className="mb-12 grid grid-cols-1 gap-8 sm:mb-16 md:grid-cols-3 md:gap-8">
             {[
               {
@@ -148,12 +153,12 @@ export default function AboutPage() {
                 <p className="text-xs font-medium uppercase tracking-widest text-accent sm:text-sm">
                   {item.label}
                 </p>
-                <p className="text-sm leading-relaxed text-neutral-600">
+                <p className="text-sm leading-relaxed text-white/80 [text-shadow:0_1px_14px_rgb(32_24_51_/_0.32)]">
                   {item.desc}
                 </p>
                 <Link
                   href={item.link}
-                  className="inline-block text-sm text-neutral-900 underline underline-offset-4 transition-colors hover:text-accent"
+                  className="inline-block text-sm font-medium text-white underline underline-offset-4 [text-shadow:0_1px_12px_rgb(32_24_51_/_0.35)] transition-colors hover:text-accent"
                 >
                   {item.cta}
                 </Link>
@@ -161,12 +166,12 @@ export default function AboutPage() {
             ))}
           </div>
 
-          <div className="border-t border-neutral-200 pt-8 sm:pt-10">
-            <p className="text-sm text-neutral-600">
+          <div className="border-t border-white/25 pt-8 sm:pt-10">
+            <p className="text-sm text-white/75 [text-shadow:0_1px_10px_rgb(32_24_51_/_0.3)]">
               {PLATFORM_NAME} is operated by LDS Ventures LLC. Questions?{" "}
               <a
                 href={`mailto:${SITE.contactEmail}`}
-                className="text-neutral-500 underline underline-offset-4 transition-colors hover:text-neutral-900"
+                className="text-white underline underline-offset-4 transition-colors hover:text-accent"
               >
                 Get in touch.
               </a>

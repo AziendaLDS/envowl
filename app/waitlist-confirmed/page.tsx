@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CardSpotlight from "@/components/CardSpotlight";
 import { FadeIn } from "@/components/FadeIn";
 import { PLATFORM_NAME, SITE } from "@/lib/constants";
 import { pageMetadata } from "@/lib/seo";
@@ -104,7 +105,7 @@ export default function WaitlistConfirmedPage({ searchParams }: PageProps) {
             },
           ].map((card, i) => (
             <FadeIn key={card.title} delay={subscribed ? 0.1 + i * 0.06 : i * 0.06}>
-              <div className="flex h-full flex-col rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm sm:p-8">
+              <CardSpotlight className="flex h-full flex-col rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm sm:p-8">
                 <h2 className="text-lg font-semibold text-neutral-900">
                   {card.title}
                 </h2>
@@ -120,7 +121,7 @@ export default function WaitlistConfirmedPage({ searchParams }: PageProps) {
                 >
                   {card.label}
                 </a>
-              </div>
+              </CardSpotlight>
             </FadeIn>
           ))}
         </div>

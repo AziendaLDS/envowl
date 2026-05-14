@@ -5,9 +5,10 @@ import {
 } from "@/components/ForCreatorSections";
 import BorderGlow from "@/components/BorderGlow";
 import { FadeIn } from "@/components/FadeIn";
+import { PurpleBurstBackdrop } from "@/components/PurpleBurstBackdrop";
 import { ShootingStarsHeroBackground } from "@/components/ShootingStarsHeroBackground";
 import { WaitlistForm } from "@/components/WaitlistForm";
-import { PLATFORM_NAME, WAITLIST_MICROCOPY_SHORT } from "@/lib/constants";
+import { PLATFORM_NAME, WAITLIST_CTA_SURFACE, WAITLIST_MICROCOPY_SHORT } from "@/lib/constants";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -24,7 +25,7 @@ const benefits = [
   },
   {
     title: "Vetted reputation",
-    copy: `A ${PLATFORM_NAME} badge signals credibility. We only list creators we trust.`,
+    copy: `An ${PLATFORM_NAME} badge signals credibility. We only list creators we trust.`,
   },
   {
     title: "Tools to close",
@@ -130,15 +131,19 @@ export default function ForCreatorsPage() {
 
       <CreatorTypes />
 
-      <section className="border-b border-neutral-200 bg-[#F2F2F2] py-16 sm:py-24 md:py-32">
-        <div className="mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
+      <section
+        className="relative overflow-hidden border-b border-white/25 py-16 sm:py-24 md:py-32"
+        style={{ backgroundColor: WAITLIST_CTA_SURFACE }}
+      >
+        <PurpleBurstBackdrop />
+        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
           <FadeIn>
-            <h2 className="text-3xl font-semibold text-neutral-900 sm:text-4xl md:text-5xl">
+            <h2 className="text-3xl font-semibold tracking-tight text-white [text-shadow:0_2px_28px_rgb(32_24_51_/_0.42)] sm:text-4xl md:text-5xl">
               We don&apos;t list everyone.
               <br />
               That&apos;s the point.
             </h2>
-            <p className="mt-6 text-left text-base leading-relaxed text-neutral-600 sm:mt-8 sm:text-lg">
+            <p className="mt-6 text-left text-base leading-relaxed text-white/80 [text-shadow:0_1px_14px_rgb(32_24_51_/_0.32)] sm:mt-8 sm:text-lg">
               To be listed on {PLATFORM_NAME}, creators go through a review
               process: portfolio review, a brief intro call with our team, and
               verification of past client work. We&apos;re not looking for
@@ -149,10 +154,11 @@ export default function ForCreatorsPage() {
           <FadeIn delay={0.08}>
             <div className="mx-auto mt-12 max-w-2xl">
               <WaitlistForm
-                defaultType="creator"
-                source="for-creators-vetting"
                 buttonLabel="Start Your Application"
+                defaultType="creator"
                 microcopy={WAITLIST_MICROCOPY_SHORT}
+                microcopyTone="onDark"
+                source="for-creators-vetting"
               />
             </div>
           </FadeIn>

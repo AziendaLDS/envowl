@@ -1,35 +1,34 @@
-import BorderGlow from "@/components/BorderGlow";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { WAITLIST_MICROCOPY_SHORT } from "@/lib/constants";
 
+const headingShadow =
+  "[text-shadow:0_2px_28px_rgb(32_24_51_/_0.42),0_1px_2px_rgb(32_24_51_/_0.2)]";
+
+const bodyShadow = "[text-shadow:0_1px_14px_rgb(32_24_51_/_0.32)]";
+
 export function ResourcesNewsletter() {
   return (
-    <BorderGlow
-      className="min-w-0 rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm sm:p-10"
-      backgroundColor="#ffffff"
-      borderRadius={24}
-      glowColor="16 90 56"
-      glowRadius={24}
-      edgeSensitivity={30}
-      coneSpread={24}
-      fillOpacity={0.28}
-      colors={["#f54927", "#f97316", "#fb7185"]}
-    >
-      <h3 className="text-xl font-semibold text-neutral-900 sm:text-2xl">
+    <div className="min-w-0 text-center">
+      <h3
+        className={`text-xl font-semibold text-white sm:text-2xl md:text-3xl ${headingShadow}`}
+      >
         Get the weekly AI briefing.
       </h3>
-      <p className="mt-3 text-base leading-relaxed text-neutral-600">
+      <p
+        className={`mx-auto mt-3 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg ${bodyShadow}`}
+      >
         One email, every week. What&apos;s happening in AI and what actually
         matters for your business or career.
       </p>
-      <div className="mt-8">
+      <div className="mx-auto mt-10 flex justify-center">
         <WaitlistForm
-          defaultType="client"
-          source="resources-newsletter"
           buttonLabel="Subscribe"
+          defaultType="client"
           microcopy={WAITLIST_MICROCOPY_SHORT}
+          microcopyTone="onDark"
+          source="resources-newsletter"
         />
       </div>
-    </BorderGlow>
+    </div>
   );
 }

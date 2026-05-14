@@ -1,0 +1,44 @@
+/* Shared radial face spotlight — full bleed inset, inherits border radius from card root */
+.spotlight-face {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at var(--spotlight-mouse-x, 50%) var(--spotlight-mouse-y, 50%),
+    var(--spotlight-color, transparent),
+    transparent 80%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.border-glow-card.has-spotlight > .spotlight-face {
+  z-index: 0;
+  border-radius: var(--border-radius);
+}
+
+.border-glow-card.has-spotlight:hover > .spotlight-face,
+.border-glow-card.has-spotlight:focus-within > .spotlight-face {
+  opacity: 0.58;
+}
+
+.card-with-spotlight {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.card-with-spotlight > .spotlight-face {
+  z-index: 0;
+}
+
+.card-with-spotlight > *:not(.spotlight-face) {
+  position: relative;
+  z-index: 2;
+}
+
+.card-with-spotlight:hover > .spotlight-face,
+.card-with-spotlight:focus-within > .spotlight-face {
+  opacity: 0.58;
+}

@@ -1,7 +1,9 @@
 "use client";
 
-import { useCallback, useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
+import { CARD_SPOTLIGHT_PURPLE } from "@/lib/constants";
 import "./BorderGlow.css";
+import "./SpotlightFace.css";
 
 function parseHSL(hslStr: string) {
   const match = hslStr.match(/([\d.]+)\s*([\d.]+)%?\s*([\d.]+)%?/);
@@ -86,6 +88,10 @@ type BorderGlowProps = {
   id?: string;
   children: React.ReactNode;
   className?: string;
+  /** Disabled when false. */
+  spotlight?: boolean;
+  /** Radial spotlight tint on the face of the card (full bleed inside the border / radius). */
+  spotlightColor?: string;
   edgeSensitivity?: number;
   glowColor?: string;
   backgroundColor?: string;
@@ -102,6 +108,8 @@ export default function BorderGlow({
   id,
   children,
   className = "",
+  spotlight = true,
+  spotlightColor = CARD_SPOTLIGHT_PURPLE,
   edgeSensitivity = 30,
   glowColor = "40 80 80",
   backgroundColor = "#120F17",
@@ -114,6 +122,7 @@ export default function BorderGlow({
   fillOpacity = 0.5,
 }: BorderGlowProps) {
   const cardRef = useRef<HTMLDivElement | null>(null);
+  const spotlightOn = spotlight && Boolean(spotlightColor);
 
   const getCenterOfElement = useCallback((el: HTMLDivElement) => {
     const { width, height } = el.getBoundingClientRect();
@@ -161,8 +170,13 @@ export default function BorderGlow({
 
       card.style.setProperty("--edge-proximity", `${(edge * 100).toFixed(3)}`);
       card.style.setProperty("--cursor-angle", `${angle.toFixed(3)}deg`);
+
+      if (spotlightOn) {
+        card.style.setProperty("--spotlight-mouse-x", `${x}px`);
+        card.style.setProperty("--spotlight-mouse-y", `${y}px`);
+      }
     },
-    [getCursorAngle, getEdgeProximity],
+    [getCursorAngle, getEdgeProximity, spotlightOn],
   );
 
   useEffect(() => {
@@ -206,6 +220,12 @@ export default function BorderGlow({
     });
   }, [animated]);
 
+  useEffect(() => {
+    const card = cardRef.current;
+    if (!card || !spotlightOn || !spotlightColor) return;
+    card.style.setProperty("--spotlight-color", spotlightColor);
+  }, [spotlightColor, spotlightOn]);
+
   const glowVars = buildGlowVars(glowColor, glowIntensity);
   const gradientVars = buildGradientVars(colors);
 
@@ -214,7 +234,7 @@ export default function BorderGlow({
       id={id}
       ref={cardRef}
       onPointerMove={handlePointerMove}
-      className={`border-glow-card ${className}`.trim()}
+      className={`border-glow-card ${spotlightOn ? "has-spotlight " : ""}${className}`.trim()}
       style={
         {
           "--card-bg": backgroundColor,
@@ -228,6 +248,7 @@ export default function BorderGlow({
         } as React.CSSProperties
       }
     >
+      {spotlightOn ? <div className="spotlight-face" aria-hidden /> : null}
       <span className="edge-light" />
       <div className="border-glow-inner">{children}</div>
     </div>

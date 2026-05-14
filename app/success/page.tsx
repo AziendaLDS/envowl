@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CardSpotlight from "@/components/CardSpotlight";
 import { FadeIn } from "@/components/FadeIn";
 import {
   PAID_PACK_CONFIG,
@@ -32,7 +33,7 @@ export default function SuccessPage({ searchParams }: PageProps) {
     <section className="min-h-[70vh] border-b border-neutral-200 bg-[#F2F2F2] py-16 sm:py-24 md:py-32">
       <div className="mx-auto max-w-2xl px-6 text-center sm:px-6 md:px-8">
         <FadeIn>
-          <div className="mx-auto inline-flex flex-col items-center gap-6 rounded-3xl border border-neutral-200 bg-white p-8 shadow-sm">
+          <CardSpotlight className="mx-auto inline-flex flex-col items-center gap-6 rounded-3xl border border-neutral-200 bg-white p-8 shadow-sm">
             <p className="text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
               Payment successful
             </p>
@@ -50,7 +51,7 @@ export default function SuccessPage({ searchParams }: PageProps) {
             >
               Lost access? Recover it here
             </Link>
-          </div>
+          </CardSpotlight>
         </FadeIn>
       </div>
     </section>
