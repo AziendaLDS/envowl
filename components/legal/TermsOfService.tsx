@@ -1,22 +1,22 @@
 export function TermsOfService() {
   return (
-    <div className="min-h-screen bg-[#F2F2F2] text-black">
-      <div className="mx-auto max-w-4xl px-6 py-16 sm:px-6 sm:py-24 md:px-8 md:py-40">
-        <div className="mb-16 sm:mb-24 md:mb-28">
-          <p className="mb-4 text-sm font-medium uppercase tracking-widest text-black/55 sm:mb-5 sm:text-base">
+    <div className="relative isolate -mt-16 overflow-hidden md:-mt-[4.5rem]">
+      <div className="mx-auto max-w-3xl px-4 pb-24 pt-32 sm:px-6 md:px-8 md:pb-32 md:pt-44">
+        <div className="mb-16 border-b border-paper/10 pb-12 sm:mb-20">
+          <p className="mb-4 text-sm font-semibold text-ember">
             Legal
           </p>
-          <h1 className="mb-4 text-3xl font-semibold tracking-tight text-black sm:mb-5 sm:text-4xl md:text-5xl lg:text-6xl">
+          <h1 className="mb-5 font-display text-5xl font-bold leading-[0.98] tracking-[-0.035em] text-paper sm:text-6xl lg:text-7xl">
             Terms of Service
           </h1>
-          <p className="text-base text-black/60 sm:text-lg">
-            Last updated: April 13, 2026
+          <p className="text-base text-paper/50">
+            Last updated: October 1, 2026
           </p>
         </div>
 
-        <div className="space-y-12 text-base leading-[1.8] text-black sm:space-y-20 sm:text-xl md:space-y-24 md:text-2xl md:leading-[1.85]">
+        <div className="space-y-14 text-base leading-[1.8] text-paper/70 sm:text-lg">
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               Agreement
             </h2>
             <p>
@@ -30,21 +30,44 @@ export function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               Description of Service
             </h2>
             <p>
               Envowl is currently operating as a pre-launch waitlist and
               resource platform. We collect email addresses from individuals
-              interested in our upcoming AI talent marketplace, and publish free
+              interested in our upcoming AI talent marketplace, publish free
               educational content about artificial intelligence for businesses
-              and professionals. The full marketplace platform is under
+              and professionals, and sell a small number of paid digital
+              resource packs. The full marketplace platform is under
               development and has not yet launched.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
+              Purchases
+            </h2>
+            <p className="mb-4">
+              If you buy a paid resource pack from the Envowl shop:
+            </p>
+            <ul className="list-none space-y-3">
+              {[
+                "Payment is processed securely by Stripe, and prices are shown at checkout",
+                "Packs are digital products delivered by an access link sent to the email address you provide at checkout",
+                "You are granted a personal, non-transferable license to use the pack. You may not resell, redistribute, or share it publicly",
+                "All sales are final. Because packs are digital and delivered immediately, we do not offer refunds. If you have trouble with your access link, contact us at the email below and we will fix it",
+              ].map((item) => (
+                <li key={item} className="flex gap-4">
+                  <span className="mt-3 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-ember" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               Waitlist & Communications
             </h2>
             <p className="mb-4">
@@ -56,10 +79,10 @@ export function TermsOfService() {
                 "We may send you periodic emails about our launch, platform updates, and AI resources",
                 "You can unsubscribe at any time using the link provided in any email",
                 "Joining the waitlist does not guarantee access to the platform, any specific pricing, or any specific features",
-                "We reserve the right to modify, delay, or cancel the platform launch at our discretion",
+                "Launch timing is a target, not a commitment. We may change, delay, or cancel the marketplace launch at our discretion",
               ].map((item) => (
                 <li key={item} className="flex gap-4">
-                  <span className="mt-2.5 h-2 w-2 flex-shrink-0 rounded-full bg-black" />
+                  <span className="mt-3 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-ember" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -67,7 +90,7 @@ export function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               Acceptable Use
             </h2>
             <p className="mb-4">
@@ -83,7 +106,7 @@ export function TermsOfService() {
                 "Impersonate Envowl, LDS Ventures LLC, or any of our team members",
               ].map((item) => (
                 <li key={item} className="flex gap-4">
-                  <span className="mt-2.5 h-2 w-2 flex-shrink-0 rounded-full bg-black" />
+                  <span className="mt-3 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-ember" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -91,7 +114,7 @@ export function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               Intellectual Property
             </h2>
             <p>
@@ -104,7 +127,7 @@ export function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               Third Party Content & Links
             </h2>
             <p>
@@ -118,7 +141,7 @@ export function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               Disclaimer of Warranties
             </h2>
             <p>
@@ -132,7 +155,7 @@ export function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               Limitation of Liability
             </h2>
             <p>
@@ -141,13 +164,13 @@ export function TermsOfService() {
               punitive damages arising from your use of or inability to use the
               Envowl website or services. Our total liability to you for any
               claims arising from these terms shall not exceed the amount you
-              paid us in the twelve months preceding the claim, which at the
-              current pre-launch stage is zero.
+              paid us in the twelve months preceding the claim (zero, if you
+              have made no purchases).
             </p>
           </section>
 
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               Governing Law
             </h2>
             <p>
@@ -160,7 +183,7 @@ export function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               Changes to These Terms
             </h2>
             <p>
@@ -173,7 +196,7 @@ export function TermsOfService() {
           </section>
 
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               Contact
             </h2>
             <p>
@@ -181,7 +204,7 @@ export function TermsOfService() {
               Ventures LLC at{" "}
               <a
                 href="mailto:envowlsupport@gmail.com"
-                className="font-medium text-black underline underline-offset-4"
+                className="font-medium text-paper underline decoration-ember decoration-2 underline-offset-4 hover:text-ember"
               >
                 envowlsupport@gmail.com
               </a>

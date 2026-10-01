@@ -9,7 +9,7 @@ import {
 
 /**
  * Client-only: audience type toggle updates hidden `type` field.
- * Submits to `/api/subscribe` (Beehiiv V2) via JSON.
+ * Submits to `/api/waitlist` via JSON.
  */
 export function AudienceSubscribeForm({
   type,
@@ -62,7 +62,7 @@ export function AudienceSubscribeForm({
   }
 
   return (
-    <div className="w-full min-w-0 max-w-lg">
+    <div className="w-full min-w-0 max-w-xl">
       <form
         key={type}
         onSubmit={onSubmit}
@@ -90,7 +90,7 @@ export function AudienceSubscribeForm({
         </button>
       </form>
       {error ? (
-        <p className="mt-2 text-sm text-red-600" role="alert">
+        <p className="mt-2 text-sm text-red-300" role="alert">
           {error}
         </p>
       ) : null}

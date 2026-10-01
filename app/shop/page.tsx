@@ -1,9 +1,15 @@
 import Link from "next/link";
-import BorderGlow from "@/components/BorderGlow";
 import { FadeIn } from "@/components/FadeIn";
 import { FreePackEmailModal } from "@/components/FreePackEmailModal";
+import { PackIncludedList } from "@/components/PackIncludedList";
+import { PageHero } from "@/components/site/PageHero";
+import { SamplePromptCard } from "@/components/ShopSections";
 import { ShopBuyNowButton } from "@/components/ShopBuyNowButton";
 import { pageMetadata } from "@/lib/seo";
+import {
+  BUTTON_PRIMARY_CLASS,
+  BUTTON_SECONDARY_CLASS,
+} from "@/lib/subscribe-classes";
 
 export const metadata = pageMetadata({
   title: "Shop",
@@ -16,7 +22,7 @@ const packs = [
   {
     name: "Claude Starter Pack",
     description:
-      "Your introduction to using AI the right way - not just asking random questions and hoping for the best, but giving it the right instructions to get outputs that are actually useful. These 4 prompts are built for anyone who wants to get more out of Claude or ChatGPT starting today, no experience required.",
+      "Four prompts that teach you how to talk to AI so the answers are actually useful. Made for anyone who wants to get more out of Claude or ChatGPT, no experience needed.",
     included: [
       "Explain It Like I Know Nothing About It",
       "The Study Guide",
@@ -24,14 +30,14 @@ const packs = [
       "The Honest Feedback Machine",
     ],
     price: "Free",
-    cta: "Get Free Pack",
+    cta: "Get the free pack",
     href: "#",
     freePackEmailCapture: true,
   },
   {
     name: "Claude for Life",
     description:
-      "A collection of 8 deeply engineered prompts built for anyone who wants to think clearer, communicate better, and actually get things done. These aren't generic AI prompts - each one is a complete system designed to replace the kind of thinking, writing, and planning that normally takes hours and drains your energy.",
+      "Eight prompts for thinking clearer, writing better, and getting things done. Each one is a complete, reusable system for the planning, writing, and decision-making that normally takes hours.",
     included: [
       "The Instant Brief",
       "The Perfect Professional Email",
@@ -43,7 +49,7 @@ const packs = [
       "The Job Application Machine",
     ],
     price: "$15",
-    cta: "Buy Now",
+    cta: "Buy now",
     href: "#",
     freePackEmailCapture: false,
     checkoutPack: "claude-for-life" as const,
@@ -51,7 +57,7 @@ const packs = [
   {
     name: "Claude for Business",
     description:
-      "15 high-powered prompts built for small business owners, freelancers, and solopreneurs who are done wasting time on tasks that should take minutes but somehow eat up hours. Each prompt is designed to replace something you either dread doing, pay someone else to do, or never get around to at all.",
+      "Fifteen prompts for small business owners, freelancers, and solopreneurs. Each one replaces a task you dread, pay someone for, or never get around to.",
     included: [
       "The Full SEO Audit",
       "The Cold Outreach Writer",
@@ -70,91 +76,92 @@ const packs = [
       "The Job Post Writer",
     ],
     price: "$27",
-    cta: "Buy Now",
+    cta: "Buy now",
     href: "#",
     freePackEmailCapture: false,
     checkoutPack: "claude-for-business" as const,
   },
 ];
 
+const cardStyles = [
+  "border border-paper/[0.08] bg-ink-900",
+  "border border-paper/[0.08] bg-gradient-to-b from-ink-700 to-ink-900",
+  "border border-ember/60 bg-gradient-to-b from-ember/20 via-ink-900 to-ink-900",
+];
+
 export default function ShopPage() {
   return (
-    <section className="border-b border-neutral-200 bg-[#F2F2F2] py-16 sm:py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6 sm:px-6 md:px-8">
-        <FadeIn>
-          <p className="mb-3 text-center text-xs font-semibold uppercase tracking-widest text-accent">
-            Shop
-          </p>
-          <h1 className="text-center text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
-            Choose your pack
-          </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-base leading-relaxed text-neutral-600 sm:mt-6 sm:text-lg">
-            Pick the pack that matches your current stage. Replace placeholder
-            content with your final pack names, descriptions, and included items.
-          </p>
-        </FadeIn>
+    <>
+      <PageHero
+        aside={<SamplePromptCard />}
+        eyebrow="Shop"
+        title={
+          <>
+            Prompt packs that <span className="text-ember">actually work.</span>
+          </>
+        }
+        description="Built by people who use Claude every day. Copy, paste, and get useful output fast."
+      />
 
-        <div className="mt-10 grid grid-cols-1 gap-6 sm:mt-14 sm:gap-8 lg:grid-cols-3">
+      <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 md:px-8 md:pb-32">
+        <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
           {packs.map((pack, i) => (
-            <FadeIn key={pack.name} delay={i * 0.06}>
-              <BorderGlow
-                className="flex h-full flex-col rounded-3xl border border-neutral-200 bg-white p-7 sm:p-8"
-                backgroundColor="#ffffff"
-                borderRadius={24}
-                glowColor="16 90 56"
-                glowRadius={24}
-                edgeSensitivity={30}
-                coneSpread={24}
-                fillOpacity={0.25}
-                colors={["#f54927", "#f97316", "#fb7185"]}
-              >
-                <div className="mb-5 flex items-start justify-between gap-4">
-                  <h2 className="text-xl font-semibold tracking-tight text-neutral-900 sm:text-2xl">
+            <FadeIn key={pack.name} delay={i * 0.06} className="h-full">
+              <div className={`flex h-full flex-col rounded-[20px] p-7 sm:p-8 ${cardStyles[i]}`}>
+                <div className="flex items-start justify-between gap-4">
+                  <h2 className="font-display text-2xl font-bold tracking-tight text-paper sm:text-3xl">
                     {pack.name}
                   </h2>
-                  <span className="shrink-0 rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1 text-sm font-semibold text-neutral-800">
+                  <span
+                    className={`shrink-0 rounded-full px-3.5 py-1 font-display text-lg font-bold ${
+                      pack.price === "Free" ? "border border-paper/20 text-paper" : "bg-ember text-ink"
+                    }`}
+                  >
                     {pack.price}
                   </span>
                 </div>
 
-                <p className="text-sm leading-relaxed text-neutral-600 sm:text-base">
-                  {pack.description}
+                <p className="mt-5 text-base leading-relaxed text-paper/60">{pack.description}</p>
+
+                <p className="mt-7 text-sm font-semibold text-paper">
+                  {pack.included.length} prompts included
                 </p>
+                <PackIncludedList items={pack.included} />
 
-                <ul className="mt-5 space-y-2 text-sm text-neutral-700 sm:text-base">
-                  {pack.included.map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {pack.freePackEmailCapture ? (
-                  <FreePackEmailModal
-                    buttonLabel={pack.cta}
-                    buttonClassName="mt-8 inline-flex min-h-[44px] w-full items-center justify-center rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-neutral-800"
-                  />
-                ) : "checkoutPack" in pack && pack.checkoutPack ? (
-                  <ShopBuyNowButton
-                    packName={pack.checkoutPack}
-                    packTitle={pack.name}
-                    buttonLabel={pack.cta}
-                    buttonClassName="mt-8 inline-flex min-h-[44px] w-full items-center justify-center rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-neutral-800 disabled:cursor-not-allowed disabled:opacity-60"
-                  />
-                ) : (
-                  <Link
-                    href={pack.href}
-                    className="mt-8 inline-flex min-h-[44px] items-center justify-center rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-neutral-800"
-                  >
-                    {pack.cta}
-                  </Link>
-                )}
-              </BorderGlow>
+                <div className="mt-auto pt-9">
+                  {pack.freePackEmailCapture ? (
+                    <FreePackEmailModal
+                      buttonLabel={pack.cta}
+                      buttonClassName={`w-full ${BUTTON_SECONDARY_CLASS}`}
+                    />
+                  ) : "checkoutPack" in pack && pack.checkoutPack ? (
+                    <ShopBuyNowButton
+                      packName={pack.checkoutPack}
+                      packTitle={pack.name}
+                      buttonLabel={pack.cta}
+                      buttonClassName={`w-full ${BUTTON_PRIMARY_CLASS}`}
+                    />
+                  ) : (
+                    <Link href={pack.href} className={`w-full ${BUTTON_PRIMARY_CLASS}`}>
+                      {pack.cta}
+                    </Link>
+                  )}
+                </div>
+              </div>
             </FadeIn>
           ))}
-        </div>
-      </div>
-    </section>
+                </div>
+
+        <p className="mt-8 text-center text-sm text-paper/55">
+          Instant access by email. All sales are final. Already bought a pack?{" "}
+          <Link
+            href="/recover"
+            className="font-semibold text-paper underline decoration-ember decoration-2 underline-offset-4 hover:text-ember"
+          >
+            Recover your access link.
+          </Link>
+        </p>
+      </section>
+    </>
   );
 }

@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import BorderGlow from "@/components/BorderGlow";
+import { Check, Copy } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
+import { PageHero } from "@/components/site/PageHero";
 
 export type PromptItem = {
   title: string;
@@ -65,71 +66,55 @@ export function PromptPackContent({
   };
 
   return (
-    <section className="border-b border-neutral-200 bg-[#F2F2F2] py-16 sm:py-24 md:py-32">
-      <div className="mx-auto max-w-6xl px-6 sm:px-6 md:px-8">
-        <FadeIn>
-          <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent">
-            {eyebrow}
-          </p>
-          <h1 className="text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
-            {title}
-          </h1>
-          <p className="mt-4 max-w-3xl text-base leading-relaxed text-neutral-600 sm:mt-6 sm:text-lg">
-            {description}
-          </p>
-        </FadeIn>
-
-        <div className="mt-10 space-y-6 sm:mt-14 sm:space-y-8">
+    <>
+      <PageHero compact eyebrow={eyebrow} title={title} description={description} />
+      <section className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 md:px-8">
+        <div className="space-y-3">
           {prompts.map((item, i) => {
-            const { whenToUse, copyableBody } = splitPromptContent(
-              item.title,
-              item.prompt
-            );
+            const { whenToUse, copyableBody } = splitPromptContent(item.title, item.prompt);
+            const copied = copiedTitle === item.title;
 
             return (
-            <FadeIn key={item.title} delay={i * 0.04}>
-              <BorderGlow
-                className="rounded-3xl border border-neutral-200 bg-white p-6 sm:p-8"
-                backgroundColor="#ffffff"
-                borderRadius={24}
-                glowColor="16 90 56"
-                glowRadius={24}
-                edgeSensitivity={30}
-                coneSpread={24}
-                fillOpacity={0.25}
-                colors={["#f54927", "#f97316", "#fb7185"]}
-              >
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                  <div className="space-y-2">
-                    <h2 className="text-xl font-semibold tracking-tight text-neutral-900 sm:text-2xl">
-                      {item.title}
-                    </h2>
-                    {whenToUse ? (
-                      <p className="text-sm leading-relaxed text-neutral-600 sm:text-base">
-                        {whenToUse}
+              <FadeIn key={item.title} delay={Math.min(i, 4) * 0.04}>
+                <article className="rounded-[20px] border border-paper/[0.08] bg-ink-900 p-6 sm:p-8">
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                    <div className="space-y-2">
+                      <p className="font-mono text-xs text-ember">
+                        {String(i + 1).padStart(2, "0")}
                       </p>
-                    ) : null}
+                      <h2 className="font-display text-2xl font-semibold tracking-tight text-paper sm:text-3xl">
+                        {item.title}
+                      </h2>
+                      {whenToUse ? (
+                        <p className="max-w-2xl text-base leading-relaxed text-paper/60">{whenToUse}</p>
+                      ) : null}
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => copyPrompt(item.title, copyableBody)}
+                      aria-live="polite"
+                      className={`inline-flex min-h-[44px] shrink-0 items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold transition active:scale-[0.98] ${
+                        copied ? "bg-paper text-ink" : "bg-ember text-ink hover:bg-ember-soft"
+                      }`}
+                    >
+                      {copied ? (
+                        <Check className="h-4 w-4" strokeWidth={2.5} aria-hidden />
+                      ) : (
+                        <Copy className="h-4 w-4" strokeWidth={2} aria-hidden />
+                      )}
+                      {copied ? "Copied" : "Copy prompt"}
+                    </button>
                   </div>
-                  <button
-                    type="button"
-                    onClick={() => copyPrompt(item.title, copyableBody)}
-                    className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-neutral-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-neutral-800"
-                  >
-                    {copiedTitle === item.title ? "Copied" : "Copy"}
-                  </button>
-                </div>
 
-                <pre className="mt-5 overflow-x-auto rounded-2xl border border-neutral-200 bg-neutral-50 p-4 text-sm leading-relaxed text-neutral-800 sm:mt-6 sm:p-5">
-                  <code className="whitespace-pre-wrap break-words font-mono">
-                    {copyableBody}
-                  </code>
-                </pre>
-              </BorderGlow>
-            </FadeIn>
-          );
+                  <pre className="mt-6 max-h-[28rem] overflow-auto rounded-2xl border border-paper/[0.06] bg-ink p-4 text-sm leading-relaxed text-paper/80 sm:p-5">
+                    <code className="whitespace-pre-wrap break-words font-mono">{copyableBody}</code>
+                  </pre>
+                </article>
+              </FadeIn>
+            );
           })}
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

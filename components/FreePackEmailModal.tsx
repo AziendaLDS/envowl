@@ -1,7 +1,11 @@
 "use client";
 
 import { useCallback, useEffect, useId, useRef, useState } from "react";
-import CardSpotlight from "@/components/CardSpotlight";
+import { X } from "lucide-react";
+import {
+  BUTTON_PRIMARY_CLASS,
+  SUBSCRIBE_INPUT_CLASS,
+} from "@/lib/subscribe-classes";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -122,7 +126,7 @@ export function FreePackEmailModal({
         <div className="fixed inset-0 z-[100] flex items-end justify-center p-4 sm:items-center">
           <button
             type="button"
-            className="absolute inset-0 bg-black/35"
+            className="absolute inset-0 bg-ink/75 backdrop-blur-sm"
             aria-label="Close dialog"
             onClick={close}
           />
@@ -133,37 +137,35 @@ export function FreePackEmailModal({
             aria-labelledby={titleId}
             className="relative z-[101] w-full max-w-md"
           >
-            <CardSpotlight className="rounded-3xl border border-neutral-200 bg-white p-6 shadow-xl sm:p-8">
+            <div className="rounded-[24px] border border-paper/10 bg-ink-900 p-6 shadow-[0_40px_120px_-30px_rgb(0_0_0_/_0.8)] sm:p-8">
             <div className="flex items-start justify-between gap-4">
               <h2
                 id={titleId}
-                className="text-lg font-semibold tracking-tight text-neutral-900 sm:text-xl"
+                className="font-display text-2xl font-bold tracking-tight text-paper"
               >
                 {success ? "You are all set" : "Get your free starter pack"}
               </h2>
               <button
                 type="button"
                 onClick={close}
-                className="-m-1 shrink-0 rounded-lg p-2 text-neutral-500 transition hover:bg-neutral-100 hover:text-neutral-900"
+                className="-m-1 shrink-0 rounded-full p-2 text-paper/50 transition hover:bg-paper/10 hover:text-paper"
                 aria-label="Close"
               >
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+                <X className="h-5 w-5" strokeWidth={2} aria-hidden />
               </button>
             </div>
 
             {success ? (
-              <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-4 text-emerald-950">
-                <p className="text-base font-medium">Check your inbox</p>
-                <p className="mt-2 text-sm leading-relaxed text-emerald-900/90">
+              <div className="mt-6 rounded-2xl border border-ember/40 bg-ember/10 px-5 py-5">
+                <p className="text-base font-semibold text-paper">Check your inbox</p>
+                <p className="mt-2 text-sm leading-relaxed text-paper/70">
                   We sent a link to your Claude Starter Pack. If you do not see it in a few minutes,
                   check spam or promotions.
                 </p>
                 <button
                   type="button"
                   onClick={close}
-                  className="mt-5 inline-flex min-h-[44px] w-full items-center justify-center rounded-full bg-neutral-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-neutral-800"
+                  className={`mt-5 w-full ${BUTTON_PRIMARY_CLASS}`}
                 >
                   Close
                 </button>
@@ -184,17 +186,17 @@ export function FreePackEmailModal({
                     onChange={(e) => setEmail(e.target.value)}
                     onBlur={() => setTouched(true)}
                     placeholder="you@example.com"
-                    className="w-full min-h-12 rounded-xl border-2 border-neutral-200 bg-white px-4 py-3.5 text-base text-neutral-900 outline-none ring-2 ring-transparent transition placeholder:text-neutral-400 focus:border-accent focus:ring-accent/20"
+                    className={SUBSCRIBE_INPUT_CLASS}
                   />
                   {showFieldError ? (
-                    <p className="mt-2 text-sm text-red-600" role="alert">
+                    <p className="mt-2 text-sm text-red-300" role="alert">
                       Please enter a valid email address.
                     </p>
                   ) : null}
                 </div>
 
                 {serverMessage ? (
-                  <p className="text-sm text-red-600" role="alert">
+                  <p className="text-sm text-red-300" role="alert">
                     {serverMessage}
                   </p>
                 ) : null}
@@ -202,13 +204,13 @@ export function FreePackEmailModal({
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="inline-flex min-h-[44px] w-full items-center justify-center rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-neutral-800 disabled:cursor-not-allowed disabled:opacity-60"
+                  className={`w-full ${BUTTON_PRIMARY_CLASS}`}
                 >
                   {submitting ? "Sending…" : "Send me the prompts"}
                 </button>
               </form>
             )}
-            </CardSpotlight>
+            </div>
           </div>
         </div>
       ) : null}

@@ -50,15 +50,15 @@ export default function StarterPromptsPage({ searchParams }: PageProps) {
   return (
     <>
       <PromptPackContent
-        eyebrow="Prompts"
+        eyebrow="Your prompt pack"
         title="Claude Starter Pack"
         description="Your starter prompts are below. Each one is shown in full and can be copied in one click."
         prompts={starterPrompts}
       />
-      <div className="bg-[#F2F2F2] pb-16 text-center sm:pb-24">
+      <div className="pb-24 text-center">
         <Link
           href="/recover"
-          className="text-sm font-medium text-neutral-600 underline underline-offset-4 hover:text-neutral-900"
+          className="text-sm font-medium text-paper/55 underline decoration-paper/30 underline-offset-4 hover:text-paper"
         >
           Lost access? Recover it here
         </Link>

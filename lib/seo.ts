@@ -6,7 +6,7 @@ export const SITE_TWITTER_HANDLE = "@envowl";
 export const COMPANY_LEGAL_NAME = "LDS Ventures LLC";
 export const DEFAULT_TITLE = "Envowl — The AI Talent Marketplace";
 export const DEFAULT_DESCRIPTION =
-  "Find vetted AI experts or apply as a creator. Envowl connects businesses and individuals with trusted AI talent — curated, verified, and built for where the world is going.";
+  "A curated marketplace for vetted AI talent. Join the waitlist for early access and founder pricing. Launching Summer 2027.";
 
 const ogImage = {
   url: "/og-image.png" as const,

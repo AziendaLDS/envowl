@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArticleBlocks } from "@/components/ArticleBody";
@@ -83,42 +84,49 @@ export default function ArticlePage({ params }: Props) {
   ]);
 
   return (
-    <article className="border-b border-neutral-200 bg-[#F2F2F2] py-16 sm:py-24 md:py-28">
+    <article className="relative isolate -mt-16 overflow-hidden md:-mt-[4.5rem]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumb]) }}
       />
-      <div className="mx-auto max-w-3xl px-6 sm:px-6 md:px-8">
-        <p className="text-sm font-semibold uppercase tracking-wider text-accent">
-          {article.tag}
-        </p>
-        <h1 className="mt-4 text-3xl font-semibold tracking-tight text-neutral-900 sm:mt-5 sm:text-4xl md:text-5xl">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-48 -top-48 -z-10 h-[36rem] w-[36rem] rounded-full bg-ember/15 blur-[140px]"
+      />
+      <div className="mx-auto max-w-3xl px-4 pb-24 pt-28 sm:px-6 md:px-8 md:pb-32 md:pt-36">
+        <Link
+          href="/resources"
+          className="group inline-flex items-center gap-2 text-sm font-medium text-paper/55 transition hover:text-paper"
+        >
+          <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" strokeWidth={2} aria-hidden />
+          All resources
+        </Link>
+        <p className="mt-10 text-sm font-semibold text-ember">{article.tag}</p>
+        <h1 className="mt-4 font-display text-4xl font-bold leading-[1.02] tracking-[-0.03em] text-paper sm:text-5xl md:text-6xl">
           {article.title}
         </h1>
-        <div className="mt-5 flex flex-wrap gap-3 text-base text-neutral-500">
+        <div className="mt-6 flex flex-wrap gap-x-5 gap-y-1 text-base text-paper/50">
           <span>{article.readTime}</span>
-          <span aria-hidden>·</span>
           <span>{article.date}</span>
         </div>
         {article.curatedLine ? (
-          <p className="mt-3 text-sm text-neutral-500">{article.curatedLine}</p>
+          <p className="mt-3 text-sm text-paper/50">{article.curatedLine}</p>
         ) : null}
-        <div className="mt-12">
+        <div className="mt-12 border-t border-paper/10 pt-12">
           <ArticleBlocks blocks={article.blocks} />
         </div>
-        <div className="mt-16 border-t border-neutral-200 pt-12">
-          <p className="text-base text-neutral-600">
-            Want early access to {PLATFORM_NAME}?{" "}
-            <Link href="/#waitlist" className="font-semibold text-accent hover:underline">
-              Join the waitlist
-            </Link>
-            .
+        <div className="mt-16 rounded-[20px] border border-paper/[0.08] bg-ink-900 p-7 sm:p-9">
+          <p className="font-display text-2xl font-semibold tracking-tight text-paper">
+            Want early access to {PLATFORM_NAME}?
+          </p>
+          <p className="mt-2 text-base text-paper/60">
+            Vetted AI talent, founder pricing, and weekly insights before launch.
           </p>
           <Link
-            href="/resources"
-            className="mt-8 inline-flex text-base font-medium text-neutral-700 hover:text-neutral-900"
+            href="/#waitlist"
+            className="mt-6 inline-flex min-h-12 items-center rounded-full bg-ember px-6 text-base font-semibold text-ink transition hover:bg-ember-soft"
           >
-            ← All resources
+            Join the waitlist
           </Link>
         </div>
       </div>

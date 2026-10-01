@@ -96,15 +96,15 @@ export default function ClaudeForBusinessPromptsPage({
   return (
     <>
       <PromptPackContent
-        eyebrow="Prompts"
+        eyebrow="Your prompt pack"
         title="Claude for Business"
         description="Your business prompt library is below. Copy any prompt and paste it directly into Claude or ChatGPT."
         prompts={businessPrompts}
       />
-      <div className="bg-[#F2F2F2] pb-16 text-center sm:pb-24">
+      <div className="pb-24 text-center">
         <Link
           href="/recover"
-          className="text-sm font-medium text-neutral-600 underline underline-offset-4 hover:text-neutral-900"
+          className="text-sm font-medium text-paper/55 underline decoration-paper/30 underline-offset-4 hover:text-paper"
         >
           Lost access? Recover it here
         </Link>
