@@ -1,58 +1,35 @@
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import type { Article } from "@/lib/articles";
-import CardSpotlight from "@/components/CardSpotlight";
-
-const outerCardClasses =
-  "group block h-full rounded-3xl border border-neutral-200 bg-white shadow-sm transition hover:border-neutral-300 hover:shadow-md";
 
 export function ArticleCard({
   article,
-  compact = false,
-  omitSpotlight = false,
 }: {
   article: Pick<Article, "slug" | "tag" | "title" | "teaser" | "readTime" | "date">;
-  compact?: boolean;
-  /** When nested in `BorderGlow`, the parent provides the radial spotlight — skip here. */
-  omitSpotlight?: boolean;
 }) {
-  const inner = (
-    <>
-      <p className="text-sm font-semibold uppercase tracking-wider text-accent">
-        {article.tag}
-      </p>
-      <h3 className="mt-3 text-lg font-semibold tracking-tight text-neutral-900 group-hover:text-neutral-700 sm:mt-4 sm:text-xl">
+  return (
+    <Link
+      href={`/resources/${article.slug}`}
+      className="group flex h-full flex-col rounded-[20px] border border-paper/[0.08] bg-ink-900 p-7 transition hover:-translate-y-1 hover:border-ember/40"
+    >
+      <div className="flex items-center justify-between gap-4 text-sm">
+        <span className="font-medium text-ember">{article.tag}</span>
+        <ArrowUpRight
+          className="h-5 w-5 text-paper/30 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-ember"
+          strokeWidth={2}
+          aria-hidden
+        />
+      </div>
+      <h3 className="mt-6 font-display text-xl font-semibold leading-snug tracking-tight text-paper sm:text-2xl">
         {article.title}
       </h3>
-      {!compact ? (
-        <p className="mt-3 flex-1 text-base leading-relaxed text-neutral-600 line-clamp-3">
-          {article.teaser}
-        </p>
-      ) : null}
-      <div className="mt-5 flex items-center justify-between text-sm text-neutral-500">
+      <p className="mt-3 flex-1 text-base leading-relaxed text-paper/55 line-clamp-3">
+        {article.teaser}
+      </p>
+      <div className="mt-6 flex items-center justify-between text-sm text-paper/45">
         <span>{article.readTime}</span>
         {article.date ? <span>{article.date}</span> : null}
       </div>
-    </>
-  );
-
-  const linkHref = `/resources/${article.slug}`;
-
-  if (omitSpotlight) {
-    return (
-      <Link
-        href={linkHref}
-        className={`${outerCardClasses} group flex h-full flex-col p-6 sm:p-8`}
-      >
-        {inner}
-      </Link>
-    );
-  }
-
-  return (
-    <CardSpotlight className={outerCardClasses}>
-      <Link href={linkHref} className="flex h-full flex-col p-6 sm:p-8">
-        {inner}
-      </Link>
-    </CardSpotlight>
+    </Link>
   );
 }

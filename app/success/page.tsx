@@ -1,6 +1,7 @@
+import { Check } from "lucide-react";
 import Link from "next/link";
-import CardSpotlight from "@/components/CardSpotlight";
 import { FadeIn } from "@/components/FadeIn";
+import { BUTTON_PRIMARY_CLASS } from "@/lib/subscribe-classes";
 import {
   PAID_PACK_CONFIG,
   isPaidPackSlug,
@@ -30,28 +31,35 @@ export default function SuccessPage({ searchParams }: PageProps) {
     : null;
 
   return (
-    <section className="min-h-[70vh] border-b border-neutral-200 bg-[#F2F2F2] py-16 sm:py-24 md:py-32">
-      <div className="mx-auto max-w-2xl px-6 text-center sm:px-6 md:px-8">
+    <section className="relative isolate -mt-16 overflow-hidden md:-mt-[4.5rem]">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute bottom-[-24rem] left-1/2 -z-10 h-[44rem] w-[70rem] -translate-x-1/2 rounded-full bg-ember/20 blur-[160px]"
+      />
+      <div className="mx-auto flex min-h-[80vh] max-w-2xl flex-col items-center justify-center px-4 pb-24 pt-32 text-center sm:px-6 md:px-8">
         <FadeIn>
-          <CardSpotlight className="mx-auto inline-flex flex-col items-center gap-6 rounded-3xl border border-neutral-200 bg-white p-8 shadow-sm">
-            <p className="text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
-              Payment successful
-            </p>
+          <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-ember text-ink" aria-hidden>
+            <Check className="h-8 w-8" strokeWidth={2.5} />
+          </span>
+          <h1 className="mt-8 font-display text-5xl font-bold leading-[0.98] tracking-[-0.035em] text-paper sm:text-6xl">
+            Payment successful.
+          </h1>
+          <p className="mx-auto mt-5 max-w-md text-lg leading-relaxed text-paper/65">
+            {pack ? "Your prompts are ready. We also emailed you the access link." : "Thanks for your purchase. Check your inbox for your access link."}
+          </p>
+          <div className="mt-10 flex flex-col items-center gap-5">
             {accessHref ? (
-              <Link
-                href={accessHref}
-                className="inline-flex min-h-[48px] items-center justify-center rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-neutral-800"
-              >
+              <Link href={accessHref} className={BUTTON_PRIMARY_CLASS}>
                 Open your prompts
               </Link>
             ) : null}
             <Link
               href="/recover"
-              className="text-sm font-medium text-neutral-600 underline underline-offset-4 hover:text-neutral-900"
+              className="text-sm font-medium text-paper/60 underline decoration-paper/30 underline-offset-4 hover:text-paper"
             >
               Lost access? Recover it here
             </Link>
-          </CardSpotlight>
+          </div>
         </FadeIn>
       </div>
     </section>

@@ -1,13 +1,13 @@
-import { AudienceSplit } from "@/components/AudienceSplit";
-import BorderGlow from "@/components/BorderGlow";
-import { Hero } from "@/components/Hero";
-import { HowItWorks } from "@/components/HowItWorks";
-import Link from "next/link";
-import { ProblemSection } from "@/components/ProblemSection";
-import { ResourcesPreview } from "@/components/ResourcesPreview";
-import { WaitlistCTA } from "@/components/WaitlistCTA";
-import { WaitlistForm } from "@/components/WaitlistForm";
-import { WAITLIST_MICROCOPY_SHORT } from "@/lib/constants";
+import { Suspense } from "react";
+import { Audiences } from "@/components/home/Audiences";
+import { Faq } from "@/components/home/Faq";
+import { HomeHero } from "@/components/home/HomeHero";
+import { JoinCTA } from "@/components/home/JoinCTA";
+import { Manifesto } from "@/components/home/Manifesto";
+import { Process } from "@/components/home/Process";
+import { ResourcesEditorial } from "@/components/home/ResourcesEditorial";
+import { StackMarquee } from "@/components/home/StackMarquee";
+import { Vetting } from "@/components/home/Vetting";
 import { faqSchema } from "@/lib/schema";
 import {
   DEFAULT_DESCRIPTION,
@@ -30,22 +30,27 @@ const homeFaq = [
   {
     question: "Who is Envowl for?",
     answer:
-      "Businesses that are adopting AI and need people who've actually done it before. Professionals whose roles are changing faster than their training is - and who want real guidance, not just courses. And creators or agencies who are tired of competing on price against people with no track record.",
+      "Businesses that are adopting AI and need people who've actually done it before. Professionals whose roles are changing faster than their training is, and who want real guidance, not just courses. And creators or agencies who are tired of competing on price against people with no track record.",
   },
   {
     question: "How is Envowl different from a freelancer directory?",
     answer:
-      "A directory will show you everyone. Envowl shows you who's actually good. Every creator is reviewed before they're listed - portfolio, delivery history, scope fit. We turn down a lot of applications. That's not gatekeeping, that's the whole product. Buyers waste less time. Creators get better clients. That doesn't happen in an open marketplace.",
+      "A directory will show you everyone. Envowl shows you who's actually good. Every creator is reviewed before they're listed: portfolio, delivery history, scope fit. We'll turn down a lot of applications, because a shorter list means better matches. Buyers waste less time. Creators get better clients. That doesn't happen in an open marketplace.",
   },
   {
     question: "How does the vetting process work?",
     answer:
-      "Every creator application is manually reviewed against three criteria: portfolio quality, delivery credibility, and scope fit. We don't approve everyone - that's the point.",
+      "Every creator application will be manually reviewed against three criteria: portfolio quality, delivery credibility, and scope fit. We won't approve everyone, and that keeps the list worth trusting.",
+  },
+    {
+    question: "When does Envowl launch?",
+    answer:
+      "We're targeting Summer 2027. Join the waitlist for early access and founder pricing when we open, plus weekly AI insights until then.",
   },
   {
     question: "Is Envowl free to use as a business?",
     answer:
-      "Browsing and posting is free. You only pay when you're ready to engage a creator. The resources section is also free - practical AI guidance you can use whether you hire anyone or not.",
+      "Pricing is still being finalized, but the plan is for browsing and posting to be free, and you only pay when you engage a creator. Our resources are free today: practical AI guidance you can use whether you hire anyone or not.",
   },
   {
     question: "Can I use Envowl if I don't know exactly what I need?",
@@ -63,63 +68,17 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema) }}
       />
-      <Hero>
-        <WaitlistForm
-          defaultType="client"
-          source="homepage"
-          microcopyTone="onDark"
-          microcopySpacing="tight"
-          microcopy={WAITLIST_MICROCOPY_SHORT}
-        />
-      </Hero>
-      <ProblemSection />
-      <HowItWorks />
-      <AudienceSplit />
-      <ResourcesPreview />
-      <section className="border-b border-neutral-200 bg-[#ebebeb] py-16 sm:py-24">
-        <div className="mx-auto max-w-4xl px-6 sm:px-6 md:px-8">
-          <h2 className="text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
-            Frequently asked questions
-          </h2>
-          <div className="mt-8 space-y-4">
-            {homeFaq.map((item) => (
-              <BorderGlow
-                key={item.question}
-                className="rounded-2xl border border-neutral-200 bg-white px-6 py-5"
-                backgroundColor="#ffffff"
-                borderRadius={16}
-                glowColor="16 90 56"
-                glowRadius={22}
-                edgeSensitivity={30}
-                coneSpread={24}
-                fillOpacity={0.24}
-                colors={["#f54927", "#f97316", "#fb7185"]}
-              >
-                <details className="group">
-                  <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
-                    <h3 className="text-lg font-semibold text-neutral-900">{item.question}</h3>
-                    <span
-                      aria-hidden
-                      className="mt-0.5 text-xl leading-none text-neutral-500 transition-transform group-open:rotate-45"
-                    >
-                      +
-                    </span>
-                  </summary>
-                  <p className="mt-3 text-base leading-relaxed text-neutral-600">{item.answer}</p>
-                </details>
-              </BorderGlow>
-            ))}
-          </div>
-          <p className="mt-8 text-sm text-neutral-600">
-            Looking for a full product breakdown? Visit{" "}
-            <Link href="/platform" className="font-semibold text-accent hover:underline">
-              the Envowl platform overview
-            </Link>
-            .
-          </p>
-        </div>
-      </section>
-      <WaitlistCTA />
+      <HomeHero />
+      <StackMarquee />
+      <Manifesto />
+      <Process />
+      <Vetting />
+      <Audiences />
+      <ResourcesEditorial />
+      <Faq items={homeFaq} />
+      <Suspense fallback={<div id="waitlist" className="min-h-[36rem]" />}>
+        <JoinCTA />
+      </Suspense>
     </>
   );
 }

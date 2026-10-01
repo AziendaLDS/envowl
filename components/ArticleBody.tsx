@@ -22,7 +22,7 @@ function RichLinks({ text }: { text: string }) {
         <a
           key={key++}
           href={href}
-          className="font-semibold text-accent underline underline-offset-2 hover:text-accent-hover"
+          className="font-semibold text-paper underline decoration-ember decoration-2 underline-offset-4 hover:text-ember"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -34,7 +34,7 @@ function RichLinks({ text }: { text: string }) {
         <Link
           key={key++}
           href={href}
-          className="font-semibold text-accent underline underline-offset-2 hover:text-accent-hover"
+          className="font-semibold text-paper underline decoration-ember decoration-2 underline-offset-4 hover:text-ember"
         >
           {label}
         </Link>,
@@ -54,7 +54,7 @@ function Inline({ text }: { text: string }) {
     <>
       {boldParts.map((part, i) => {
         if (part.startsWith("**") && part.endsWith("**")) {
-          return <strong key={i}>{part.slice(2, -2)}</strong>;
+          return <strong key={i} className="font-semibold text-paper">{part.slice(2, -2)}</strong>;
         }
         return <RichLinks key={i} text={part} />;
       })}
@@ -70,7 +70,7 @@ export function ArticleBlocks({ blocks }: { blocks: ArticleBlock[] }) {
           return (
             <figure
               key={i}
-              className="mb-10 flex w-full justify-center overflow-hidden rounded-2xl border border-neutral-200 bg-[#000b1a] shadow-sm sm:mb-12"
+              className="mb-10 flex w-full justify-center overflow-hidden rounded-[20px] border border-paper/[0.08] bg-[#000b1a] sm:mb-12"
             >
               <Image
                 src={block.src}
@@ -85,7 +85,7 @@ export function ArticleBlocks({ blocks }: { blocks: ArticleBlock[] }) {
           );
         }
         if (block.type === "p") {
-          const className = `mb-5 text-base leading-relaxed text-neutral-600 last:mb-0 sm:mb-6 sm:text-lg${
+          const className = `mb-5 text-base leading-[1.8] text-paper/70 last:mb-0 sm:mb-6 sm:text-lg${
             block.italic ? " italic" : ""
           }`;
           return (
@@ -98,7 +98,7 @@ export function ArticleBlocks({ blocks }: { blocks: ArticleBlock[] }) {
           return (
             <h2
               key={i}
-              className="mb-4 mt-12 text-2xl font-semibold tracking-tight text-neutral-900 first:mt-0 sm:text-3xl"
+              className="mb-4 mt-14 font-display text-2xl font-bold tracking-[-0.02em] text-paper first:mt-0 sm:text-3xl"
             >
               <Inline text={block.text} />
             </h2>
@@ -108,7 +108,7 @@ export function ArticleBlocks({ blocks }: { blocks: ArticleBlock[] }) {
           return (
             <h3
               key={i}
-              className="mb-3 mt-10 text-xl font-semibold tracking-tight text-neutral-900 first:mt-0 sm:text-2xl"
+              className="mb-3 mt-10 font-display text-xl font-semibold tracking-tight text-paper first:mt-0 sm:text-2xl"
             >
               <Inline text={block.text} />
             </h3>
@@ -118,7 +118,7 @@ export function ArticleBlocks({ blocks }: { blocks: ArticleBlock[] }) {
           return (
             <ul
               key={i}
-              className="mb-6 list-disc space-y-2 pl-6 text-base leading-relaxed text-neutral-600 sm:text-lg"
+              className="mb-6 list-disc space-y-2 pl-6 text-base leading-[1.8] text-paper/70 marker:text-ember sm:text-lg"
             >
               {block.items.map((item, j) => (
                 <li key={j}>
@@ -132,7 +132,7 @@ export function ArticleBlocks({ blocks }: { blocks: ArticleBlock[] }) {
           return (
             <ol
               key={i}
-              className="mb-6 list-decimal space-y-3 pl-6 text-base leading-relaxed text-neutral-600 sm:text-lg"
+              className="mb-6 list-decimal space-y-3 pl-6 text-base leading-[1.8] text-paper/70 marker:font-semibold marker:text-ember sm:text-lg"
             >
               {block.items.map((item, j) => (
                 <li key={j}>
@@ -146,7 +146,7 @@ export function ArticleBlocks({ blocks }: { blocks: ArticleBlock[] }) {
           return (
             <pre
               key={i}
-              className="mb-6 overflow-x-auto rounded-xl border border-neutral-200 bg-white p-4 text-left text-sm leading-relaxed text-neutral-800 shadow-sm sm:p-5 sm:text-[0.8125rem]"
+              className="mb-6 overflow-x-auto rounded-2xl border border-paper/[0.08] bg-ink-900 p-4 text-left text-sm leading-relaxed text-paper/85 sm:p-5 sm:text-[0.8125rem]"
             >
               <code className="font-mono">{block.text}</code>
             </pre>

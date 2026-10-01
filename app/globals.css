@@ -4,21 +4,17 @@
 
 :root {
   /* HSL channels (space-separated) for Tailwind opacity modifiers */
-  --background: 0 0% 95%;
-  --foreground: 0 0% 9%;
+  --background: 240 5% 4%;
+  --foreground: 36 24% 94%;
   --accent: #f54927;
-  --accent-hover: #d63d20;
-  /* Defaults for shadcn-style tokens (light); overridden in `.theme-purple-gradient` */
-  --border: 0 0% 90%;
-  --card: 0 0% 100%;
-  --secondary: 0 0% 96%;
-  --muted-foreground: 0 0% 45%;
+  --accent-hover: #ff7a5c;
 }
 
 html {
   overflow-x: clip;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  background-color: #0a0a0b;
 }
 
 body {
@@ -27,6 +23,11 @@ body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
   overflow-x: clip;
   min-width: 0;
+}
+
+::selection {
+  background: rgb(245 73 39 / 0.85);
+  color: #0a0a0b;
 }
 
 @layer base {
@@ -39,95 +40,86 @@ body {
 }
 
 @layer utilities {
+  /* Maison: Archivo Expanded */
+  .font-display {
+    font-stretch: 125%;
+  }
+  /* Big headings: heavy uppercase... */
+  h1.font-display,
+  h2.font-display.font-bold {
+    font-weight: 750;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+  /* ...with the highlighted phrase in hairline weight for contrast */
+  h1.font-display .text-ember,
+  h2.font-display .text-ember,
+  h1.font-display [class*="text-paper/"],
+  h2.font-display [class*="text-paper/"] {
+    font-weight: 200;
+  }
+  /* Smaller display text stays calm, sentence case */
+  .font-display.font-extrabold:not(h1, h2) { font-weight: 600; }
+  .font-display.font-bold:not(h1, h2) { font-weight: 500; }
+  .font-display.font-semibold { font-weight: 500; }
+  .font-display.font-medium { font-weight: 400; }
+
   .text-balance {
     text-wrap: balance;
   }
 }
 
-/* v0-style service cards: deep purple anchored on #302b63 (not pure black) */
-.theme-purple-gradient {
-  --foreground: 0 0% 98%;
-  --muted-foreground: 245 12% 72%;
-  --card: 245 32% 22%;
-  --secondary: 245 28% 28%;
-  --border: 245 22% 38%;
-  background-image: linear-gradient(
-    160deg,
-    #302b63 0%,
-    #252050 45%,
-    #14122a 100%
-  );
-}
-
-.hero-noise {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
-}
 /* ============================================
-   EnvowlAudienceCards Component Styles
-   Add this block to your global CSS file
+   Envowl night theme (homepage + shared chrome)
    ============================================ */
 
-   .ew-cards-wrap {
-    width: 100%;
-    padding: 24px 0;
+.night {
+  --night-line: rgb(244 241 236 / 0.09);
+  background-color: #0a0a0b;
+  color: #f4f1ec;
+  color-scheme: dark;
+}
+
+/* Film grain: fixed, pointer-events-none so it never repaints on scroll. */
+.night-grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.dot-field {
+  background-image: radial-gradient(rgb(244 241 236 / 0.14) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee 48s linear infinite;
+}
+
+.marquee-mask {
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+@keyframes caret-blink {
+  50% { opacity: 0; }
+}
+
+.caret {
+  animation: caret-blink 1s steps(1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track,
+  .caret {
+    animation: none;
   }
-  
-  .ew-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
-  }
-  
-  .ew-label {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #e8410a;
-  }
-  
-  .ew-headline {
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 1.25;
-    color: #1a1814;
-    margin: 0;
-  }
-  
-  .ew-body {
-    font-size: 13px;
-    line-height: 1.6;
-    color: #6b6860;
-    margin: 0;
-    flex: 1;
-  }
-  
-  .ew-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #e8410a;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    margin-top: 4px;
-  }
-  
-  .ew-link svg {
-    transition: transform 0.15s ease;
-  }
-  
-  .ew-link:hover svg {
-    transform: translateX(3px);
-  }
-  
-  @media (max-width: 640px) {
-    .ew-cards-wrap {
-      padding: 32px 16px;
-    }
-  
-    .ew-grid {
-      grid-template-columns: 1fr;
-    }
-  }
+}

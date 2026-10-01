@@ -1,4 +1,4 @@
-# The New Gold Rush Is Invisible — And Most Business Are Watching It Pass Them By
+# The New Gold Rush Is Invisible — And Most Businesses Are Watching It Pass Them By
 
 **Category:** Industry Guides
 **Read time:** 5 min read

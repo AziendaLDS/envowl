@@ -10,21 +10,18 @@ import {
 export function WaitlistForm({
   defaultType = "client",
   source = "landing",
-  buttonLabel = "Join the Waitlist",
+  buttonLabel = "Join the waitlist",
   microcopy,
   className = "",
-  /** `onDark` = light text on dark sections. `hero` = black copy on dark hero (light text-shadow for legibility, no box). */
-  microcopyTone = "default",
-  /** Tighter gap between the email row and microcopy (e.g. homepage hero). */
-  microcopySpacing = "default",
+  /** Left-align microcopy/errors instead of centering. */
+  align = "center",
 }: {
-  defaultType?: "client" | "creator";
+  defaultType?: "client" | "creator" | "professional";
   source?: string;
   buttonLabel?: string;
   microcopy?: ReactNode;
   className?: string;
-  microcopyTone?: "default" | "onDark" | "hero";
-  microcopySpacing?: "default" | "tight";
+  align?: "center" | "left";
 }) {
   const [error, setError] = useState<string | null>(null);
   const [pending, setPending] = useState(false);
@@ -38,7 +35,8 @@ export function WaitlistForm({
     const form = e.currentTarget;
     const fd = new FormData(form);
     const emailValue = String(fd.get("email") ?? "").trim();
-    const type = fd.get("type") === "creator" ? "creator" : "client";
+    const rawType = fd.get("type");
+    const type = rawType === "creator" || rawType === "professional" ? rawType : "client";
     const src = String(fd.get("source") ?? source);
 
     setPending(true);
@@ -96,11 +94,7 @@ export function WaitlistForm({
       </form>
       {error ? (
         <p
-          className={`mt-3 text-center text-sm ${
-            microcopyTone === "onDark" || microcopyTone === "hero"
-              ? "text-red-300"
-              : "text-red-600"
-          }`}
+          className={`mt-3 text-sm text-red-300 ${align === "left" ? "text-left" : "text-center"}`}
           role="alert"
         >
           {error}
@@ -108,15 +102,7 @@ export function WaitlistForm({
       ) : null}
       {microcopy ? (
         <p
-          className={`text-center text-sm font-medium leading-snug sm:text-base ${
-            microcopySpacing === "tight" ? "mt-2.5" : "mt-4"
-          } ${
-            microcopyTone === "hero"
-              ? "text-black [text-shadow:0_0_1px_rgba(255,255,255,1),0_0_10px_rgba(255,255,255,0.9),0_0_20px_rgba(255,255,255,0.45)]"
-              : microcopyTone === "onDark"
-                ? "text-white/75"
-                : "text-neutral-600"
-          }`}
+          className={`mt-4 text-sm leading-snug text-paper/55 ${align === "left" ? "text-left" : "text-center"}`}
         >
           {microcopy}
         </p>

@@ -1,19 +1,17 @@
 import { Suspense } from "react";
-import { FadeIn } from "@/components/FadeIn";
-import ClickSpark from "@/components/ClickSpark";
-import { PurpleBurstBackdrop } from "@/components/PurpleBurstBackdrop";
 import { ResourcesGrid } from "@/components/ResourcesGrid";
-import { ResourcesNewsletter } from "@/components/ResourcesNewsletter";
-import { ShootingStarsHeroBackground } from "@/components/ShootingStarsHeroBackground";
+import { CtaBand } from "@/components/site/CtaBand";
+import { PageHero } from "@/components/site/PageHero";
+import { WaitlistForm } from "@/components/WaitlistForm";
 import { articles } from "@/lib/articles";
+
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageMetadata, SITE_URL } from "@/lib/seo";
-import { WAITLIST_CTA_SURFACE } from "@/lib/constants";
 
 export const metadata = pageMetadata({
   title: "AI Resources & Guides",
   description:
-    "Free guides, videos, and breakdowns for businesses and professionals who want to stay ahead with AI — from Envowl.",
+    "Free guides, videos, and breakdowns for businesses and professionals who want to stay ahead with AI, from Envowl.",
   path: "/resources",
 });
 
@@ -43,47 +41,40 @@ export default function ResourcesPage() {
           __html: JSON.stringify([resourceListSchema, resourceBreadcrumbSchema]),
         }}
       />
-      <section className="relative flex min-h-[min(100svh,38rem)] items-center overflow-hidden bg-[#0a0a0a] py-14 text-white sm:py-24 md:min-h-[36rem] md:py-36">    
-       <ShootingStarsHeroBackground fadeVariant="lower" nextSectionBg="#ebebeb" />
-        <ClickSpark sparkColor="#f54927" sparkSize={12} sparkRadius={22} sparkCount={10} duration={500}>
-          <div className="relative z-10 mx-auto max-w-4xl text-center pl-[max(1.5rem,env(safe-area-inset-left))] pr-[max(1.5rem,env(safe-area-inset-right))] sm:pl-6 sm:pr-6 md:pl-8 md:pr-8">
-            <FadeIn>
-              <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-accent">
-                Resources
-              </p>
-              <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-                The AI resource library.
-              </h1>
-              <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/80 sm:mt-8 sm:text-lg md:text-xl">
-                Practical guides for businesses, professionals, and anyone trying to
-                keep up with where the world is going.
-              </p>
-            </FadeIn>
-          </div>
-        </ClickSpark>
+      <PageHero
+        compact
+        titleAbove
+        titleClassName="text-[2.6rem] sm:text-[clamp(2.25rem,4.6vw,3.75rem)]"
+        eyebrow="Resources"
+        title={
+          <>
+            The AI resource library.
+            <br />
+            <span className="text-paper/35">Free. Use it.</span>
+          </>
+        }
+        description="Practical guides for businesses, professionals, and anyone trying to keep up with where the world is going."
+      />
+
+      <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 md:px-8 md:pb-32">
+        <Suspense
+          fallback={<div className="h-64 animate-pulse rounded-[20px] bg-paper/[0.04]" />}
+        >
+          <ResourcesGrid />
+        </Suspense>
       </section>
 
-      <section className="bg-[#ebebeb] py-16 sm:py-24 md:py-28">
-        <div className="mx-auto max-w-7xl px-6 sm:px-6 md:px-8">
-          <Suspense
-            fallback={
-              <div className="h-64 animate-pulse rounded-xl bg-neutral-200/70" />
-            }
-          >
-            <ResourcesGrid />
-          </Suspense>
-        </div>
-      </section>
-
-      <section
-        className="relative overflow-hidden border-t border-white/25 py-16 sm:py-24 md:py-28"
-        style={{ backgroundColor: WAITLIST_CTA_SURFACE }}
+      <CtaBand
+        title="Get the weekly AI briefing."
+        description="One email, every week. What's happening in AI and what actually matters for your business or career. Subscribing also puts you on the Envowl waitlist."
       >
-        <PurpleBurstBackdrop />
-        <div className="relative z-10 mx-auto max-w-2xl px-6 sm:px-6 md:px-8">
-          <ResourcesNewsletter />
-        </div>
-      </section>
+        <WaitlistForm
+          buttonLabel="Subscribe"
+          defaultType="client"
+          microcopy="Free. Unsubscribe anytime."
+          source="resources-newsletter"
+        />
+      </CtaBand>
     </>
   );
 }

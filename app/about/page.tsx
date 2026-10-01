@@ -1,184 +1,201 @@
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { PurpleBurstBackdrop } from "@/components/PurpleBurstBackdrop";
-import { PLATFORM_NAME, SITE, WAITLIST_CTA_SURFACE } from "@/lib/constants";
+import { RoadmapCard } from "@/components/AboutSections";
+import { FadeIn } from "@/components/FadeIn";
+import { PageHero } from "@/components/site/PageHero";
+import { PLATFORM_NAME, SITE } from "@/lib/constants";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "About Envowl — Trust in AI Talent",
+  title: "About Envowl: Trust in AI Talent",
   description:
     "Why Envowl exists: trusted introductions between people who need AI help and creators who deliver. Our beliefs, mission, and how we're building the marketplace.",
   path: "/about",
 });
 
+const beliefs = [
+  "Hiring for AI shouldn't feel like a gamble.",
+  "The best people to hire are the ones who've already done it and can prove it.",
+  "You shouldn't need to understand AI to benefit from it.",
+  "Learning about AI should be free. Finding someone you can trust should be easy.",
+  "A shorter list of better people beats an endless directory.",
+];
+
+const paths = [
+  {
+    label: "For the curious",
+    desc: "Start with the resource library. Free, practical, no fluff. Get smart before you spend a dollar.",
+    link: "/resources",
+    cta: "Browse resources",
+  },
+  {
+    label: "For the ready",
+    desc: "Join the waitlist. Get early access, founder pricing, and weekly AI insights straight to your inbox.",
+    link: "/#waitlist",
+    cta: "Join the waitlist",
+  },
+  {
+    label: "For the builders",
+    desc: "If you're an AI creator who delivers real results, we want you on the platform.",
+    link: "/for-creators",
+    cta: "Apply as a creator",
+  },
+];
+
+const body = "text-lg leading-[1.8] text-paper/70 sm:text-xl";
+
+function BeliefsCard() {
+  return (
+    <FadeIn>
+      <div className="rounded-[24px] bg-ember p-7 text-ink sm:p-10">
+        <p className="font-display text-3xl font-bold tracking-tight">We believe:</p>
+        <ol className="mt-8 space-y-6">
+          {beliefs.map((belief, i) => (
+            <li key={belief} className="grid grid-cols-[2rem_1fr] gap-3 sm:grid-cols-[2.5rem_1fr]">
+              <span className="font-display text-xl font-bold text-ink/45">{i + 1}</span>
+              <p className="text-lg font-medium leading-relaxed">{belief}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </FadeIn>
+  );
+}
+
+
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white text-black">
-      {/* Hero */}
-      <section className="mx-auto max-w-4xl px-6 pb-12 pt-24 sm:px-6 sm:pb-16 sm:pt-32 md:px-8 md:pb-16 md:pt-40 lg:pt-44">
-        <p className="mb-4 text-sm uppercase tracking-widest text-neutral-500 sm:mb-6">
-          What we believe
-        </p>
-        <h1 className="mb-6 text-3xl font-semibold leading-tight sm:mb-8 sm:text-4xl md:text-5xl lg:text-6xl xl:text-[3.25rem]">
-          AI isn&apos;t the great equalizer.
+    <>
+      <PageHero
+        aside={<RoadmapCard />}
+        titleClassName="text-[2.6rem] sm:text-6xl lg:text-[3.25rem] xl:text-[3.75rem]"
+        eyebrow="What we believe"
+        title={
+          <>
+            AI isn&apos;t the great equalizer.{" "}
+            <span className="text-paper/35">Access to trusted AI expertise is.</span>
+          </>
+        }
+      />
+
+      <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 md:px-8 md:pb-32">
+        <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-20">
+        <article className="max-w-2xl space-y-8">
+          <p className={body}>
+            Something strange is happening. The most transformative technology in
+            a generation is available to everyone, and most people still
+            can&apos;t figure out how to use it to their advantage.
+          </p>
+          <p className={body}>
+            It&apos;s not a capability problem. The tools work. The use cases are
+            real. Businesses are saving hours every week. Careers are being
+            rebuilt around new skills. The gap between those who understand AI and
+            those who don&apos;t is widening faster than most people realize.
+          </p>
+          <p className="font-display text-3xl font-bold tracking-tight text-paper sm:text-4xl">
+            The problem is trust.
+          </p>
+
+          <FadeIn>
+            <blockquote className="my-12 border-l-4 border-ember py-2 pl-6 font-display text-2xl font-semibold leading-snug tracking-tight text-paper sm:pl-8 sm:text-3xl">
+              &ldquo;One bad experience with an AI &lsquo;expert&rsquo; doesn&apos;t
+              just cost money. It costs belief. And belief, once lost, is hard to
+              rebuild.&rdquo;
+            </blockquote>
+          </FadeIn>
+
+          <p className={body}>
+            The internet is full of people selling AI solutions. Promises of
+            automation, efficiency, transformation. Most of it is noise. And the
+            people who get burned, like the small business owner who paid someone
+            to build something that never worked, or the professional who followed
+            advice that led nowhere, don&apos;t come back. They write off the
+            whole category.
+          </p>
+          <p className={body}>
+            The technology isn&apos;t what&apos;s failing. The introductions are: no vetting, no track record, no trust.
+          </p>
+          <p className={body}>
+            {PLATFORM_NAME} exists because we believe the single biggest unlock for
+            AI adoption isn&apos;t a better tool. It&apos;s a better introduction.
+            A trusted handshake between the people who need help and the people
+            who can actually deliver it.
+          </p>
+
+          <div className="lg:hidden">
+            <BeliefsCard />
+          </div>
+
+          <p className={body}>
+            We&apos;re not neutral on this. We think the stakes are real. We think
+            the window for getting ahead of the curve is open right now, and it
+            won&apos;t stay open forever.
+          </p>
+          <p className={body}>
+            {PLATFORM_NAME} is built for the people who feel that urgency. The
+            business owner who knows they need to adapt but doesn&apos;t know who
+            to trust. The professional who wants to make themselves indispensable
+            in a world that&apos;s changing under their feet. The creator who knows
+            how to deliver results but is tired of chasing clients who don&apos;t
+            understand the value of what they do.
+          </p>
+          <p className={body}>
+            We built the resource library because education shouldn&apos;t be
+          paywalled. We&apos;re building the vetting process because quality
+          shouldn&apos;t be a gamble, and the marketplace because the right
+          introduction changes everything.
+          </p>
+          <p className="font-display text-2xl font-semibold leading-snug tracking-tight text-paper sm:text-3xl">
+            This is what {PLATFORM_NAME} is for.
           <br />
-          <span className="text-neutral-400 md:whitespace-nowrap">
-            Access to trusted AI expertise&nbsp;is.
-          </span>
-        </h1>
-      </section>
-
-      {/* Manifesto body */}
-      <section className="mx-auto max-w-4xl space-y-8 px-6 pb-16 text-neutral-600 sm:space-y-10 sm:px-6 sm:pb-24 md:px-8">
-        <p className="text-lg leading-loose lg:text-xl">
-          Something strange is happening. The most transformative technology in
-          a generation is available to everyone — and most people still
-          can&apos;t figure out how to use it to their advantage.
-        </p>
-
-        <p className="text-lg leading-loose lg:text-xl">
-          It&apos;s not a capability problem. The tools work. The use cases are
-          real. Businesses are saving hours every week. Careers are being
-          rebuilt around new skills. The gap between those who understand AI and
-          those who don&apos;t is widening faster than most people realize.
-        </p>
-
-        <p className="text-lg leading-loose lg:text-xl">The problem is trust.</p>
-
-        <div className="my-10 border-l-2 border-accent py-2 pl-6 sm:my-12 sm:pl-8">
-          <p className="text-xl font-medium leading-loose text-neutral-900 lg:text-2xl">
-            &ldquo;One bad experience with an AI &apos;expert&apos; doesn&apos;t
-            just cost money. It costs belief. And belief, once lost, is hard to
-            rebuild.&rdquo;
+          <span className="text-ember">This is what we&apos;re building toward.</span>
           </p>
-        </div>
-
-        <p className="text-lg leading-loose lg:text-xl">
-          The internet is full of people selling AI solutions. Promises of
-          automation, efficiency, transformation. Most of it is noise. And the
-          people who get burned — the small business owner who paid someone to
-          build something that never worked, the professional who followed
-          advice that led nowhere — they don&apos;t come back. They write off
-          the whole category.
-        </p>
-
-        <p className="text-lg leading-loose lg:text-xl">
-          That&apos;s not an AI problem. That&apos;s a vetting problem. A trust
-          problem. A marketplace problem.
-        </p>
-
-        <p className="text-lg leading-loose lg:text-xl">
-          {PLATFORM_NAME} exists because we believe the single biggest unlock
-          for AI adoption isn&apos;t a better tool. It&apos;s a better
-          introduction. A trusted handshake between the people who need help
-          and the people who can actually deliver it.
-        </p>
-
-        <div className="my-10 space-y-5 rounded-2xl border border-[#3d3679] bg-[#302b63] p-6 sm:my-12 sm:space-y-6 sm:p-10">
-          <p className="text-lg font-medium leading-loose text-white lg:text-xl">
-            We believe:
-          </p>
-          {[
-            "That knowledge is the only real defense against being left behind.",
-            "That the best AI implementations come from people who understand your business, not just the technology.",
-            "That trust is built through track records, not promises.",
-            "That the gap between AI haves and have-nots is a solvable problem.",
-            "That the next decade will be defined by who got educated early and who didn't.",
-          ].map((belief) => (
-            <div key={belief} className="flex gap-4">
-              <span className="mt-1 flex-shrink-0 text-accent">—</span>
-              <p className="text-lg leading-loose text-neutral-300 lg:text-xl">
-                {belief}
-              </p>
+        </article>
+          <aside className="hidden lg:block">
+            <div className="sticky top-28">
+              <BeliefsCard />
             </div>
-          ))}
+          </aside>
         </div>
-
-        <p className="text-lg leading-loose lg:text-xl">
-          We&apos;re not neutral on this. We think the stakes are real. We think
-          the window for getting ahead of the curve is open right now — and it
-          won&apos;t stay open forever.
-        </p>
-
-        <p className="text-lg leading-loose lg:text-xl">
-          {PLATFORM_NAME} is built for the people who feel that urgency. The
-          business owner who knows they need to adapt but doesn&apos;t know who
-          to trust. The professional who wants to make themselves indispensable
-          in a world that&apos;s changing under their feet. The creator who knows
-          how to deliver results but is tired of chasing clients who don&apos;t
-          understand the value of what they do.
-        </p>
-
-        <p className="text-lg leading-loose lg:text-xl">
-          We built the resource library because education shouldn&apos;t be
-          paywalled. We built the vetting process because quality shouldn&apos;t
-          be a gamble. We built the marketplace because the right introduction
-          changes everything.
-        </p>
-
-        <p className="text-lg font-medium leading-loose text-neutral-900 lg:text-xl">
-          This is what {PLATFORM_NAME} is for. This is what we&apos;re building
-          toward.
-        </p>
       </section>
 
-      {/* Divider + CTA */}
-      <section
-        className="relative overflow-hidden border-t border-white/25"
-        style={{ backgroundColor: WAITLIST_CTA_SURFACE }}
-      >
-        <PurpleBurstBackdrop />
-        <div className="relative z-10 mx-auto max-w-4xl px-6 py-16 sm:px-6 sm:py-24 md:px-8">
-          <div className="mb-12 grid grid-cols-1 gap-8 sm:mb-16 md:grid-cols-3 md:gap-8">
-            {[
-              {
-                label: "For the curious",
-                desc: "Start with the resource library. Free, practical, no fluff. Get smart before you spend a dollar.",
-                link: "/resources",
-                cta: "Browse resources →",
-              },
-              {
-                label: "For the ready",
-                desc: "Join the waitlist. Get early access, founder pricing, and weekly AI insights straight to your inbox.",
-                link: "/#waitlist",
-                cta: "Join the waitlist →",
-              },
-              {
-                label: "For the builders",
-                desc: "If you're an AI creator who delivers real results, we want you on the platform.",
-                link: "/for-creators",
-                cta: "Apply as a creator →",
-              },
-            ].map((item) => (
-              <div key={item.label} className="space-y-3">
-                <p className="text-xs font-medium uppercase tracking-widest text-accent sm:text-sm">
-                  {item.label}
-                </p>
-                <p className="text-sm leading-relaxed text-white/80 [text-shadow:0_1px_14px_rgb(32_24_51_/_0.32)]">
-                  {item.desc}
-                </p>
-                <Link
-                  href={item.link}
-                  className="inline-block text-sm font-medium text-white underline underline-offset-4 [text-shadow:0_1px_12px_rgb(32_24_51_/_0.35)] transition-colors hover:text-accent"
-                >
+      <section className="border-t border-paper/[0.08]">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:px-8 md:py-28">
+          <div className="grid gap-3 md:grid-cols-3">
+            {paths.map((item) => (
+              <Link
+                key={item.label}
+                href={item.link}
+                className="group flex min-h-[15rem] flex-col justify-between rounded-[20px] border border-paper/[0.08] bg-ink-900 p-7 transition hover:border-ember/50"
+              >
+                <div>
+                  <p className="font-display text-2xl font-semibold tracking-tight text-paper">
+                    {item.label}
+                  </p>
+                  <p className="mt-3 text-base leading-relaxed text-paper/60">{item.desc}</p>
+                </div>
+                <span className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-ember">
                   {item.cta}
-                </Link>
-              </div>
+                  <ArrowUpRight
+                    className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                    strokeWidth={2}
+                    aria-hidden
+                  />
+                </span>
+              </Link>
             ))}
           </div>
-
-          <div className="border-t border-white/25 pt-8 sm:pt-10">
-            <p className="text-sm text-white/75 [text-shadow:0_1px_10px_rgb(32_24_51_/_0.3)]">
-              {PLATFORM_NAME} is operated by LDS Ventures LLC. Questions?{" "}
-              <a
-                href={`mailto:${SITE.contactEmail}`}
-                className="text-white underline underline-offset-4 transition-colors hover:text-accent"
-              >
-                Get in touch.
-              </a>
-            </p>
-          </div>
+          <p className="mt-10 text-sm text-paper/50">
+            {PLATFORM_NAME} is operated by LDS Ventures LLC. Questions?{" "}
+            <a
+              href={`mailto:${SITE.contactEmail}`}
+              className="text-paper underline decoration-ember decoration-2 underline-offset-4 hover:text-ember"
+            >
+              Get in touch.
+            </a>
+          </p>
         </div>
       </section>
-    </div>
+    </>
   );
 }

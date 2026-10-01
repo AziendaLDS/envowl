@@ -22,7 +22,8 @@ export async function POST(request: NextRequest) {
   }
 
   const email = String(body.email ?? "").trim();
-  const role = body.role === "creator" ? "creator" : "client";
+  const role =
+    body.role === "creator" || body.role === "professional" ? body.role : "client";
   const source = String(body.source ?? "website").slice(0, 200);
 
   if (!emailRegex.test(email)) {
@@ -56,7 +57,7 @@ export async function POST(request: NextRequest) {
     console.warn("[waitlist] Missing Beehiiv env vars; skipping Beehiiv submission.");
   } else {
     try {
-      console.log("Attempting Beehiiv submission for: " + email);
+      console.log("Attempting Beehiiv submission");
       const beehiivRes = await fetch(
         `https://api.beehiiv.com/v2/publications/${encodeURIComponent(beehiivPublicationId)}/subscriptions`,
         {
@@ -70,13 +71,13 @@ export async function POST(request: NextRequest) {
             reactivate_existing: false,
             send_welcome_email: true,
             utm_source: source ?? "website",
+            utm_campaign: `signup_${role}`,
           }),
         }
       );
 
       const beehiivBody = await beehiivRes.json();
       console.log("Beehiiv status:", beehiivRes.status);
-      console.log("Beehiiv response:", JSON.stringify(beehiivBody));
 
       if (!beehiivRes.ok) {
         console.error("Beehiiv subscription failed:", beehiivRes.status, JSON.stringify(beehiivBody));

@@ -1,149 +1,120 @@
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import {
-  HowItWorks,
-  SocialProofStats,
-  UseCaseCategories,
-} from "@/components/ForBusinessSections";
+import { TrustSection, UseCaseCategories } from "@/components/ForBusinessSections";
 import { FadeIn } from "@/components/FadeIn";
-import { PurpleBurstBackdrop } from "@/components/PurpleBurstBackdrop";
-import { ShootingStarsHeroBackground } from "@/components/ShootingStarsHeroBackground";
+import { BriefMatcher } from "@/components/home/BriefMatcher";
+import { CtaBand } from "@/components/site/CtaBand";
+import { PageHero } from "@/components/site/PageHero";
+import { Steps } from "@/components/site/Steps";
 import { WaitlistForm } from "@/components/WaitlistForm";
-import { PLATFORM_NAME, WAITLIST_CTA_SURFACE, WAITLIST_MICROCOPY_SHORT } from "@/lib/constants";
+import { PLATFORM_NAME, WAITLIST_MICROCOPY_SHORT } from "@/lib/constants";
 import { pageMetadata } from "@/lib/seo";
+import { BUTTON_PRIMARY_CLASS } from "@/lib/subscribe-classes";
 
 export const metadata = pageMetadata({
   title: "Hire Vetted AI Experts for Your Business",
   description:
-    "Connect with verified AI experts who understand your industry and budget. Envowl helps businesses avoid costly mismatches — join the waitlist.",
+    "Find vetted AI experts who understand your industry and budget. Envowl helps businesses avoid costly mismatches. Join the waitlist for early access.",
   path: "/for-businesses",
 });
 
 const pills = [
   "Small business owners",
-  "Operations & marketing teams",
-  "Professionals upskilling",
+  "Operations and marketing teams",
+  "Founders and solo operators",
+];
+
+const steps = [
+  {
+    title: "Tell us your problem",
+    body: "Fill out a short brief: your industry, what you want to automate or build, and your rough budget. No technical knowledge required.",
+    details: ["Plain-English brief", "5 minutes", "No jargon"],
+  },
+  {
+    title: "Get matched with vetted creators",
+    body: "We'll surface 2-3 creators who have solved your exact problem before, with real portfolios and honest reviews from past clients. No guessing who's legit.",
+    details: ["2-3 matches", "Proven track record", "Past-client reviews"],
+  },
+  {
+    title: "Hire with confidence",
+    body: "Start your project, message the creator directly, and move fast. Every creator on Envowl is reviewed manually before they're listed.",
+    details: ["Direct messaging", "Milestone delivery", "Human-reviewed"],
+  },
 ];
 
 export default function ForBusinessesPage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-[#0a0a0a] py-16 text-white sm:py-24 md:py-36">
-        <ShootingStarsHeroBackground fadeVariant="lower" />
-        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
-          <FadeIn>
-            <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-accent">
-              For businesses
-            </p>
-            <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-              AI for your business, without the guesswork.
-            </h1>
-            <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/80 sm:mt-8 sm:text-lg md:text-xl">
-              Find a vetted AI expert who understands your industry, your
-              budget, and your actual problem — not just the tech.
-            </p>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <div className="mx-auto mt-12 max-w-2xl">
-              <WaitlistForm
-                defaultType="client"
-                source="for-businesses-hero"
-                microcopyTone="hero"
-                buttonLabel="Join the Waitlist"
-                microcopy={WAITLIST_MICROCOPY_SHORT}
-              />
-            </div>
-          </FadeIn>
-        </div>
-      </section>
+      <PageHero
+        aside={<BriefMatcher fill />}
+                titleClassName="text-[2.6rem] sm:text-6xl lg:text-[3.5rem] xl:text-[4.5rem]"
 
-      <section className="border-b border-neutral-200 bg-[#F2F2F2] py-16 sm:py-24 md:py-32">
-        <div className="mx-auto max-w-4xl px-6 sm:px-6 md:px-8">
-          <FadeIn>
-            <h2 className="text-3xl font-semibold text-neutral-900 sm:text-4xl md:text-5xl">
-              You don&apos;t need to understand AI. You need results.
-            </h2>
-            <p className="mt-6 text-base leading-relaxed text-neutral-600 sm:mt-8 sm:text-lg">
-              Whether you&apos;re a small business owner trying to automate the
-              admin, a marketing manager looking to scale content, or a
-              professional who wants to future-proof their career —{" "}
-              {PLATFORM_NAME} connects you with someone who&apos;s done this
-              before.
-            </p>
-            <div className="mt-10 flex flex-wrap justify-center gap-3">
-              {pills.map((p) => (
-                <span
-                  key={p}
-                  className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-neutral-700 ring-1 ring-neutral-200 shadow-[0_0_0_1px_rgba(255,255,255,0.65),0_0_16px_rgba(245,73,39,0.12)] transition-shadow hover:shadow-[0_0_0_1px_rgba(255,255,255,0.85),0_0_22px_rgba(245,73,39,0.2)]"
-                >
-                  {p}
-                </span>
-              ))}
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      <HowItWorks />
-      <UseCaseCategories />
-
-      <section className="border-b border-neutral-200 bg-[#ebebeb] py-16 sm:py-24 md:py-32">
-        <div className="mx-auto max-w-4xl px-6 sm:px-6 md:px-8">
-          <FadeIn>
-            <h2 className="text-3xl font-semibold text-neutral-900 sm:text-4xl md:text-5xl">
-              One bad AI experience can set you back months.
-            </h2>
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-neutral-600 sm:mt-8 sm:space-y-5 sm:text-lg">
-              <p>
-                We&apos;ve seen it happen: a business hires someone who
-                overpromises, delivers something broken, and the owner walks
-                away convinced AI &quot;doesn&apos;t work.&quot; That&apos;s not
-                an AI problem. That&apos;s a vetting problem.
-              </p>
-              <p>
-                Every creator on {PLATFORM_NAME} is reviewed by our team before
-                they&apos;re listed. You see real portfolios, real reviews, real
-                results.
-              </p>
-            </div>
-            <SocialProofStats />
-          </FadeIn>
-        </div>
-      </section>
-
-      <section
-        className="relative overflow-hidden border-b border-white/25 py-16 sm:py-24 md:py-32"
-        style={{ backgroundColor: WAITLIST_CTA_SURFACE }}
+        eyebrow="For businesses"
+        title={
+          <>
+            AI for your business,{" "}
+            <span className="text-ember">without&nbsp;the guesswork.</span>
+          </>
+        }
+        description="Find a vetted AI expert who understands your industry, your budget, and your actual problem. Not just the tech."
       >
-        <PurpleBurstBackdrop />
-        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center sm:px-6 md:px-8">
-          <FadeIn>
-            <h2 className="text-3xl font-semibold tracking-tight text-white [text-shadow:0_2px_28px_rgb(32_24_51_/_0.42)] sm:text-4xl md:text-5xl">
-              Not ready to hire yet? Start here.
-            </h2>
-            <p className="mt-6 text-base leading-relaxed text-white/80 [text-shadow:0_1px_14px_rgb(32_24_51_/_0.32)] sm:mt-8 sm:text-lg">
-              Browse our free library of guides, videos, and industry-specific
-              breakdowns. Get smart on AI before you spend a dollar.
-            </p>
-          </FadeIn>
-          <FadeIn delay={0.06}>
-            <Link
-              href="/resources"
-              className="mt-10 flex w-full items-center justify-center rounded-xl bg-accent px-8 py-3.5 text-base font-semibold text-white transition hover:bg-accent-hover sm:mt-12 sm:inline-flex sm:w-auto"
-            >
-              Browse Free Resources →
-            </Link>
-          </FadeIn>
-        </div>
+        <WaitlistForm
+          align="left"
+          defaultType="client"
+          source="for-businesses-hero"
+          microcopy={WAITLIST_MICROCOPY_SHORT}
+        />
+      </PageHero>
+
+      <section className="mx-auto max-w-7xl px-4 py-24 sm:px-6 md:px-8 md:py-32">
+        <FadeIn>
+          <h2 className="max-w-none font-display text-4xl font-bold leading-[1.02] tracking-[-0.03em] sm:text-[clamp(2.25rem,5.4vw,4.5rem)]">
+            You don&apos;t need{" "}
+            <br className="hidden sm:block" />
+            to understand AI.{" "}
+            <br className="hidden sm:block" />
+            <span className="text-paper/35">You need results.</span>
+          </h2>
+          <div className="mt-10 grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
+            <p className="max-w-2xl text-lg leading-relaxed text-paper/65">
+            Whether you&apos;re automating the admin, scaling your content, or following up with leads faster, {PLATFORM_NAME} will connect you with someone who&apos;s done it before.
+          </p>
+            <ul className="flex flex-wrap content-start gap-2">
+            {pills.map((p) => (
+              <li
+                key={p}
+                className="rounded-full border border-paper/15 bg-paper/[0.03] px-4 py-2 text-sm font-medium text-paper/80"
+              >
+                {p}
+              </li>
+            ))}
+          </ul>
+          </div>
+        </FadeIn>
       </section>
 
-      <div className="bg-[#F2F2F2] py-10 text-center sm:py-12">
-        <Link
-          href="/"
-          className="text-base font-medium text-neutral-600 hover:text-neutral-900"
-        >
-          ← Back home
+      <Steps
+        heading={
+          <>
+            From problem to solution
+            <br className="hidden sm:block" /> in three steps.
+          </>
+        }
+        headingClassName="max-w-none sm:text-[clamp(1.75rem,4.3vw,3.5rem)]"
+        steps={steps}
+      />
+      <UseCaseCategories />
+      <TrustSection platformName={PLATFORM_NAME} />
+
+      <CtaBand
+        title="Not ready to hire yet? Start here."
+        description="Browse our free library of guides and industry breakdowns. Get smart on AI before you spend a dollar."
+      >
+        <Link href="/resources" className={`group ${BUTTON_PRIMARY_CLASS}`}>
+          Browse free resources
+          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={2} aria-hidden />
         </Link>
-      </div>
+      </CtaBand>
     </>
   );
 }

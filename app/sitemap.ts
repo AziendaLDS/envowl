@@ -10,6 +10,7 @@ const staticRoutes = [
   "/for-professionals",
   "/privacy",
   "/resources",
+  "/shop",
   "/terms",
   "/platform",
 ];

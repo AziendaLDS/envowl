@@ -3,77 +3,97 @@ import Image from "next/image";
 import { SocialIcons } from "@/components/SocialIcons";
 import { PLATFORM_NAME, SITE } from "@/lib/constants";
 
-const linkClass =
-  "text-base text-neutral-700 transition hover:text-neutral-900";
+const linkClass = "text-sm text-paper/60 transition hover:text-paper";
+
+const columns: { title: string; links: { label: string; href: string; external?: boolean }[] }[] = [
+  {
+    title: "Marketplace",
+    links: [
+      { label: "Platform", href: "/platform" },
+      { label: "For Businesses", href: "/for-businesses" },
+      { label: "For Professionals", href: "/for-professionals" },
+      { label: "For Creators", href: "/for-creators" },
+    ],
+  },
+  {
+    title: "Learn",
+    links: [
+      { label: "Resources", href: "/resources" },
+      { label: "Shop", href: "/shop" },
+      { label: "About", href: "/about" },
+      { label: "Contact", href: `mailto:${SITE.contactEmail}`, external: true },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      { label: "Privacy Policy", href: "/privacy" },
+      { label: "Terms of Service", href: "/terms" },
+    ],
+  },
+];
 
 export function Footer() {
   return (
-    <footer className="border-t border-neutral-200 bg-[#F2F2F2]">
-      <div className="mx-auto max-w-7xl py-16 pl-[max(1.5rem,env(safe-area-inset-left))] pr-[max(1.5rem,env(safe-area-inset-right))] sm:py-20 sm:pl-6 sm:pr-6 md:py-24 md:pl-8 md:pr-8">
-        <div className="flex flex-col gap-10 sm:gap-14 lg:flex-row lg:justify-between lg:gap-12">
-          <div className="max-w-md shrink-0">
-            <Link href="/" className="inline-flex items-center">
+    <footer className="night relative overflow-hidden border-t border-paper/[0.08]">
+      <div className="mx-auto max-w-7xl px-4 pb-8 pt-16 sm:px-6 md:px-8 md:pt-24">
+        <div className="grid gap-12 lg:grid-cols-[1.2fr_2fr]">
+          <div className="max-w-sm">
+            <Link href="/" className="inline-flex" aria-label="Envowl home">
               <Image
-                src="/logo.png"
+                src="/logo-dark.png"
                 alt="Envowl"
-                width={220}
-                height={66}
-                className="h-11 w-auto object-contain"
+                width={866}
+                height={558}
+                className="h-12 w-auto"
               />
             </Link>
-            <p className="mt-3 max-w-md text-base leading-relaxed text-neutral-600">
-              {PLATFORM_NAME} — Where AI expertise meets real-world problems.
+            <p className="mt-5 text-base leading-relaxed text-paper/60">
+              The AI talent marketplace. Vetted builders, real projects, no
+              guesswork.
             </p>
-            <div className="mt-6">
+            <div className="mt-8">
               <SocialIcons />
             </div>
           </div>
 
-          <div className="grid flex-1 grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-12 md:gap-14 lg:max-w-3xl lg:justify-end">
-            <div className="flex flex-col gap-4">
-              <Link href="/platform" className={linkClass}>
-                Platform
-              </Link>
-              <Link href="/for-businesses" className={linkClass}>
-                For Businesses
-              </Link>
-              <Link href="/for-professionals" className={linkClass}>
-                For Professionals
-              </Link>
-              <Link href="/for-creators" className={linkClass}>
-                For Creators
-              </Link>
-              <Link href="/resources" className={linkClass}>
-                Resources
-              </Link>
-            </div>
-            <div className="flex flex-col gap-4">
-              <Link href="/about" className={linkClass}>
-                About
-              </Link>
-              <a
-                href={`mailto:${SITE.contactEmail}`}
-                className={linkClass}
-              >
-                Contact
-              </a>
-            </div>
-            <div className="flex flex-col gap-4">
-              <Link href="/privacy" className={linkClass}>
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className={linkClass}>
-                Terms of Service
-              </Link>
-            </div>
+          <div className="grid grid-cols-2 gap-10 sm:grid-cols-3">
+            {columns.map((col) => (
+              <div key={col.title}>
+                <p className="text-sm font-semibold text-paper">{col.title}</p>
+                <ul className="mt-4 flex flex-col gap-3">
+                  {col.links.map((l) => (
+                    <li key={l.label}>
+                      {l.external ? (
+                        <a href={l.href} className={linkClass}>
+                          {l.label}
+                        </a>
+                      ) : (
+                        <Link href={l.href} className={linkClass}>
+                          {l.label}
+                        </Link>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
-        <p className="mt-10 text-sm leading-relaxed text-neutral-500 sm:mt-14">
-          <span className="block text-neutral-600">
-            © {new Date().getFullYear()} LDS Ventures LLC · d/b/a {PLATFORM_NAME}
-          </span>
-          <span className="mt-1 block">All rights reserved.</span>
+
+        <p
+          aria-hidden
+          className="pointer-events-none mt-16 select-none text-center font-display text-[22vw] font-extrabold leading-[0.8] tracking-[-0.06em] text-transparent [-webkit-text-stroke:1px_rgb(244_241_236_/_0.2)] md:mt-24 lg:text-[15rem]"
+        >
+          envowl
         </p>
+
+        <div className="mt-8 flex flex-col gap-2 border-t border-paper/[0.08] pt-6 text-sm text-paper/45 sm:flex-row sm:justify-between">
+          <span>
+            © {new Date().getFullYear()} LDS Ventures LLC, d/b/a {PLATFORM_NAME}
+          </span>
+          <span>All rights reserved.</span>
+        </div>
       </div>
     </footer>
   );

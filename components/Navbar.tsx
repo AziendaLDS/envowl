@@ -1,50 +1,29 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const links = [
-  { href: "/for-creators", label: "For Creators" },
-  { href: "/for-professionals", label: "For Professionals" },
-  { href: "/for-businesses", label: "For Businesses" },
+  { href: "/for-businesses", label: "Businesses" },
+  { href: "/for-professionals", label: "Professionals" },
+  { href: "/for-creators", label: "Creators" },
   { href: "/resources", label: "Resources" },
   { href: "/shop", label: "Shop" },
 ];
 
-function MenuIcon() {
-  return (
-    <svg
-      className="h-6 w-6"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      strokeWidth={2}
-      aria-hidden
-    >
-      <path strokeLinecap="round" d="M4 7h16M4 12h16M4 17h16" />
-    </svg>
-  );
-}
-
-function CloseIcon() {
-  return (
-    <svg
-      className="h-6 w-6"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      strokeWidth={2}
-      aria-hidden
-    >
-      <path strokeLinecap="round" d="M6 18L18 6M6 6l12 12" />
-    </svg>
-  );
-}
-
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const { scrollY } = useScroll();
+
+  // Transparent over each page's hero, solid once content scrolls underneath.
+  useMotionValueEvent(scrollY, "change", (y) => setScrolled(y > 12));
+  useEffect(() => setScrolled(window.scrollY > 12), []);
 
   useEffect(() => {
     const onResize = () => {
@@ -71,65 +50,86 @@ export function Navbar() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 relative overflow-visible border-b border-neutral-200/80 bg-[#F2F2F2]/85 pt-[env(safe-area-inset-top,0px)] backdrop-blur-md">
-      <div className="mx-auto flex min-h-[4.25rem] max-w-7xl items-center justify-between gap-2 overflow-visible py-2.5 pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] sm:min-h-[4.75rem] sm:gap-3 sm:pl-6 sm:pr-6 md:py-0 md:pl-[max(2rem,env(safe-area-inset-left))] md:pr-[max(2rem,env(safe-area-inset-right))]">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 border-b pt-[env(safe-area-inset-top,0px)] text-paper transition-[background-color,border-color,backdrop-filter] duration-300 ${
+        // No backdrop-filter while the menu is open: it would become the containing
+        // block for the fixed backdrop below and clip it to the header's height.
+        open
+          ? "border-paper/[0.08] bg-ink"
+          : scrolled
+            ? "border-paper/[0.08] bg-ink/95 backdrop-blur-xl"
+            : "border-transparent bg-transparent"
+      }`}
+    >
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] sm:px-6 md:h-[4.5rem] md:px-8">
         <Link
           href="/"
-          className="flex shrink-0 items-center self-center"
+          className="flex shrink-0 items-center"
           onClick={() => setOpen(false)}
+          aria-label="Envowl home"
         >
           <Image
-            src="/logo.png"
+            src="/logo-dark.png"
             alt="Envowl"
-            width={240}
-            height={72}
-            className="h-9 w-auto max-h-9 max-w-[min(140px,42vw)] self-center object-contain bg-transparent sm:h-[52px] sm:max-h-[52px] sm:max-w-none"
-            style={{ objectFit: "contain", background: "transparent" }}
+            width={866}
+            height={558}
+            className="h-9 w-auto md:h-10"
             priority
-            quality={85}
-            sizes="(max-width: 768px) 150px, 180px"
+            sizes="80px"
           />
         </Link>
 
-        <nav
-          className="hidden items-center gap-6 text-base font-medium text-neutral-700 md:flex md:gap-10"
-          aria-label="Main"
-        >
-          {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="transition hover:text-neutral-900"
-            >
-              {l.label}
-            </Link>
-          ))}
+        <nav className="hidden items-center gap-8 md:flex" aria-label="Main">
+          {links.map((l) => {
+            const active = pathname?.startsWith(l.href);
+            return (
+              <Link
+                key={l.href}
+                href={l.href}
+                aria-current={active ? "page" : undefined}
+                className={`relative py-2 text-sm font-medium transition-colors ${
+                  active ? "text-paper" : "text-paper/60 hover:text-paper"
+                }`}
+              >
+                {l.label}
+                {active ? (
+                  <motion.span
+                    layoutId="nav-active"
+                    className="absolute inset-x-0 -bottom-0.5 h-[2px] rounded-full bg-ember"
+                    transition={{ type: "spring", stiffness: 400, damping: 34 }}
+                  />
+                ) : null}
+              </Link>
+            );
+          })}
         </nav>
 
-        <Link
-          href="/#waitlist"
-          className="hidden min-h-[44px] shrink-0 items-center justify-center rounded-xl bg-accent px-5 py-2.5 text-base font-semibold text-white transition hover:bg-accent-hover md:inline-flex"
-        >
-          Join Waitlist
-        </Link>
-
-        <div className="flex items-center gap-1.5 md:hidden">
+        <div className="flex items-center gap-2">
           <Link
             href="/#waitlist"
-            className="inline-flex min-h-[44px] min-w-[44px] shrink-0 items-center justify-center rounded-xl bg-accent px-3 py-2 text-sm font-semibold text-white transition hover:bg-accent-hover"
+            className="group inline-flex min-h-[40px] shrink-0 items-center gap-1.5 rounded-full bg-ember px-4 text-sm font-semibold text-ink transition hover:bg-ember-soft active:scale-[0.98] md:px-5"
             onClick={() => setOpen(false)}
           >
-            Waitlist
+            Join the waitlist
+            <ArrowUpRight
+              className="hidden h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 sm:block"
+              strokeWidth={2}
+              aria-hidden
+            />
           </Link>
           <button
             type="button"
-            className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg text-neutral-900 hover:bg-neutral-200/80"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full text-paper transition hover:bg-paper/10 md:hidden"
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((v) => !v)}
           >
-            {open ? <CloseIcon /> : <MenuIcon />}
+            {open ? (
+              <X className="h-5 w-5" strokeWidth={2} aria-hidden />
+            ) : (
+              <Menu className="h-5 w-5" strokeWidth={2} aria-hidden />
+            )}
           </button>
         </div>
       </div>
@@ -144,7 +144,7 @@ export function Navbar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="fixed inset-0 z-40 bg-black/35 md:hidden"
+              className="fixed inset-0 top-16 z-40 bg-ink/60 md:hidden"
               aria-hidden
               tabIndex={-1}
               onClick={() => setOpen(false)}
@@ -152,23 +152,29 @@ export function Navbar() {
             <motion.nav
               key="mobile-menu"
               id="mobile-menu"
-              initial={{ opacity: 0, y: -10 }}
+              initial={{ opacity: 0, y: -8 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.22, ease: [0.4, 0, 0.2, 1] }}
-              className="absolute left-0 right-0 top-full z-50 border-b border-neutral-200 bg-[#F2F2F2] shadow-lg md:hidden"
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+              className="absolute left-0 right-0 top-full z-50 border-b border-paper/[0.08] bg-ink md:hidden"
               aria-label="Mobile"
             >
-              <div className="mx-auto flex max-w-7xl flex-col gap-0.5 py-3 pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] sm:pl-6 sm:pr-6 md:pl-[max(2rem,env(safe-area-inset-left))] md:pr-[max(2rem,env(safe-area-inset-right))]">
-                {links.map((l) => (
-                  <Link
+              <div className="flex flex-col py-3 pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))]">
+                {links.map((l, i) => (
+                  <motion.div
                     key={l.href}
-                    href={l.href}
-                    className="rounded-lg px-3 py-3.5 text-base font-medium text-neutral-800 active:bg-neutral-200/70"
-                    onClick={() => setOpen(false)}
+                    initial={{ opacity: 0, x: -8 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.03 * i, duration: 0.25 }}
                   >
-                    {l.label}
-                  </Link>
+                    <Link
+                      href={l.href}
+                      className="block rounded-xl px-3 py-3.5 font-display text-2xl font-semibold tracking-tight text-paper active:bg-paper/10"
+                      onClick={() => setOpen(false)}
+                    >
+                      {l.label}
+                    </Link>
+                  </motion.div>
                 ))}
               </div>
             </motion.nav>

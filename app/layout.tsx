@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import { Archivo } from "next/font/google";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import Eyes from "@/components/Eyes";
@@ -19,6 +20,12 @@ const geistSans = localFont({
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+const display = Archivo({
+  subsets: ["latin"],
+  axes: ["wdth"],
+  variable: "--font-display",
+  display: "swap",
+});
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -30,8 +37,8 @@ export const viewport: Viewport = {
   initialScale: 1,
   viewportFit: "cover",
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#F2F2F2" },
-    { media: "(prefers-color-scheme: dark)", color: "#302b63" },
+    { media: "(prefers-color-scheme: light)", color: "#0A0A0B" },
+    { media: "(prefers-color-scheme: dark)", color: "#0A0A0B" },
   ],
 };
 
@@ -114,11 +121,11 @@ gtag('config', 'G-XC358QBGN7');`}
         </Script>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen min-w-0 overflow-x-clip bg-[#F2F2F2] font-sans text-[0.9375rem] leading-relaxed antialiased text-neutral-900 sm:text-[1.0625rem]`}
+        className={`${geistSans.variable} ${geistMono.variable} ${display.variable} night min-h-screen min-w-0 overflow-x-clip font-sans text-[0.9375rem] leading-relaxed antialiased sm:text-[1.0625rem]`}
       >
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:z-[70] focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-neutral-900 focus:ring-2 focus:ring-accent focus:left-[max(1rem,env(safe-area-inset-left))] focus:top-[max(1rem,env(safe-area-inset-top))]"
+          className="sr-only focus:not-sr-only focus:fixed focus:z-[70] focus:rounded-md focus:bg-paper focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink focus:ring-2 focus:ring-accent focus:left-[max(1rem,env(safe-area-inset-left))] focus:top-[max(1rem,env(safe-area-inset-top))]"
         >
           Skip to main content
         </a>
@@ -127,7 +134,10 @@ gtag('config', 'G-XC358QBGN7');`}
           dangerouslySetInnerHTML={{ __html: JSON.stringify(baseSchemas) }}
         />
         <Navbar />
-        <main id="main-content" className="min-h-[50vh] min-w-0">
+        <main
+          id="main-content"
+          className="night-grain relative min-h-[50vh] min-w-0 pt-[calc(4rem+env(safe-area-inset-top,0px))] md:pt-[calc(4.5rem+env(safe-area-inset-top,0px))]"
+        >
           {children}
         </main>
         <Eyes />

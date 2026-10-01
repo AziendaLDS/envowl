@@ -1,22 +1,22 @@
 export function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-[#F2F2F2] text-black">
-      <div className="mx-auto max-w-4xl px-6 py-16 sm:px-6 sm:py-24 md:px-8 md:py-40">
-        <div className="mb-16 sm:mb-24 md:mb-28">
-          <p className="mb-4 text-sm font-medium uppercase tracking-widest text-black/55 sm:mb-5 sm:text-base">
+    <div className="relative isolate -mt-16 overflow-hidden md:-mt-[4.5rem]">
+      <div className="mx-auto max-w-3xl px-4 pb-24 pt-32 sm:px-6 md:px-8 md:pb-32 md:pt-44">
+        <div className="mb-16 border-b border-paper/10 pb-12 sm:mb-20">
+          <p className="mb-4 text-sm font-semibold text-ember">
             Legal
           </p>
-          <h1 className="mb-4 text-3xl font-semibold tracking-tight text-black sm:mb-5 sm:text-4xl md:text-5xl lg:text-6xl">
+          <h1 className="mb-5 font-display text-5xl font-bold leading-[0.98] tracking-[-0.035em] text-paper sm:text-6xl lg:text-7xl">
             Privacy Policy
           </h1>
-          <p className="text-base text-black/60 sm:text-lg">
-            Last updated: April 13, 2026
+          <p className="text-base text-paper/50">
+            Last updated: October 1, 2026
           </p>
         </div>
 
-        <div className="space-y-12 text-base leading-[1.8] text-black sm:space-y-20 sm:text-xl md:space-y-24 md:text-2xl md:leading-[1.85]">
+        <div className="space-y-14 text-base leading-[1.8] text-paper/70 sm:text-lg">
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               Overview
             </h2>
             <p>
@@ -24,17 +24,17 @@ export function PrivacyPolicy() {
               operated by LDS Ventures LLC. We are committed to protecting your
               personal information and being transparent about what we collect and
               how we use it. This Privacy Policy explains our practices for the
-              Envowl website and waitlist service located at our website.
+              Envowl website, waitlist, and digital resource shop.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               Information We Collect
             </h2>
             <p className="mb-4">
               We collect only the minimum information necessary to operate our
-              waitlist and communicate with you:
+              waitlist, deliver purchases, and communicate with you:
             </p>
             <ul className="list-none space-y-3">
               {[
@@ -47,14 +47,18 @@ export function PrivacyPolicy() {
                   desc: "Whether you signed up as a potential client or an AI creator, to personalize our communications.",
                 },
                 {
+                  label: "Purchase information",
+                  desc: "If you buy a paid resource pack, we store your email address and the pack you purchased so we can deliver it and restore your access. Payments are handled by Stripe. We never see or store your full card details.",
+                },
+                {
                   label: "Usage data",
                   desc: "Basic analytics such as pages visited and time spent on site, collected in aggregate and not tied to individual identities.",
                 },
               ].map((item) => (
                 <li key={item.label} className="flex gap-4">
-                  <span className="mt-2.5 h-2 w-2 flex-shrink-0 rounded-full bg-black" />
+                  <span className="mt-3 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-ember" />
                   <span>
-                    <span className="font-semibold text-black">{item.label}</span>{" "}
+                    <span className="font-semibold text-paper">{item.label}</span>{" "}
                     — {item.desc}
                   </span>
                 </li>
@@ -63,7 +67,7 @@ export function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               How We Use Your Information
             </h2>
             <p className="mb-4">We use the information we collect to:</p>
@@ -72,10 +76,11 @@ export function PrivacyPolicy() {
                 "Send you waitlist updates, early access notifications, and launch announcements",
                 "Deliver our weekly newsletter and AI resource content",
                 "Improve the Envowl platform based on usage patterns",
+                "Deliver purchased resources and send access links",
                 "Communicate important service updates",
               ].map((item) => (
                 <li key={item} className="flex gap-4">
-                  <span className="mt-2.5 h-2 w-2 flex-shrink-0 rounded-full bg-black" />
+                  <span className="mt-3 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-ember" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -83,7 +88,7 @@ export function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               What We Never Do
             </h2>
             <ul className="list-none space-y-3">
@@ -93,7 +98,7 @@ export function PrivacyPolicy() {
                 "We never send unsolicited commercial messages unrelated to Envowl",
               ].map((item) => (
                 <li key={item} className="flex gap-4">
-                  <span className="mt-2.5 h-2 w-2 flex-shrink-0 rounded-full bg-black" />
+                  <span className="mt-3 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-ember" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -101,7 +106,7 @@ export function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               Third Party Services
             </h2>
             <p className="mb-4">
@@ -115,29 +120,37 @@ export function PrivacyPolicy() {
                   desc: "Our email newsletter and waitlist platform. Your email address is stored and managed through Beehiiv's infrastructure.",
                 },
                 {
-                  name: "Vercel",
-                  desc: "Our website hosting provider. Vercel may collect standard server logs including IP addresses.",
+                  name: "Supabase",
+                  desc: "Our database provider. Waitlist signups and purchase records (email address and pack purchased) are stored in Supabase.",
                 },
                 {
-                  name: "Analytics",
-                  desc: "We may use privacy-focused analytics tools to understand site usage in aggregate.",
+                  name: "Stripe",
+                  desc: "Our payment processor for paid resource packs. Stripe collects and processes your payment details directly. We receive only your email address and confirmation of purchase.",
+                },
+                {
+                  name: "Resend",
+                  desc: "Our transactional email provider. We use it to send purchase confirmations and access links to your email address.",
+                },
+                {
+                  name: "Vercel",
+                  desc: "Our website hosting provider. Vercel may collect standard server logs including IP addresses. We also use Vercel Analytics to understand site usage in aggregate, without building individual user profiles.",
                 },
               ].map((item) => (
                 <div
                   key={item.name}
-                  className="rounded-xl border border-neutral-300 bg-white p-6 shadow-sm"
+                  className="rounded-[20px] border border-paper/10 bg-ink-900 p-6"
                 >
-                  <p className="mb-2 text-xl font-semibold text-black">
+                  <p className="mb-2 font-display text-xl font-semibold text-paper">
                     {item.name}
                   </p>
-                  <p className="text-lg leading-relaxed text-black">{item.desc}</p>
+                  <p className="text-lg leading-relaxed text-paper">{item.desc}</p>
                 </div>
               ))}
             </div>
           </section>
 
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               Your Rights
             </h2>
             <p className="mb-4">You have the right to:</p>
@@ -146,10 +159,9 @@ export function PrivacyPolicy() {
                 "Unsubscribe from our emails at any time using the unsubscribe link in any email we send",
                 "Request access to the personal data we hold about you",
                 "Request deletion of your personal data from our systems",
-                "Opt out of any future communications",
               ].map((item) => (
                 <li key={item} className="flex gap-4">
-                  <span className="mt-2.5 h-2 w-2 flex-shrink-0 rounded-full bg-black" />
+                  <span className="mt-3 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-ember" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -158,7 +170,7 @@ export function PrivacyPolicy() {
               To exercise any of these rights, contact us at{" "}
               <a
                 href="mailto:envowlsupport@gmail.com"
-                className="font-medium text-black underline underline-offset-4"
+                className="font-medium text-paper underline decoration-ember decoration-2 underline-offset-4 hover:text-ember"
               >
                 envowlsupport@gmail.com
               </a>
@@ -167,19 +179,20 @@ export function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               Data Retention
             </h2>
             <p>
               We retain your email address and signup information for as long as
               you are subscribed to our communications. If you unsubscribe or
               request deletion, we will remove your data from our active systems
-              within 30 days.
+              within 30 days. Purchase records are kept so you can recover
+              access to what you bought, unless you ask us to delete them.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               Cookies
             </h2>
             <p>
@@ -191,7 +204,7 @@ export function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               Children&apos;s Privacy
             </h2>
             <p>
@@ -203,7 +216,7 @@ export function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               Changes to This Policy
             </h2>
             <p>
@@ -215,7 +228,7 @@ export function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="mb-4 text-2xl font-semibold text-black sm:mb-6 sm:text-3xl md:text-4xl">
+            <h2 className="mb-4 font-display text-2xl font-bold tracking-[-0.02em] text-paper sm:text-3xl">
               Contact
             </h2>
             <p>
@@ -223,7 +236,7 @@ export function PrivacyPolicy() {
               LLC at{" "}
               <a
                 href="mailto:envowlsupport@gmail.com"
-                className="font-medium text-black underline underline-offset-4"
+                className="font-medium text-paper underline decoration-ember decoration-2 underline-offset-4 hover:text-ember"
               >
                 envowlsupport@gmail.com
               </a>
