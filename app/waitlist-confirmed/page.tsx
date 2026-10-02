@@ -57,7 +57,7 @@ export default function WaitlistConfirmedPage({ searchParams }: PageProps) {
     <section className="relative isolate -mt-16 overflow-hidden md:-mt-[4.5rem]">
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-[-24rem] left-1/2 -z-10 h-[44rem] w-[70rem] -translate-x-1/2 rounded-full bg-ember/20 blur-[160px]"
+        className="pointer-events-none absolute bottom-[-34rem] left-1/2 -z-10 h-[64rem] w-[90rem] -translate-x-1/2 ember-glow opacity-20"
       />
       <div className="mx-auto max-w-5xl px-4 pb-24 pt-32 text-center sm:px-6 md:px-8 md:pb-32 md:pt-44">
         <FadeIn>

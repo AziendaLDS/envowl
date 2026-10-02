@@ -92,7 +92,7 @@ export default function ArticlePage({ params }: Props) {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-48 -top-48 -z-10 h-[36rem] w-[36rem] rounded-full bg-ember/15 blur-[140px]"
+        className="pointer-events-none absolute -right-[21rem] -top-[21rem] -z-10 h-[54rem] w-[54rem] ember-glow opacity-15"
       />
       <div className="mx-auto max-w-3xl px-4 pb-24 pt-28 sm:px-6 md:px-8 md:pb-32 md:pt-36">
         <Link

@@ -58,7 +58,7 @@ export function RecoverAccessClient() {
     <section className="relative isolate -mt-16 overflow-hidden md:-mt-[4.5rem]">
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-48 -top-48 -z-10 h-[36rem] w-[36rem] rounded-full bg-ember/15 blur-[140px]"
+        className="pointer-events-none absolute -right-[21rem] -top-[21rem] -z-10 h-[54rem] w-[54rem] ember-glow opacity-15"
       />
       <div className="mx-auto flex min-h-[80vh] max-w-md flex-col justify-center px-4 pb-24 pt-32 sm:px-6">
         <FadeIn>

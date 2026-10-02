@@ -39,7 +39,7 @@ export default function SuccessPage({ searchParams }: PageProps) {
     <section className="relative isolate -mt-16 overflow-hidden md:-mt-[4.5rem]">
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-[-24rem] left-1/2 -z-10 h-[44rem] w-[70rem] -translate-x-1/2 rounded-full bg-ember/20 blur-[160px]"
+        className="pointer-events-none absolute bottom-[-34rem] left-1/2 -z-10 h-[64rem] w-[90rem] -translate-x-1/2 ember-glow opacity-20"
       />
       <div className="mx-auto flex min-h-[80vh] max-w-2xl flex-col items-center justify-center px-4 pb-24 pt-32 text-center sm:px-6 md:px-8">
         <FadeIn>

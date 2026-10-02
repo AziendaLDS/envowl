@@ -31,7 +31,7 @@ export function JoinCTA() {
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-[-30rem] left-1/2 -z-10 h-[50rem] w-[80rem] -translate-x-1/2 rounded-full bg-ember/30 blur-[160px]"
+        className="pointer-events-none absolute bottom-[-40rem] left-1/2 -z-10 h-[70rem] w-[100rem] -translate-x-1/2 ember-glow opacity-30"
       />
       <div id="audience-waitlist" className="mx-auto max-w-4xl scroll-mt-24 text-center">
         <motion.h2

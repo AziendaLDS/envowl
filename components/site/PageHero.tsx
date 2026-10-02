@@ -90,7 +90,7 @@ export function PageHero({
     <section className="relative isolate -mt-16 overflow-hidden md:-mt-[4.5rem]">
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-48 -top-48 -z-10 h-[40rem] w-[40rem] rounded-full bg-ember/20 blur-[140px]"
+        className="pointer-events-none absolute -right-[21rem] -top-[21rem] -z-10 h-[58rem] w-[58rem] ember-glow opacity-20"
       />
       <div
         aria-hidden

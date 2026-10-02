@@ -24,7 +24,7 @@ export function HomeHero() {
       {/* Ember glow + dot field behind the matcher */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-40 top-[-10%] -z-10 h-[46rem] w-[46rem] rounded-full bg-ember/25 blur-[140px]"
+        className="pointer-events-none absolute -right-[19rem] top-[calc(-10%-9rem)] -z-10 h-[64rem] w-[64rem] ember-glow opacity-25"
       />
       <div
         aria-hidden

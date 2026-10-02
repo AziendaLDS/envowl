@@ -26,7 +26,7 @@ export function CtaBand({
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-[-30rem] left-1/2 -z-10 h-[50rem] w-[80rem] -translate-x-1/2 rounded-full bg-ember/25 blur-[160px]"
+        className="pointer-events-none absolute bottom-[-40rem] left-1/2 -z-10 h-[70rem] w-[100rem] -translate-x-1/2 ember-glow opacity-25"
       />
       <div className="mx-auto max-w-3xl text-center">
         <motion.h2

@@ -91,6 +91,19 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
+/* Soft ember glow. A gradient instead of filter: blur(), which Safari/iPad
+   clips to a hard-edged rectangle on large elements. Tune strength with opacity-*. */
+.ember-glow {
+  background: radial-gradient(
+    closest-side,
+    rgb(245 73 39) 0%,
+    rgb(245 73 39 / 0.7) 30%,
+    rgb(245 73 39 / 0.3) 60%,
+    rgb(245 73 39 / 0.08) 82%,
+    transparent 100%
+  );
+}
+
 .dot-field {
   background-image: radial-gradient(rgb(244 241 236 / 0.14) 1px, transparent 1px);
   background-size: 18px 18px;
