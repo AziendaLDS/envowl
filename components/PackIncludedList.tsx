@@ -26,7 +26,7 @@ export function PackIncludedList({ items, limit = 6 }: { items: string[]; limit?
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-controls={listId}
-          className="mt-4 self-start text-sm font-semibold text-ember underline decoration-2 underline-offset-4 transition hover:text-paper"
+          className="-my-1 mt-4 inline-flex min-h-[44px] items-center self-start text-sm font-semibold text-ember underline decoration-2 underline-offset-4 transition hover:text-paper"
         >
           {open ? "Show fewer" : `See all ${items.length}`}
         </button>

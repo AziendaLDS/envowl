@@ -71,7 +71,7 @@ export function HomeHero() {
             <Link
               href="/?audience=creator#audience-waitlist"
               scroll
-              className="group inline-flex items-center gap-2 text-sm font-medium text-paper/60 transition hover:text-paper"
+              className="group -my-3 inline-flex min-h-[44px] items-center gap-2 text-sm font-medium text-paper/60 transition hover:text-paper"
             >
               Build with AI? Apply as a creator
               <ArrowRight

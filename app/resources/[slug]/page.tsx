@@ -97,7 +97,7 @@ export default function ArticlePage({ params }: Props) {
       <div className="mx-auto max-w-3xl px-4 pb-24 pt-28 sm:px-6 md:px-8 md:pb-32 md:pt-36">
         <Link
           href="/resources"
-          className="group inline-flex items-center gap-2 text-sm font-medium text-paper/55 transition hover:text-paper"
+          className="group -my-3 inline-flex min-h-[44px] items-center gap-2 text-sm font-medium text-paper/55 transition hover:text-paper"
         >
           <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" strokeWidth={2} aria-hidden />
           All resources
