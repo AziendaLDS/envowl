@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "content:articles": "node scripts/build-articles-from-md.mjs"
+    "content:articles": "node scripts/build-articles-from-md.mjs",
+    "og:images": "node scripts/generate-og-images.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.103.3",

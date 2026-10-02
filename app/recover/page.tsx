@@ -7,6 +7,11 @@ export const metadata = pageMetadata({
   path: "/recover",
 });
 
+metadata.robots = {
+  index: false,
+  follow: false,
+};
+
 export default function RecoverAccessPage() {
   return <RecoverAccessClient />;
 }

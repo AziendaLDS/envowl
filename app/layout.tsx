@@ -9,6 +9,7 @@ import { Navbar } from "@/components/Navbar";
 import {
   DEFAULT_DESCRIPTION,
   DEFAULT_TITLE,
+  OG_IMAGE_ALT,
   SITE_NAME,
   SITE_URL,
 } from "@/lib/seo";
@@ -71,7 +72,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: SITE_NAME,
+        alt: OG_IMAGE_ALT,
       },
     ],
   },

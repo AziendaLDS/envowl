@@ -8,11 +8,13 @@ export const DEFAULT_TITLE = "Envowl — The AI Talent Marketplace";
 export const DEFAULT_DESCRIPTION =
   "A curated marketplace for vetted AI talent. Join the waitlist for early access and founder pricing. Launching Summer 2027.";
 
-const ogImage = {
-  url: "/og-image.png" as const,
+export const OG_IMAGE_ALT = `${SITE_NAME}: ${DEFAULT_TITLE.replace(/^Envowl\s*[—-]\s*/, "")}`;
+
+const defaultOgImage = {
+  url: "/og-image.png",
   width: 1200,
   height: 630,
-  alt: SITE_NAME,
+  alt: OG_IMAGE_ALT,
 };
 
 type PageMetadataOptions = {
@@ -20,6 +22,8 @@ type PageMetadataOptions = {
   description: string;
   path: string;
   ogType?: "website" | "article";
+  /** Page-specific 1200x630 card (path under /public). Defaults to the site card. */
+  ogImage?: string;
 };
 
 /**
@@ -29,6 +33,9 @@ type PageMetadataOptions = {
 export function pageMetadata(opts: PageMetadataOptions): Metadata {
   const pathname = opts.path.startsWith("/") ? opts.path : `/${opts.path}`;
   const url = `${SITE_URL}${pathname === "/" ? "" : pathname}`;
+  const ogImage = opts.ogImage
+    ? { ...defaultOgImage, url: opts.ogImage, alt: opts.title }
+    : defaultOgImage;
 
   return {
     title: opts.title,

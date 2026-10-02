@@ -15,6 +15,11 @@ export const metadata = pageMetadata({
   path: "/success",
 });
 
+metadata.robots = {
+  index: false,
+  follow: false,
+};
+
 type PageProps = {
   searchParams: Record<string, string | string[] | undefined>;
 };

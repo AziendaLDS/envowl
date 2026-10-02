@@ -29,6 +29,7 @@ export function generateMetadata({ params }: Props): Metadata {
     description: article.teaser,
     path: `/resources/${params.slug}`,
     ogType: "article",
+    ogImage: `/og/${params.slug}.png`,
   });
 
   return {

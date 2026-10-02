@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import { Audiences } from "@/components/home/Audiences";
 import { Faq } from "@/components/home/Faq";
@@ -15,11 +16,15 @@ import {
   pageMetadata,
 } from "@/lib/seo";
 
-export const metadata = pageMetadata({
-  title: DEFAULT_TITLE,
-  description: DEFAULT_DESCRIPTION,
-  path: "/",
-});
+export const metadata: Metadata = {
+  ...pageMetadata({
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    path: "/",
+  }),
+  // DEFAULT_TITLE already contains the brand; skip the "· Envowl" template suffix.
+  title: { absolute: DEFAULT_TITLE },
+};
 
 const homeFaq = [
   {
